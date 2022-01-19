@@ -33,5 +33,7 @@
 
     <color name="act_main_title_notice_bg_color">#FFFCEB</color>
     <color name="act_main_title_notice_content_color">#FF251C</color>
+    <color name="act_main_layout_bg_color">#F4F4F4</color>
+    <color name="act_main_options_bar_txt_color">#191919</color>
 
 </resources>

@@ -1,0 +1,9 @@
+/gradle
+/.gradle
+/.idea
+app/build
+gradlew
+gradlew.bat
+Bsky.HunchBackTransport.iml
+app/app.iml
+local.properties

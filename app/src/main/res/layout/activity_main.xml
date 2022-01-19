@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,7 +21,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/act_main_layout_bg_color"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -64,36 +64,118 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="@color/color_main_orange"
+                android:orientation="horizontal">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_16"
-                    android:background="@color/color_main_orange" />
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    <ImageView
+                        style="@style/main_act_title_list_img_style"
+                        android:src="@mipmap/act_main_waybill_management_icon" />
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            />
-
-
-                    </LinearLayout>
+                    <TextView
+                        style="@style/main_act_title_list_txt_style"
+                        android:text="运单管理" />
 
                 </LinearLayout>
 
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        style="@style/main_act_title_list_img_style"
+                        android:src="@mipmap/act_main_vehicle_management_icon" />
+
+                    <TextView
+                        style="@style/main_act_title_list_txt_style"
+                        android:text="运单管理" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        style="@style/main_act_title_list_img_style"
+                        android:src="@mipmap/act_main_personnel_management_icon" />
+
+                    <TextView
+                        style="@style/main_act_title_list_txt_style"
+                        android:text="人员管理" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        style="@style/main_act_title_list_img_style"
+                        android:src="@mipmap/act_fleet_management_icon" />
+
+                    <TextView
+                        style="@style/main_act_title_list_txt_style"
+                        android:text="车队管理" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        android:layout_width="27.5dp"
+                        android:layout_height="32.5dp"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:src="@mipmap/act_waybill_task_icon" />
+
+                    <TextView
+                        style="@style/main_act_options_bar_txt_style"
+                        android:text="运单管理" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_27_5"
+                        android:layout_height="@dimen/dp_32_5"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:src="@mipmap/act_cooperate_icon" />
+
+                    <TextView
+                        style="@style/main_act_options_bar_txt_style"
+                        android:text="合作" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_29"
+                        android:layout_height="@dimen/dp_32_5"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:src="@mipmap/act_operation_guide_icon" />
+
+                    <TextView
+                        style="@style/main_act_options_bar_txt_style"
+                        android:text="操作指南" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_32_5"
+                        android:layout_height="@dimen/dp_32_5"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:src="@mipmap/act_common_problem_icon" />
+
+                    <TextView
+                        style="@style/main_act_options_bar_txt_style"
+                        android:text="常见问题" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 

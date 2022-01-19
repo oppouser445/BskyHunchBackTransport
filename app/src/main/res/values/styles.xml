@@ -12,4 +12,39 @@
         <item name="android:layout_marginLeft">@dimen/dp_28</item>
         <item name="android:layout_marginRight">@dimen/dp_28</item>
     </style>
+
+    <style name="main_act_title_list_lLayout_style">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="main_act_title_list_img_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_16</item>
+    </style>
+
+    <style name="main_act_title_list_txt_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:layout_marginBottom">@dimen/dp_15</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="main_act_options_bar_txt_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:layout_marginBottom">@dimen/dp_15</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/act_main_options_bar_txt_color</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
 </resources>
