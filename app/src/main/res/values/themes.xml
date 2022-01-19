@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppThemeNoActionBar" parent="@android:style/Theme.Light.NoTitleBar">
+
+        <!--应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色-->
+        <!--<item name="colorPrimary">@color/white</item>-->
+
+        <!--应用的主要暗色调，statusBarColor默认使用该颜色-->
+        <!--<item name="colorPrimaryDark">@color/white</item>-->
+        <!--colorAccent CheckBox，RadioButton，SwitchCompat等一般控件的选中效果默认采用该颜色-->
+        <!--<item name="colorAccent">@color/es_green</item>-->
+
+        <!--应用的主要文字颜色，actionBar的标题文字默认使用该颜色-->
+        <!--<item name="android:textColorPrimary">@color/white</item>-->
+        <item name="android:textSize">16sp</item>
+
+        <item name="android:windowAnimationStyle">@style/SlideToWindowAnimTheme</item>
+
+        <!--下列两行控制使得应用窗口透明，用于展示一些差异-->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="SlideToWindowAnimTheme">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_right</item>
+    </style>
+</resources>

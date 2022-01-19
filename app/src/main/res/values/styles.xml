@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--@style/Widget.AppCompat.Button.Borderless 继承这个可去除自带的 阴影效果-->
+    <style name="login_act_btn_style" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">@dimen/dp_304</item>
+        <item name="android:layout_height">@dimen/dp_45</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:background">@drawable/select_btn_resend</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/dp_16</item>
+        <item name="android:layout_marginLeft">@dimen/dp_28</item>
+        <item name="android:layout_marginRight">@dimen/dp_28</item>
+    </style>
+</resources>

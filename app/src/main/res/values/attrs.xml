@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <declare-styleable name="loginact_attrs">
+            <attr name="bgType" format="integer"/>
+        </declare-styleable>
+
+    <declare-styleable name="loginact_countdown_attrs">
+            <attr name="textCountdownColor" format="color"/>
+        </declare-styleable>
+</resources>
