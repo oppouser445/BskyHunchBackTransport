@@ -3,7 +3,7 @@ package com.tuofeng.bskyhunchbacktransport.viewmodel;
 import androidx.databinding.Bindable;
 
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
-import com.tuofeng.bskyhunchbacktransport.mode.data.LoginRepository;
+import com.tuofeng.bskyhunchbacktransport.module.data.LoginRepository;
 
 public class LoginViewModel extends BaseViewModel<ILoginView, LoginRepository>{
 

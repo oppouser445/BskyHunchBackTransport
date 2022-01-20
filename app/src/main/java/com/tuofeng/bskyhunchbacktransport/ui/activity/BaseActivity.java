@@ -9,6 +9,7 @@ import androidx.databinding.ViewDataBinding;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.base.IView;
+import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 
 import org.greenrobot.eventbus.EventBus;
@@ -23,6 +24,10 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
         super.onCreate(savedInstanceState);
         int layoutId = getLayoutId();
         setContentView(layoutId);
+
+        StatusBarUtil.setLightStatusBar(this, true);
+        StatusBarUtil.setTransparentStatusBar(getWindow());
+
         mViewModel = getViewModel();
         mDataBinding = DataBindingUtil.setContentView(this, layoutId);
         initView();

@@ -21,11 +21,10 @@ import com.tuofeng.bskyhunchbacktransport.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityLoginBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
-import com.tuofeng.bskyhunchbacktransport.mode.SingleTextWatcher;
+import com.tuofeng.bskyhunchbacktransport.module.SingleTextWatcher;
 import com.tuofeng.bskyhunchbacktransport.ui.view.DownTimerText;
 import com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
-import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.LoginViewModel;
@@ -60,8 +59,6 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
     @Override
     protected void initView() {
-        StatusBarUtil.setTransparentStatusBar(getWindow());
-        StatusBarUtil.setLightStatusBar(this, true);
         mDataBinding.setViewModel(mViewModel);
 
         mEdLoginPhone = mDataBinding.edPhone;

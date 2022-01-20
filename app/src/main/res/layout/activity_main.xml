@@ -13,7 +13,7 @@
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.MainViewModel" />
     </data>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/act_main_layout_bg_color"
             android:orientation="vertical">
 
@@ -62,10 +62,8 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/color_main_orange"
-                android:orientation="horizontal">
+                style="@style/main_act_options_bar1_layout_home_style"
+                android:background="@color/color_main_orange">
 
                 <LinearLayout style="@style/main_act_title_list_lLayout_style">
 
@@ -118,10 +116,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="horizontal">
+                style="@style/main_act_options_bar1_layout_home_style"
+                android:background="@color/white">
 
                 <LinearLayout style="@style/main_act_title_list_lLayout_style">
 
@@ -177,8 +173,77 @@
 
             </LinearLayout>
 
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_74_5"
+                android:layout_margin="@dimen/dp_12" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_3_5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image_alarm_clock"
+                        android:layout_width="@dimen/dp_14_5"
+                        android:layout_height="@dimen/dp_14_5"
+                        android:src="@mipmap/alarm_clock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:includeFontPadding="false"
+                        android:text="临期任务 "
+                        android:textColor="@color/act_login_re_adapter_tv_color"
+                        android:textSize="@dimen/sp_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:includeFontPadding="false"
+                        android:text="查看更多"
+                        android:textColor="@color/act_login_re_adapter_tv_color"
+                        android:textSize="@dimen/sp_10" />
+
+                    <ImageView
+                        android:id="@+id/image_see_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/see_more" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_act_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_margin="@dimen/dp_12" />
+
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </layout>

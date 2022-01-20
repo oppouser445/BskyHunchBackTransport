@@ -47,4 +47,16 @@
         <item name="android:textSize">@dimen/sp_12</item>
     </style>
 
+    <style name="main_act_options_bar1_layout_home_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="main_act_main_relist_layout_style">
+        <item name="android:layout_marginStart">@dimen/dp_10</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:layout_marginEnd">@dimen/dp_10</item>
+    </style>
+
 </resources>

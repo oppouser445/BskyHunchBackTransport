@@ -3,7 +3,7 @@ package com.tuofeng.bskyhunchbacktransport.viewmodel;
 import androidx.databinding.Bindable;
 
 import com.tuofeng.bskyhunchbacktransport.in.IMainView;
-import com.tuofeng.bskyhunchbacktransport.mode.data.MainRepository;
+import com.tuofeng.bskyhunchbacktransport.module.data.MainRepository;
 
 public class MainViewModel extends BaseViewModel<IMainView, MainRepository>{
 

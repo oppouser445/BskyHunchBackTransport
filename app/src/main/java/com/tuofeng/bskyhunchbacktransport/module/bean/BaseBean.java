@@ -1,4 +1,4 @@
-package com.tuofeng.bskyhunchbacktransport.mode.bean;
+package com.tuofeng.bskyhunchbacktransport.module.bean;
 
 import androidx.databinding.BaseObservable;
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataBean"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_act_login_relist_bg_orange"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/main_act_main_relist_layout_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="【接货】有任务即将开始"
+                android:textColor="@color/act_login_re_title_tv_color"
+                android:textSize="@dimen/sp_10" />
+
+            <RelativeLayout
+                style="@style/main_act_main_relist_layout_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="成都市双流区"
+                    android:textColor="@color/act_login_re_tv_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/lndication_map" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="成都市双流区"
+                    android:textColor="@color/act_login_re_tv_color"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/main_act_main_relist_layout_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="109dp"
+                    android:layout_height="14dp"
+                    android:includeFontPadding="false"
+                    android:text="货主：北京驮丰XXXXXX"
+                    android:textColor="@color/act_login_re_adapter_tv_color"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="105dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentEnd="true"
+                    android:includeFontPadding="false"
+                    android:text="装货时间：2021-01-16"
+                    android:textColor="@color/act_login_re_adapter_tv2_color"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:text="货物名称：备注备注备注备注备注备注备注备注备注备注备注备注备注"
+                android:textColor="@color/act_login_re_adapter_tv_color"
+                android:textSize="@dimen/sp_10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

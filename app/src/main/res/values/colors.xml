@@ -36,4 +36,12 @@
     <color name="act_main_layout_bg_color">#F4F4F4</color>
     <color name="act_main_options_bar_txt_color">#191919</color>
 
+    <color name="act_login_re_adapter_tv_color">#ff666666</color>
+    <color name="act_login_re_adapter_tv2_color">#ffff251c</color>
+
+    <color name="act_login_re_title_tv_color">#ff1377ff</color>
+
+    <color name="act_login_re_tv_color">#ff191919</color>
+
+
 </resources>

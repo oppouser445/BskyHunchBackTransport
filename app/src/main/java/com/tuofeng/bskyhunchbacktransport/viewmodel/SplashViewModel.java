@@ -7,7 +7,7 @@ import androidx.databinding.ObservableField;
 
 import com.tuofeng.bskyhunchbacktransport.BR;
 import com.tuofeng.bskyhunchbacktransport.in.ISplashView;
-import com.tuofeng.bskyhunchbacktransport.mode.data.SplashRepository;
+import com.tuofeng.bskyhunchbacktransport.module.data.SplashRepository;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 
 public class SplashViewModel extends BaseViewModel<ISplashView,SplashRepository>{
