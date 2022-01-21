@@ -59,4 +59,85 @@
         <item name="android:layout_marginEnd">@dimen/dp_10</item>
     </style>
 
+    <style name="main_fragment_supplyhall_relist_layout_style">
+        <item name="android:layout_marginStart">@dimen/dp_10</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:layout_marginEnd">@dimen/dp_10</item>
+    </style>
+
+    <!--android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"-->
+
+    <style name="main_fragment_supplyhall_table_layout_style">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="main_fragment_supplyhall_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_main_orange</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="main_fragment_supplyhall_img_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_4</item>
+    </style>
+
+
+    <style name="main_fragment_min_tab1_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="main_fragment_min_basic_information_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_4</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/fragment_mine_tab3_tv_color</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+
+    <style name="main_fragment_min_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_107_5</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:background">@drawable/shape_mine_rectangle_bg</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_12"
+    android:includeFontPadding="false"
+    android:text="基本信息"
+    android:textColor="@color/fragment_mine_tab1_wallet_color"
+    android:textSize="@dimen/sp_14"-->
+
+    <style name="main_fragment_mine_layout_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">@dimen/dp_15</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/fragment_mine_tab1_wallet_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
 </resources>

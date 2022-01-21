@@ -13,6 +13,7 @@ import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.RecycleBannerAdapter;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.BaseFragmentActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.MainFragment;
+import com.tuofeng.bskyhunchbacktransport.ui.fragment.MineFragment;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.SupplyHallFragment;
 import com.tuofeng.bskyhunchbacktransport.utils.FragmentUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
@@ -25,6 +26,7 @@ import java.util.List;
 public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, MainViewModel> implements IMainView, View.OnClickListener {
     private MainFragment mMainFragment;
     private SupplyHallFragment mSupplyHallFragment;
+    private MineFragment mMineFragment;
 
     @Override
     protected MainViewModel getViewModel() {
@@ -42,8 +44,11 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
 
         mMainFragment = new MainFragment();
         mSupplyHallFragment = new SupplyHallFragment();
+        mMineFragment = new MineFragment();
 
-        FragmentUtils.switchFragment(this,R.id.frame_home,mSupplyHallFragment,mMainFragment);
+        //FragmentUtils.switchFragment(this,R.id.frame_home,mMainFragment,mSupplyHallFragment);
+        //FragmentUtils.switchFragment(this,R.id.frame_home,mMainFragment,mSupplyHallFragment);
+        FragmentUtils.switchFragment(this,R.id.frame_home,mMainFragment,mMineFragment);
     }
 
     @Override

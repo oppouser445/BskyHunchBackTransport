@@ -43,5 +43,23 @@
 
     <color name="act_login_re_tv_color">#ff191919</color>
 
+    <color name="fragment_supply_hall_table_tv_color">#666666</color>
+
+
+    <color name="fragment_mine_telephone_color">#191919</color>
+    <color name="fragment_mine_number_plate_color">#999999</color>
+
+    <color name="fragment_mine_certification_bg_color">#25A3FC</color>
+
+    <color name="fragment_mine_tab1_wallet_color">#ff191919</color>
+    <color name="fragment_mine_tab1_withdraw_color">#ffff251c</color>
+    <color name="fragment_mine_tab1_amount_color">#fff35b00</color>
+
+    <color name="fragment_mine_tab2_details_color">#469CD3</color>
+    <color name="fragment_mine_tab2_waybill_number_color">#3594D1</color>
+
+    <color name="fragment_mine_tab3_tv_color">#666666</color>
+
+
 
 </resources>

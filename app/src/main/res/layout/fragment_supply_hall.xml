@@ -1,19 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:gravity="center"
-    android:scrollbars="none">
+    tools:context=".ui.activity.MainActivity">
 
-    <TextView
+    <data>
 
-        android:layout_width="wrap_content"
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.FragmentSupplyHallViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="第二页"
-        android:textSize="@dimen/sp_20" />
+        android:background="@color/color_main_orange"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
 
+        <RadioGroup
+            android:id="@+id/rbtn_supply_hall_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_12"
+            android:orientation="horizontal">
 
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/rbtn_supply_hall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/select_supply_hall_fragment_tab1_bg"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="@dimen/dp_12_5"
+                android:paddingTop="@dimen/dp_6_5"
+                android:paddingRight="@dimen/dp_12_5"
+                android:paddingBottom="@dimen/dp_6_5"
+                android:text="资源大厅"
+                android:textColor="@color/color_main_orange"
+                android:textSize="@dimen/sp_16" />
+
+            <RadioButton
+                android:id="@+id/rbtn_recruit_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3_5"
+                android:background="@drawable/select_supply_hall_fragment_tab1_bg"
+                android:button="@null"
+                android:paddingLeft="@dimen/dp_12_5"
+                android:paddingTop="@dimen/dp_6_5"
+                android:paddingRight="@dimen/dp_12_5"
+                android:paddingBottom="@dimen/dp_6_5"
+                android:text="招募车队"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+
+                <TextView
+                    style="@style/main_fragment_supplyhall_tv_style"
+                    android:text="推荐排序" />
+
+                <ImageView
+                    style="@style/main_fragment_supplyhall_img_style"
+                    android:src="@mipmap/triangle_orange_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+
+                <TextView
+                    style="@style/main_fragment_supplyhall_tv_style"
+                    android:text="全国"
+                    android:textColor="@color/fragment_supply_hall_table_tv_color" />
+
+                <ImageView
+                    style="@style/main_fragment_supplyhall_img_style"
+                    android:src="@mipmap/triangle_orange_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+
+                <TextView
+                    style="@style/main_fragment_supplyhall_tv_style"
+                    android:text="全国"
+                    android:textColor="@color/fragment_supply_hall_table_tv_color" />
+
+                <ImageView
+                    style="@style/main_fragment_supplyhall_img_style"
+                    android:src="@mipmap/triangle_orange_icon" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+
+                <TextView
+                    style="@style/main_fragment_supplyhall_tv_style"
+                    android:text="筛选"
+                    android:textColor="@color/fragment_supply_hall_table_tv_color" />
+
+                <ImageView
+                    style="@style/main_fragment_supplyhall_img_style"
+                    android:src="@mipmap/filter_icon" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/act_main_layout_bg_color"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rList_fragment_supply_hall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_12"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

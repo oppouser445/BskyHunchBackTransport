@@ -33,6 +33,16 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     private FragmentActivity mActivity;
 
     @Override
+    int getLayoutID() {
+        return R.layout.fragment_main;
+    }
+
+    @Override
+    FragmentMainViewModel getViewModel() {
+        return new FragmentMainViewModel(this);
+    }
+
+    @Override
     void initView() {
         mActivity = getActivity();
         mImgTitleNoticeClear = mDataBinding.imgTitleNoticeClear;
@@ -63,16 +73,6 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
         mRecycleBannerAdapter = new RecycleBannerAdapter(mDataList, mActivity);
 
         mRecyclerActHome.setAdapter(mRecycleBannerAdapter);
-    }
-
-    @Override
-    int getLayoutID() {
-        return R.layout.fragment_main;
-    }
-
-    @Override
-    FragmentMainViewModel getViewModel() {
-        return new FragmentMainViewModel(this);
     }
 
     @Override

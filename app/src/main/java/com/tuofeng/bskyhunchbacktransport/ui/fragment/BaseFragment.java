@@ -24,10 +24,9 @@ public abstract class BaseFragment<B extends ViewDataBinding,M extends BaseViewM
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         int layoutID = getLayoutID();
-        View mView = inflater.inflate(layoutID, container, false);
         mViewModel = getViewModel();
         mDataBinding = DataBindingUtil.inflate(inflater, layoutID, container, false);
-        return mView;
+        return mDataBinding.getRoot();
     }
 
     @Override

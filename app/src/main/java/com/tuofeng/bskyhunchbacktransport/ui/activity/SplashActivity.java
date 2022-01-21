@@ -34,8 +34,8 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding,SplashVie
     @Override
     public void startLoginAct() {
         ToastUtil.shortToast("测试回调");
-        //Intent intent = new Intent(this,LoginActivity.class);
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this,MainActivity.class);
+        //Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
