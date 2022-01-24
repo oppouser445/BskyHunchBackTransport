@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_enabled="true" android:drawable="@drawable/shape_btn_bg_orange"/>
+
+        <item android:state_enabled="false">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/coloe_btn_resend_gray" />
+                <padding android:bottom="2dp" android:left="14dp" android:right="14dp" android:top="2dp" />
+                <corners android:radius="5dp" />
+            </shape>
+        </item>
+    </selector>

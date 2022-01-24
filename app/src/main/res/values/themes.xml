@@ -19,6 +19,9 @@
         <item name="android:windowIsTranslucent">true</item>
 
         <item name="android:windowTranslucentStatus">true</item>
+
+        <!--设置true底部的状态栏内容会被APP覆盖-->
+        <item name="android:windowTranslucentNavigation">false</item>
     </style>
 
     <style name="SlideToWindowAnimTheme">

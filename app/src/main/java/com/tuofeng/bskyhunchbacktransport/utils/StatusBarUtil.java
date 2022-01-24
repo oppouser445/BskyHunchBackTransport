@@ -31,9 +31,10 @@ public class StatusBarUtil {
 
     private static int getTitleBarColor(int type) {
         int color = Color.TRANSPARENT;
-        // Color.parseColor("#20000000") ;
         if (type == 1) {
             color = Color.parseColor("#FF8823");
+        }else if (type == 2) {
+            color = Color.parseColor("#FFFFFF");
         }
         return color;
     }
@@ -50,7 +51,6 @@ public class StatusBarUtil {
 
                 case RomUtils.AvailableRomType.FLYME:
                     setFlymeLightStatusBar(activity, dark);
-
                     break;
 
                 case RomUtils.AvailableRomType.ANDROID_NATIVE:

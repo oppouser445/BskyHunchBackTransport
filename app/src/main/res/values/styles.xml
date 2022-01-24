@@ -132,12 +132,36 @@
     <style name="main_fragment_mine_layout_title_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-
         <item name="android:layout_marginStart">@dimen/dp_15</item>
         <item name="android:layout_marginTop">@dimen/dp_8</item>
         <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/fragment_mine_tab1_wallet_color</item>
         <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="act_table_bottom_layout_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_3"
+    android:includeFontPadding="false"
+    android:text="首页"
+    android:textColor="@color/color_main_orange"
+    android:textSize="@dimen/sp_9"-->
+
+    <style name="act_table_bottom_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_3</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/sp_9</item>
+        <item name="android:textColor">@color/fragment_main_bottom_tv_color</item>
     </style>
 
 </resources>

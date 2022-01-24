@@ -173,11 +173,25 @@
 
             </LinearLayout>
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/vp_banner"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_74_5"
-                android:layout_margin="@dimen/dp_12" />
+                android:layout_margin="@dimen/dp_12">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/lLayout_main_fragment_banner_dots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -239,8 +253,8 @@
                 android:id="@+id/recycler_act_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:nestedScrollingEnabled="false"
-                android:layout_margin="@dimen/dp_12" />
+                android:layout_margin="@dimen/dp_12"
+                android:nestedScrollingEnabled="false" />
 
         </LinearLayout>
 

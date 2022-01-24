@@ -60,12 +60,15 @@
         </RadioGroup>
 
         <LinearLayout
+            android:id="@+id/llyaout_tab_home"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_44"
             android:background="@color/white"
             android:orientation="horizontal">
 
-            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+            <LinearLayout
+                android:id="@+id/llyaout_sort"
+                style="@style/main_fragment_supplyhall_table_layout_style">
 
                 <TextView
                     style="@style/main_fragment_supplyhall_tv_style"
@@ -77,7 +80,9 @@
 
             </LinearLayout>
 
-            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+            <LinearLayout
+                android:id="@+id/llyaout_national"
+                style="@style/main_fragment_supplyhall_table_layout_style">
 
                 <TextView
                     style="@style/main_fragment_supplyhall_tv_style"
@@ -86,11 +91,13 @@
 
                 <ImageView
                     style="@style/main_fragment_supplyhall_img_style"
-                    android:src="@mipmap/triangle_orange_icon" />
+                    android:src="@mipmap/triangle_orange_icon_default" />
 
             </LinearLayout>
 
-            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+            <LinearLayout
+                android:id="@+id/llyaout_national2"
+                style="@style/main_fragment_supplyhall_table_layout_style">
 
                 <TextView
                     style="@style/main_fragment_supplyhall_tv_style"
@@ -99,11 +106,13 @@
 
                 <ImageView
                     style="@style/main_fragment_supplyhall_img_style"
-                    android:src="@mipmap/triangle_orange_icon" />
+                    android:src="@mipmap/triangle_orange_icon_default" />
 
             </LinearLayout>
 
-            <LinearLayout style="@style/main_fragment_supplyhall_table_layout_style">
+            <LinearLayout
+                android:id="@+id/llyaout_filter"
+                style="@style/main_fragment_supplyhall_table_layout_style">
 
                 <TextView
                     style="@style/main_fragment_supplyhall_tv_style"
@@ -112,7 +121,7 @@
 
                 <ImageView
                     style="@style/main_fragment_supplyhall_img_style"
-                    android:src="@mipmap/filter_icon" />
+                    android:src="@mipmap/filter_icon_default" />
 
             </LinearLayout>
 
@@ -128,7 +137,9 @@
                 android:id="@+id/rList_fragment_supply_hall"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
                 android:nestedScrollingEnabled="false" />
         </LinearLayout>
 
