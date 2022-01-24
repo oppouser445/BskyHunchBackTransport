@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/act_main_default_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".InformationAuthenticationActivity">
+
+    <include layout="@layout/titlelbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@drawable/shape_information_authentication_tab_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_team_leader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_16"
+            android:includeFontPadding="false"
+            android:text="我是车队长"
+            android:textColor="@color/act_iinformation_authentication_tab_title_color"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:includeFontPadding="false"
+            android:text="认证通过后可以管理车队，不可接单"
+            android:textColor="@color/act_iinformation_authentication_tab_describe_color"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="材料准备"
+                android:textColor="@color/act_iinformation_authentication_tab_title_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="@drawable/shape_information_authentication_material_bg"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/dp_6_5"
+                android:paddingTop="@dimen/dp_2_5"
+                android:paddingEnd="@dimen/dp_6_5"
+                android:paddingBottom="@dimen/dp_2_5"
+                android:text="身份证"
+                android:textColor="@color/color_main_orange" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="37.5dp"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/shape_information_authentication_certification_bg"
+            android:includeFontPadding="false"
+            android:paddingStart="13.5dp"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingEnd="13.5dp"
+            android:paddingBottom="@dimen/dp_3"
+            android:text="现在认证"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@drawable/shape_information_authentication_tab_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_16"
+            android:includeFontPadding="false"
+            android:text="我是司机"
+            android:textColor="@color/act_iinformation_authentication_tab_title_color"
+            android:textSize="@dimen/sp_19"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:includeFontPadding="false"
+            android:text="认证通过后可以管理车队，可接单"
+            android:textColor="@color/act_iinformation_authentication_tab_describe_color"
+            android:textSize="@dimen/sp_12" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="材料准备"
+                android:textColor="@color/act_iinformation_authentication_tab_title_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:background="@drawable/shape_information_authentication_material_bg"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/dp_8"
+                android:paddingTop="@dimen/dp_2_5"
+                android:paddingEnd="@dimen/dp_6_5"
+                android:paddingBottom="@dimen/dp_2_5"
+                android:text="身份证"
+                android:textColor="@color/color_main_orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@drawable/shape_information_authentication_material_bg"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/dp_6_5"
+                android:paddingTop="@dimen/dp_2_5"
+                android:paddingEnd="@dimen/dp_6_5"
+                android:paddingBottom="@dimen/dp_2_5"
+                android:text="行驶证"
+                android:textColor="@color/color_main_orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@drawable/shape_information_authentication_material_bg"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/dp_6_5"
+                android:paddingTop="@dimen/dp_2_5"
+                android:paddingEnd="@dimen/dp_6_5"
+                android:paddingBottom="@dimen/dp_2_5"
+                android:text="驾驶证"
+                android:textColor="@color/color_main_orange" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@drawable/shape_information_authentication_material_bg"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/dp_6_5"
+                android:paddingTop="@dimen/dp_2_5"
+                android:paddingEnd="@dimen/dp_6_5"
+                android:paddingBottom="@dimen/dp_2_5"
+                android:text="其他"
+                android:textColor="@color/color_main_orange" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="37.5dp"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@drawable/shape_information_authentication_certification_bg"
+            android:includeFontPadding="false"
+            android:paddingStart="13.5dp"
+            android:paddingTop="@dimen/dp_3"
+            android:paddingEnd="13.5dp"
+            android:paddingBottom="@dimen/dp_3"
+            android:text="现在认证"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+</LinearLayout>
