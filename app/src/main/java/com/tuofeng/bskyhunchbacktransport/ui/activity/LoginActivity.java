@@ -17,7 +17,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.tuofeng.bskyhunchbacktransport.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityLoginBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;

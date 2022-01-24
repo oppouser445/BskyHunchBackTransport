@@ -2,7 +2,6 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.content.Intent;
 
-import com.tuofeng.bskyhunchbacktransport.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivitySplashBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ISplashView;

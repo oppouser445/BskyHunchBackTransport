@@ -2,12 +2,11 @@ package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 
 import android.content.Intent;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tuofeng.bskyhunchbacktransport.MainActivity;
-import com.tuofeng.bskyhunchbacktransport.MessageCenterDetailsActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.MessageCenterDetailsActivity;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMessageCenterBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMessageCenterFragmentView;

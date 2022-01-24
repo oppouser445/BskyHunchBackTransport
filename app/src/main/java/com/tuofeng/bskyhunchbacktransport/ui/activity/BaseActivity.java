@@ -2,6 +2,8 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
@@ -18,6 +20,8 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
 
     protected M mViewModel;
     protected B mDataBinding;
+    protected ImageView mToolbarBack;
+    protected TextView mToolbarTitle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +30,6 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
         setContentView(layoutId);
 
         StatusBarUtil.setLightStatusBar(this, true);
-        StatusBarUtil.setTransparentStatusBar(getWindow());
 
         mViewModel = getViewModel();
         mDataBinding = DataBindingUtil.setContentView(this, layoutId);
@@ -41,6 +44,19 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
     protected abstract void initView();
 
     protected abstract void initData();
+
+    protected void initTitleBar( ){
+        mToolbarBack = findViewById(R.id.toolbar_back);
+        mToolbarTitle = findViewById(R.id.toolbar_title);
+    }
+
+    protected void initStatusBar(int type){
+        if (type == 1) {
+            StatusBarUtil.setTransparentStatusBar(getWindow(),1);
+        } else {
+            StatusBarUtil.setTransparentStatusBar(getWindow());
+        }
+    }
 
     @Override
     protected void onDestroy() {

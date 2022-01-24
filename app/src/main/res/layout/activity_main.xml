@@ -83,7 +83,9 @@
                     android:text="任务" />
             </LinearLayout>
 
-            <LinearLayout style="@style/act_table_bottom_layout_style">
+            <LinearLayout
+                android:id="@+id/lLayout_message"
+                style="@style/act_table_bottom_layout_style">
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab4"

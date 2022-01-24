@@ -1,13 +1,14 @@
-package com.tuofeng.bskyhunchbacktransport;
+package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.in.IMainView;
-import com.tuofeng.bskyhunchbacktransport.ui.activity.BaseFragmentActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.BaseFragment;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.MainFragment;
+import com.tuofeng.bskyhunchbacktransport.ui.fragment.MessageCenterFragment;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.MineFragment;
 import com.tuofeng.bskyhunchbacktransport.ui.fragment.SupplyHallFragment;
 import com.tuofeng.bskyhunchbacktransport.utils.FragmentUtils;
@@ -18,8 +19,9 @@ import com.tuofeng.bskyhunchbacktransport.databinding.ActivityMainBinding;
 public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, MainViewModel> implements IMainView, View.OnClickListener {
     private MainFragment mMainFragment;
     private SupplyHallFragment mSupplyHallFragment;
+    private MessageCenterFragment mMessageCenterFragment;
     private MineFragment mMineFragment;
-    private LinearLayout mLlayoutMain, mLlayoutMainHome, mLlayoutSupplyHall, mLlayoutTask, mlLayoutMine;
+    private LinearLayout mLlayoutMain, mLlayoutMainHome, mLlayoutSupplyHall, mLlayoutTask,mLlayoutMessage, mlLayoutMine;
     private BaseFragment mTheCurrentpage;
 
     @Override
@@ -50,6 +52,9 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
         mLlayoutTask = mDataBinding.lLayoutTask;
         mLlayoutTask.setOnClickListener(this);
 
+        mLlayoutMessage = mDataBinding.lLayoutMessage;
+        mLlayoutMessage.setOnClickListener(this);
+
         mlLayoutMine = mDataBinding.lLayoutMine;
         mlLayoutMine.setOnClickListener(this);
 
@@ -71,6 +76,9 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
                 toggleFragment(1);
                 break;
             case R.id.lLayout_task:
+                break;
+            case R.id.lLayout_message:
+                toggleFragment(3);
                 break;
             case R.id.lLayout_mine:
                 toggleFragment(4);
@@ -94,6 +102,12 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
             }
             fragment = mSupplyHallFragment;
             titleBarColor = 1;
+        }else if (type == 3) {
+            if (mMessageCenterFragment == null) {
+                mMessageCenterFragment = new MessageCenterFragment();
+            }
+            titleBarColor = 1;
+            fragment = mMessageCenterFragment;
         } else if (type == 4) {
             if (mMineFragment == null) {
                 mMineFragment = new MineFragment();

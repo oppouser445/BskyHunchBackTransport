@@ -7,7 +7,7 @@
     android:background="@color/act_main_default_bg"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context=".InformationAuthenticationActivity">
+    tools:context=".ui.activity.InformationAuthenticationActivity">
 
     <include layout="@layout/titlelbar_layout" />
 

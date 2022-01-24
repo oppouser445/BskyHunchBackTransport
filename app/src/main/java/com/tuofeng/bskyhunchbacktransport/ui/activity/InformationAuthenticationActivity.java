@@ -1,8 +1,6 @@
-package com.tuofeng.bskyhunchbacktransport;
+package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
-import android.view.View;
-
-import com.tuofeng.bskyhunchbacktransport.ui.activity.BaseActivity;
+import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 
 public class InformationAuthenticationActivity extends BaseActivity {

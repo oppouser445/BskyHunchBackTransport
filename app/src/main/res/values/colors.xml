@@ -5,11 +5,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
 
+    <color name="color_main_orange">#FF8823</color>
+    <color name="act_main_default_bg">#F4F4F4</color>
+
     <color name="color_login_line">#F5F5F5</color>
 
     <color name="coloe_btn_resend_gray">#C7C7C7</color>
-
-    <color name="color_main_orange">#FF8823</color>
 
     <color name="color_btn_bg_frame">#C9C9C9</color>
 
@@ -38,28 +39,28 @@
 
     <color name="act_login_re_adapter_tv_color">#ff666666</color>
     <color name="act_login_re_adapter_tv2_color">#ffff251c</color>
-
     <color name="act_login_re_title_tv_color">#ff1377ff</color>
-
     <color name="act_login_re_tv_color">#ff191919</color>
 
     <color name="fragment_supply_hall_table_tv_color">#666666</color>
 
-
     <color name="fragment_mine_telephone_color">#191919</color>
     <color name="fragment_mine_number_plate_color">#999999</color>
-
     <color name="fragment_mine_certification_bg_color">#25A3FC</color>
-
     <color name="fragment_mine_tab1_wallet_color">#ff191919</color>
     <color name="fragment_mine_tab1_withdraw_color">#ffff251c</color>
     <color name="fragment_mine_tab1_amount_color">#fff35b00</color>
 
     <color name="fragment_mine_tab2_details_color">#469CD3</color>
     <color name="fragment_mine_tab2_waybill_number_color">#3594D1</color>
-
     <color name="fragment_mine_tab3_tv_color">#666666</color>
 
     <color name="fragment_main_bottom_tv_color">#666666</color>
+
+    <color name="fragment_message_center_color">#B1B1B1</color>
+    <color name="act_message_center_details_tv_color">#ff666666</color>
+
+    <color name="act_iinformation_authentication_tab_title_color">#191919</color>
+    <color name="act_iinformation_authentication_tab_describe_color">#666666</color>
 
 </resources>
