@@ -47,7 +47,7 @@ public class Config {
         return url;
     }
 
-    public static String getDriverCertificationURL(String driverId) {//上传司机图片
+    public static String getTeamCaptainCertificationURL(String driverId) {//上传司机图片
         String url = baseUrl + "/api/business/driver/" + driverId + "/image";
         return url;
     }

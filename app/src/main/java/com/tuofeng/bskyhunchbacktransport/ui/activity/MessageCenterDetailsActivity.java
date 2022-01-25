@@ -3,7 +3,7 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 import android.widget.TextView;
 
 import com.tuofeng.bskyhunchbacktransport.R;
-import com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton;
+import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
 import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 
@@ -21,7 +21,7 @@ public class MessageCenterDetailsActivity extends BaseActivity {
     @Override
     protected void initView() {
         StatusBarUtil.setTransparentStatusBar(getWindow(), 1);
-        LoginActButton actButton = findViewById(R.id.bnt_message_details);
+        SharedButton actButton = findViewById(R.id.bnt_message_details);
         actButton.setOnClickListener(v -> finish());
 
         TextView tvTitleBar = findViewById(R.id.toolbar_title);

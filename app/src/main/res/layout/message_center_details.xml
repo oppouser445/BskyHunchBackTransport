@@ -40,7 +40,7 @@
         android:textColor="@color/act_message_center_details_tv_color"
         android:textSize="14sp" />
 
-    <com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton
+    <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
         android:id="@+id/bnt_message_details"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"

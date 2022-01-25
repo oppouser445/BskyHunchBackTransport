@@ -18,8 +18,8 @@ import org.greenrobot.eventbus.EventBus;
 
 public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewModel> extends Activity implements IView {
 
-    protected M mViewModel;
     protected B mDataBinding;
+    protected M mViewModel;
     protected ImageView mToolbarBack;
     protected TextView mToolbarTitle;
 
@@ -45,7 +45,15 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
 
     protected abstract void initData();
 
-    protected void initTitleBar( ){
+    protected void initTitleBar(){
+        initTitleBar(1);
+    }
+
+    protected void initTitleBar(int type){
+        initTitleBarBean();
+        initStatusBar(type);
+    }
+    protected void initTitleBarBean( ){
         mToolbarBack = findViewById(R.id.toolbar_back);
         mToolbarTitle = findViewById(R.id.toolbar_title);
     }

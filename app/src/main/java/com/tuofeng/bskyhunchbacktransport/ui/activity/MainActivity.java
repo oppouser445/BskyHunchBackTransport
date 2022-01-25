@@ -1,5 +1,6 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -66,6 +67,7 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

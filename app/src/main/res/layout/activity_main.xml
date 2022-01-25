@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activity.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -91,7 +90,7 @@
                     android:id="@+id/tv_main_bottom_tab4"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_19"
-                    android:background="@drawable/select_main_bottom_tab4_bg"
+                    android:background="@drawable/select_main_bottom_tab5_bg"
                     android:enabled="false" />
 
                 <TextView

@@ -22,7 +22,7 @@ import com.tuofeng.bskyhunchbacktransport.databinding.ActivityLoginBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
 import com.tuofeng.bskyhunchbacktransport.module.SingleTextWatcher;
 import com.tuofeng.bskyhunchbacktransport.ui.view.DownTimerText;
-import com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton;
+import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
@@ -32,7 +32,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
     private EditText mEdLoginPhone, mEdLoginVerification;
     private DownTimerText mSendCode;
-    private LoginActButton mBtnLogin;
+    private SharedButton mBtnLogin;
     private boolean mSendCodeTag;
     private boolean mFinish = true;
     private RelativeLayout mRlayoutVerificationClear, mRelativeEmptyPhone;

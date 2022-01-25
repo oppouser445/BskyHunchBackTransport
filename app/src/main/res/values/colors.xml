@@ -63,4 +63,8 @@
     <color name="act_iinformation_authentication_tab_title_color">#191919</color>
     <color name="act_iinformation_authentication_tab_describe_color">#666666</color>
 
+    <color name="act_driver_certification_tv_color">#666666</color>
+    <color name="act_driver_certification_tv2_color">#191919</color>
+    <color name="act_driver_certification_line_color">#EEEEEE</color>
+
 </resources>

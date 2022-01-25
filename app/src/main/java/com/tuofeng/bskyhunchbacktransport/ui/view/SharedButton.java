@@ -10,25 +10,25 @@ import android.view.MotionEvent;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 
-public class LoginActButton extends androidx.appcompat.widget.AppCompatButton {
+public class SharedButton extends androidx.appcompat.widget.AppCompatButton {
 
     boolean mCancelled;
     private Rect mRect;
     private boolean mIsEnabled;
     private int mViewType;
 
-    public LoginActButton(Context context) {
+    public SharedButton(Context context) {
         super(context);
         initData();
     }
 
-    public LoginActButton(Context context, AttributeSet attrs) {
+    public SharedButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         initData();
         initAttrs(context, attrs);
     }
 
-    public LoginActButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SharedButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initData();
         initAttrs(context, attrs);
@@ -58,6 +58,8 @@ public class LoginActButton extends androidx.appcompat.widget.AppCompatButton {
             bg = R.drawable.select_btn_bg2;
             tvColor = R.color.color_btn_bg_text_color;
         } else if (mViewType == 2) {
+            bg = R.drawable.shape_btn_bg_orange;
+        } else if (mViewType == 3) {//默认状态
             bg = R.drawable.shape_btn_bg_orange;
         }
         setTextColor(getResources().getColor(tvColor));

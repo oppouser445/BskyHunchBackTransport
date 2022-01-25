@@ -1,8 +1,10 @@
 package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -11,20 +13,23 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.MineFragmentViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragmentViewModel> implements IMineFragmentView {
+public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragmentViewModel> implements IMineFragmentView, View.OnClickListener {
 
-    private FragmentActivity mActivity;
+    private MainActivity mActivity;
     private ViewPager vpUserBanner;
     private ArrayList<Integer> mViewListTest;
     private List<View> mViewList;
     private BannerPagerAdapter mBannerAdapter;
     private LinearLayout mlLayoutMainFragmentBannerDots;
+    private TextView mTvUserCertification;
 
     @Override
     int getLayoutID() {
@@ -38,7 +43,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
 
     @Override
     void initView() {
-        mActivity = getActivity();
+        mActivity = (MainActivity) getActivity();
         vpUserBanner = mDataBinding.vpUserBanner;
         mViewListTest = new ArrayList<>();
         mViewListTest.add(R.mipmap.act_main_banner_icon3);
@@ -52,7 +57,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
             imageView.setBackgroundResource(mViewListTest.get(i));
             mViewList.add(imageView);
         }
-        mBannerAdapter = new BannerPagerAdapter(mViewList,vpUserBanner);
+        mBannerAdapter = new BannerPagerAdapter(mViewList, vpUserBanner);
         vpUserBanner.setAdapter(mBannerAdapter);
 
         mlLayoutMainFragmentBannerDots = mDataBinding.lLayoutMainFragmentBannerDots;
@@ -98,7 +103,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
                 }*/
                 //LogUtils.e(TAG, "滑动当前下标 position ==" + position);
 
-                ViewMyUtils.setDotsLayoutStyle(mActivity,position,mlLayoutMainFragmentBannerDots);
+                ViewMyUtils.setDotsLayoutStyle(mActivity, position, mlLayoutMainFragmentBannerDots);
             }
 
             @Override
@@ -115,7 +120,20 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
                 }*/
             }
         });
-        ViewMyUtils.initDotsLayoutStyle(mActivity,mlLayoutMainFragmentBannerDots);
-        ViewMyUtils.setDotsLayoutStyle(mActivity,0,mlLayoutMainFragmentBannerDots);
+        ViewMyUtils.initDotsLayoutStyle(mActivity, mlLayoutMainFragmentBannerDots);
+        ViewMyUtils.setDotsLayoutStyle(mActivity, 0, mlLayoutMainFragmentBannerDots);
+
+        mTvUserCertification = mDataBinding.tvUserCertification;
+        mTvUserCertification.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_user_certification:
+                Intent intent = new Intent(mActivity, InformationAuthenticationActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

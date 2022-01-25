@@ -2,8 +2,7 @@
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activity.LoginActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -59,14 +58,14 @@
                     android:textColor="@color/loginact_tv_color1"
                     android:textSize="@dimen/sp_15" />
 
-                <com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
                     android:id="@+id/btn_my_driver"
                     style="@style/login_act_btn_style"
                     android:onClick="@{() -> viewModel.showLoginView(1)}"
                     android:text="我是司机"
                     android:textColor="@color/white" />
 
-                <com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
                     android:id="@+id/btn_my_car_team_leader"
                     style="@style/login_act_btn_style"
                     android:onClick="@{() -> viewModel.showLoginView(2)}"
@@ -74,7 +73,7 @@
                     android:textColor="@color/white"
                     app:bgType="1" />
 
-                <com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
                     android:id="@+id/btn_have_an_account"
                     style="@style/login_act_btn_style"
                     android:onClick="@{() -> viewModel.showLoginView(3)}"
@@ -230,7 +229,7 @@
 
                 </RelativeLayout>
 
-                <com.tuofeng.bskyhunchbacktransport.ui.view.LoginActButton
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
                     android:id="@+id/btn_login"
                     style="@style/login_act_btn_style"
                     android:layout_marginTop="@dimen/dp_33"
