@@ -1,11 +1,14 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
+import android.content.Intent;
+
 import com.tuofeng.bskyhunchbacktransport.R;
+import com.tuofeng.bskyhunchbacktransport.databinding.ActivityDriverIdentificationBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IDriverIdentificationView;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.DriverIdentificationViewModel;
 
-public class DriverIdentificationActivity extends BaseActivity implements IDriverIdentificationView {
+public class DriverIdentificationActivity extends BaseActivity<ActivityDriverIdentificationBinding, DriverIdentificationViewModel> implements IDriverIdentificationView {
 
     @Override
     protected DriverIdentificationViewModel getViewModel() {
@@ -20,6 +23,7 @@ public class DriverIdentificationActivity extends BaseActivity implements IDrive
     @Override
     protected void initView() {
         initTitleBar();
+        mDataBinding.setViewModel(mViewModel);
     }
 
     @Override
@@ -29,6 +33,7 @@ public class DriverIdentificationActivity extends BaseActivity implements IDrive
 
     @Override
     public void NextInformationAuthentication() {
-
+        Intent intent = new Intent(this, VehicleBasicInformationActivity.class);
+        startActivity(intent);
     }
 }

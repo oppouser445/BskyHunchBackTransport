@@ -184,4 +184,70 @@
         <item name="android:layout_marginTop">@dimen/dp_16</item>
     </style>
 
+    <style name="act_driver_certification_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_12</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="act_driver_certification_tv_content_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_8</item>
+        <item name="android:enabled">false</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/act_driver_certification_tv_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="act_driver_certification_content_layout_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_12</item>
+        <item name="android:layout_marginEnd">@dimen/dp_16</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_2"
+    android:includeFontPadding="false"
+    android:text="*"
+    android:textColor="@color/act_driver_mark_color"
+    android:textSize="@dimen/sp_14"
+
+    <style name="act_driver_certification_mark_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_2</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/act_driver_mark_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <style name="act_driver_certification_tv3_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_4</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/act_driver_vehicle_basic_tv1_color</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="act_driver_certification_tv4_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_8</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/act_driver_vehicle_basic_tv2_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
 </resources>

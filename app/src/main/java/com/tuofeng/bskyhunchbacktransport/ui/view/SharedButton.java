@@ -59,8 +59,11 @@ public class SharedButton extends androidx.appcompat.widget.AppCompatButton {
             tvColor = R.color.color_btn_bg_text_color;
         } else if (mViewType == 2) {
             bg = R.drawable.shape_btn_bg_orange;
-        } else if (mViewType == 3) {//默认状态
+        } else if (mViewType == 3) {
             bg = R.drawable.shape_btn_bg_orange;
+        } else if (mViewType == 4) {
+            bg = R.drawable.shape_btn_bg_grey;
+            tvColor = R.color.color_main_orange;
         }
         setTextColor(getResources().getColor(tvColor));
         setBackgroundResource(bg);

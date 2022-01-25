@@ -67,4 +67,10 @@
     <color name="act_driver_certification_tv2_color">#191919</color>
     <color name="act_driver_certification_line_color">#EEEEEE</color>
 
+    <color name="act_driver_mark_color">#FF1108</color>
+    <color name="act_driver_vehicle_basic_tv1_color">#191919</color>
+    <color name="act_driver_vehicle_basic_tv2_color">#666666</color>
+
+    <color name="color_shape_btn_grey">#F2F2F2</color>
+
 </resources>

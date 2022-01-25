@@ -4,13 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginTop="@dimen/dp_12"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/act_driver_certification_title_style">
 
         <View
             android:layout_width="@dimen/dp_4"
@@ -18,14 +12,8 @@
             android:background="@drawable/shape_driver_certification_mark" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_8"
-            android:enabled="false"
-            android:includeFontPadding="false"
-            android:text="基本信息 "
-            android:textColor="@color/act_driver_certification_tv_color"
-            android:textSize="@dimen/sp_14" />
+            style="@style/act_driver_certification_tv_content_style"
+            android:text="基本信息 " />
 
     </LinearLayout>
 
