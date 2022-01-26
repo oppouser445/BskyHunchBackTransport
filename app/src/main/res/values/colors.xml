@@ -73,4 +73,6 @@
 
     <color name="color_shape_btn_grey">#F2F2F2</color>
 
+    <color name="color_contractconfirmation_tv_color">#191919</color>
+
 </resources>

@@ -5,7 +5,6 @@ import android.content.Intent;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityDriverIdentificationBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IDriverIdentificationView;
-import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.DriverIdentificationViewModel;
 
 public class DriverIdentificationActivity extends BaseActivity<ActivityDriverIdentificationBinding, DriverIdentificationViewModel> implements IDriverIdentificationView {
@@ -24,6 +23,7 @@ public class DriverIdentificationActivity extends BaseActivity<ActivityDriverIde
     protected void initView() {
         initTitleBar();
         mDataBinding.setViewModel(mViewModel);
+        mToolbarTitle.setText("身份认证");
     }
 
     @Override
@@ -33,7 +33,7 @@ public class DriverIdentificationActivity extends BaseActivity<ActivityDriverIde
 
     @Override
     public void NextInformationAuthentication() {
-        Intent intent = new Intent(this, VehicleBasicInformationActivity.class);
+        Intent intent = new Intent(this, DriverInformationActivity.class);
         startActivity(intent);
     }
 }

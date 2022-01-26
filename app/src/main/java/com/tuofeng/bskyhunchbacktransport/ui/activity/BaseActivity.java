@@ -2,6 +2,7 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 
 import org.greenrobot.eventbus.EventBus;
 
-public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewModel> extends Activity implements IView {
+public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseViewModel> extends Activity implements IView {
 
     protected B mDataBinding;
     protected M mViewModel;
@@ -45,22 +46,29 @@ public abstract class BaseActivity<B extends ViewDataBinding,M extends BaseViewM
 
     protected abstract void initData();
 
-    protected void initTitleBar(){
+    protected void initTitleBar() {
         initTitleBar(1);
     }
 
-    protected void initTitleBar(int type){
+    protected void initTitleBar(int type) {
         initTitleBarBean();
         initStatusBar(type);
     }
-    protected void initTitleBarBean( ){
+
+    protected void initTitleBarBean() {
         mToolbarBack = findViewById(R.id.toolbar_back);
+        mToolbarBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mToolbarTitle = findViewById(R.id.toolbar_title);
     }
 
-    protected void initStatusBar(int type){
+    protected void initStatusBar(int type) {
         if (type == 1) {
-            StatusBarUtil.setTransparentStatusBar(getWindow(),1);
+            StatusBarUtil.setTransparentStatusBar(getWindow(), 1);
         } else {
             StatusBarUtil.setTransparentStatusBar(getWindow());
         }

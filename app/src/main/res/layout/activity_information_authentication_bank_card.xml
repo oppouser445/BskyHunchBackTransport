@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.InformationAuthenticationBankCardViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.activity.InformationAuthenticationBankCardActivity">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50_5"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_28"
+                android:text="暂时不添加银行卡"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_4"
+            android:background="#F4F4F4" />
+
+        <LinearLayout style="@style/act_driver_certification_title_style">
+
+            <View style="@style/act_information_authentication_title_mark_style" />
+
+            <TextView
+                style="@style/act_driver_certification_tv_content_style"
+                android:text="添加银行" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/relative_seal"
+            style="@style/act_driver_certification_content_layout_style"
+            android:layout_marginTop="@dimen/dp_20_5">
+
+            <TextView
+                style="@style/act_driver_certification_mark_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/act_driver_certification_tv3_style"
+                android:text="开户行姓名:" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:text="张三" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:layout_marginTop="@dimen/dp_24_5">
+
+            <TextView
+                style="@style/act_driver_certification_mark_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/act_driver_certification_tv3_style"
+                android:text="银行卡号:" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:text="6217002020021452347" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:layout_marginTop="@dimen/dp_24_5">
+
+            <TextView
+                style="@style/act_driver_certification_mark_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/act_driver_certification_tv3_style"
+                android:text="开户银行:" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:text="重庆大渡口支行" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:layout_marginTop="@dimen/dp_24_5">
+
+            <TextView
+                style="@style/act_driver_certification_mark_style"
+                android:text="*" />
+
+            <TextView
+                style="@style/act_driver_certification_tv3_style"
+                android:text="身份证号:" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:text="500384199309092832" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:layout_marginTop="@dimen/dp_24_5">
+
+            <TextView
+                style="@style/act_driver_certification_mark_style"
+                android:text="*" />
+
+            <TextView
+                android:id="@+id/tv_seal"
+                style="@style/act_driver_certification_tv3_style"
+                android:text="手机号码:" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:text="15615677756" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                style="@style/act_information_authentication_button_style"
+                android:layout_marginStart="@dimen/dp_20"
+                android:onClick="@{()->viewModel.PreviousAction()}"
+                android:text="上一步"
+                app:bgType="4" />
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                style="@style/act_information_authentication_button_style"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:onClick="@{()->viewModel.NextAction()}"
+                android:text="下一步 签订合同(5/6)"
+                app:bgType="3" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

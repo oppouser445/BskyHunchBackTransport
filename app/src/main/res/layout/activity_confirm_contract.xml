@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.ConfirmContractViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_93"
+            android:layout_height="@dimen/dp_93"
+            android:layout_marginTop="@dimen/dp_71"
+            android:src="@mipmap/wait_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_27_5"
+            android:text="正在审核中，请稍后"
+            android:textColor="#25a3fc"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_33"
+            android:layout_marginTop="@dimen/dp_49"
+            android:layout_marginEnd="@dimen/dp_33"
+            android:layout_marginBottom="@dimen/dp_48"
+            android:text="李某某，你已签署承运合同，且相关资料信息等已保存。合同在实名认证审核通过后正式生效，并通过短信方式发送到你的手机，请你知悉。合同正式生效后，你即可在驮丰平台开展承运业务，祝合作愉快。"
+            android:textColor="#191919"
+            android:textSize="@dimen/sp_14" />
+
+        <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.PreviousAction()}"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+    </LinearLayout>
+
+</layout>

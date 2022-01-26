@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.ContractConfirmationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.activity.ContractConfirmationActivity">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lLyaout_contract_confirmation_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:includeFontPadding="false"
+                    android:text="货物运输承运合同"
+                    android:textColor="@color/color_contractconfirmation_tv_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_2_5"
+                    android:includeFontPadding="false"
+                    android:text="合同编号：201809122321"
+                    android:textColor="@color/color_contractconfirmation_tv_color"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_signing_contract"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chk_login_instruction"
+                    android:layout_width="@dimen/dp_21"
+                    android:layout_height="@dimen/dp_21"
+                    android:layout_marginTop="@dimen/dp_m_2"
+                    android:button="@drawable/select_act_login_agreement_btn_bg"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txt_login_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/chk_login_instruction"
+                    android:includeFontPadding="false"
+                    android:text="首次登录自动注册网络货运平台账号，并默认您已\n阅读同意《用户服务协议》《隐私协议》"
+                    android:textColor="#ffb1b1b1"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                android:id="@+id/btn_signing_contract"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.PreviousAction()}"
+                android:text="签订合同(6/6)"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

@@ -92,9 +92,9 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
         int titleBarColor = 0;
         BaseFragment fragment = null;
         if (type == 0) {
-            if (mMainFragment == null) {
+            /*if (mMainFragment == null) {
                 mMainFragment = new MainFragment();
-            }
+            }*/
             fragment = mMainFragment;
             titleBarColor = 1;
         }
