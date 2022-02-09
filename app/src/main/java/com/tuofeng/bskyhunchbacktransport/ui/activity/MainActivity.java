@@ -3,6 +3,7 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.tuofeng.bskyhunchbacktransport.R;
@@ -22,7 +23,8 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
     private SupplyHallFragment mSupplyHallFragment;
     private MessageCenterFragment mMessageCenterFragment;
     private MineFragment mMineFragment;
-    private LinearLayout mLlayoutMain, mLlayoutMainHome, mLlayoutSupplyHall, mLlayoutTask,mLlayoutMessage, mlLayoutMine;
+    private LinearLayout mLlayoutMain;
+    private RelativeLayout mLlayoutMainHome, mLlayoutSupplyHall, mLlayoutTask, mLlayoutMessage, mlLayoutMine;
     private BaseFragment mTheCurrentpage;
 
     @Override
@@ -104,7 +106,7 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
             }
             fragment = mSupplyHallFragment;
             titleBarColor = 1;
-        }else if (type == 3) {
+        } else if (type == 3) {
             if (mMessageCenterFragment == null) {
                 mMessageCenterFragment = new MessageCenterFragment();
             }
@@ -126,7 +128,7 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
     private void setBottomViewStyle(int type) {
         int childCount = mLlayoutMain.getChildCount();
         for (int i = 0; i < childCount; i++) {
-            LinearLayout childAt = (LinearLayout) mLlayoutMain.getChildAt(i);
+            RelativeLayout childAt = (RelativeLayout) mLlayoutMain.getChildAt(i);
             TextView tv1 = (TextView) childAt.getChildAt(0);
             TextView tv2 = (TextView) childAt.getChildAt(1);
             tv1.setEnabled(i == type);

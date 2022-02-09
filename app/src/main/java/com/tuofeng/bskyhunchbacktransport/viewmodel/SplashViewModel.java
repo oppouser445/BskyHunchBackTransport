@@ -37,7 +37,7 @@ public class SplashViewModel extends BaseViewModel<ISplashView,SplashRepository>
     }
 
     private void setData(String data) {
-        LogUtils.e(TAG,data+"");
+        //LogUtils.e(TAG,data+"");
         testDataString.set(TextUtils.isEmpty(data) ? "暂无数据" : "获取到数据");
         mData = "Bindable方式成功";
         notifyPropertyChanged(BR.testData);

@@ -15,7 +15,7 @@
 
     <style name="main_act_title_list_lLayout_style">
         <item name="android:layout_width">@dimen/dp_0</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
         <item name="android:orientation">vertical</item>
@@ -137,6 +137,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/dp_3</item>
         <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_centerHorizontal">true</item>
         <item name="android:textSize">@dimen/sp_9</item>
         <item name="android:textColor">@color/fragment_main_bottom_tv_color</item>
     </style>
@@ -254,6 +255,18 @@
         <item name="android:layout_marginTop">@dimen/dp_27_5</item>
         <item name="android:layout_marginBottom">@dimen/dp_20</item>
         <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="act_main_bottom_dots_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_m_8</item>
+        <item name="android:layout_marginTop">@dimen/dp_m_5</item>
+        <item name="android:background">@drawable/shape_main_act_bottom_red_dots</item>
+        <item name="android:textSize">@dimen/sp_9</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:includeFontPadding">false</item>
         <item name="android:gravity">center</item>
     </style>
 

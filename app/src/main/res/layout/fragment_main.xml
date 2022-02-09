@@ -119,79 +119,104 @@
                 style="@style/main_act_options_bar1_layout_home_style"
                 android:background="@color/white">
 
-                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+                <RelativeLayout style="@style/main_act_title_list_lLayout_style">
 
                     <ImageView
-                        android:layout_width="27.5dp"
-                        android:layout_height="32.5dp"
+                        android:id="@+id/img_waybill_management"
+                        android:layout_width="@dimen/dp_27_5"
+                        android:layout_height="@dimen/dp_32_5"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_20"
                         android:src="@mipmap/act_waybill_task_icon" />
 
                     <TextView
                         style="@style/main_act_options_bar_txt_style"
+                        android:layout_below="@+id/img_waybill_management"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_7_5"
                         android:text="运单管理" />
-                </LinearLayout>
 
-                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+                    <TextView
+                        android:id="@+id/tv_main_bottom_tab1_dots"
+                        style="@style/act_main_bottom_dots_style"
+                        android:layout_alignTop="@+id/img_waybill_management"
+                        android:layout_toEndOf="@+id/img_waybill_management"
+                        android:text="9" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/main_act_title_list_lLayout_style">
 
                     <ImageView
+                        android:id="@+id/img_cooperate"
                         android:layout_width="@dimen/dp_27_5"
-                        android:layout_height="@dimen/dp_32_5"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_20"
                         android:src="@mipmap/act_cooperate_icon" />
 
                     <TextView
                         style="@style/main_act_options_bar_txt_style"
+                        android:layout_below="@+id/img_cooperate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_9"
                         android:text="合作" />
-                </LinearLayout>
 
-                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+                    <TextView
+                        style="@style/act_main_bottom_dots_style"
+                        android:layout_alignTop="@+id/img_cooperate"
+                        android:layout_toEndOf="@+id/img_cooperate"
+                        android:background="@drawable/shape_main_act_title_red_rectangle"
+                        android:paddingStart="@dimen/dp_4"
+                        android:paddingTop="@dimen/dp_1"
+                        android:paddingEnd="@dimen/dp_4"
+                        android:paddingBottom="@dimen/dp_2"
+                        android:text="new" />
+
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/main_act_title_list_lLayout_style">
 
                     <ImageView
+                        android:id="@+id/img_operation_guide"
                         android:layout_width="@dimen/dp_29"
                         android:layout_height="@dimen/dp_32_5"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_20"
                         android:src="@mipmap/act_operation_guide_icon" />
 
                     <TextView
                         style="@style/main_act_options_bar_txt_style"
+                        android:layout_below="@+id/img_operation_guide"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_7"
                         android:text="操作指南" />
-                </LinearLayout>
+                </RelativeLayout>
 
-                <LinearLayout style="@style/main_act_title_list_lLayout_style">
+                <RelativeLayout style="@style/main_act_title_list_lLayout_style">
 
                     <ImageView
+                        android:id="@+id/img_common_problem"
                         android:layout_width="@dimen/dp_32_5"
                         android:layout_height="@dimen/dp_32_5"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginTop="@dimen/dp_20"
                         android:src="@mipmap/act_common_problem_icon" />
 
                     <TextView
                         style="@style/main_act_options_bar_txt_style"
+                        android:layout_below="@+id/img_common_problem"
+                        android:layout_centerHorizontal="true"
                         android:text="常见问题" />
-                </LinearLayout>
+                </RelativeLayout>
 
             </LinearLayout>
 
-            <RelativeLayout
+            <com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow
+                android:id="@+id/vp_banner"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_74_5"
-                android:layout_margin="@dimen/dp_12">
-
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/vp_banner"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-                <LinearLayout
-                    android:id="@+id/lLayout_main_fragment_banner_dots"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:orientation="horizontal" />
-
-            </RelativeLayout>
+                android:layout_margin="@dimen/dp_12" />
 
             <RelativeLayout
                 android:layout_width="match_parent"

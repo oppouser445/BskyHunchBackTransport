@@ -1,6 +1,7 @@
 package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 
 import android.content.Intent;
+import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,7 +22,6 @@ public class MessageCenterFragment extends BaseFragment<FragmentMessageCenterBin
     private RecyclerView mRecyclerMessageCenter;
     private List<String> mDataList;
     private RecycleMessageCenterAdapter mRecycleAdapter;
-    private MainActivity mActivity;
 
     @Override
     int getLayoutID() {
@@ -36,6 +36,9 @@ public class MessageCenterFragment extends BaseFragment<FragmentMessageCenterBin
     @Override
     void initView() {
         mActivity = (MainActivity) getActivity();
+        initTitleBar();
+        mToolbarBack.setVisibility(View.GONE);
+        mToolbarTitle.setText("消息中心");
         mRecyclerMessageCenter = mDataBinding.recyclerMessageCenter;
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(mActivity, LinearLayoutManager.VERTICAL, false);
         //mRecyclerActHome.setNestedScrollingEnabled(false);

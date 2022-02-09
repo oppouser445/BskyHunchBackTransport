@@ -1,8 +1,8 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.content.Context;
-import android.support.multidex.MultiDex;
 
+import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
 public class BaseApplication extends MultiDexApplication {

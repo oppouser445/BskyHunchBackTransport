@@ -31,24 +31,34 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/lLayout_main"
                 style="@style/act_table_bottom_layout_style">
-
+                <!--act_main_bottom_red_dots_color-->
                 <TextView
                     android:id="@+id/tv_main_bottom_tab1"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_19"
+                    android:layout_centerHorizontal="true"
                     android:background="@drawable/select_main_bottom_tab1_bg"
                     android:enabled="true" />
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab1_content"
                     style="@style/act_table_bottom_tv_style"
+                    android:layout_below="@+id/tv_main_bottom_tab1"
+                    android:layout_centerHorizontal="true"
                     android:text="首页" />
-            </LinearLayout>
 
-            <LinearLayout
+                <TextView
+                    android:id="@+id/tv_main_bottom_tab1_dots"
+                    style="@style/act_main_bottom_dots_style"
+                    android:layout_toEndOf="@+id/tv_main_bottom_tab1"
+                    android:text="9" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/lLayout_supply_hall"
                 style="@style/act_table_bottom_layout_style">
 
@@ -56,16 +66,18 @@
                     android:id="@+id/tv_main_bottom_tab2"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_19"
+                    android:layout_centerHorizontal="true"
                     android:background="@drawable/select_main_bottom_tab2_bg"
                     android:enabled="false" />
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab2_content"
                     style="@style/act_table_bottom_tv_style"
+                    android:layout_below="@+id/tv_main_bottom_tab2"
                     android:text="货源大厅" />
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/lLayout_task"
                 style="@style/act_table_bottom_layout_style">
 
@@ -73,16 +85,18 @@
                     android:id="@+id/tv_main_bottom_tab3"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_19"
+                    android:layout_centerHorizontal="true"
                     android:background="@drawable/select_main_bottom_tab3_bg"
                     android:enabled="false" />
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab3_content"
                     style="@style/act_table_bottom_tv_style"
+                    android:layout_below="@+id/tv_main_bottom_tab3"
                     android:text="任务" />
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/lLayout_message"
                 style="@style/act_table_bottom_layout_style">
 
@@ -90,16 +104,18 @@
                     android:id="@+id/tv_main_bottom_tab4"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_19"
+                    android:layout_centerHorizontal="true"
                     android:background="@drawable/select_main_bottom_tab5_bg"
                     android:enabled="false" />
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab4_content"
                     style="@style/act_table_bottom_tv_style"
+                    android:layout_below="@+id/tv_main_bottom_tab4"
                     android:text="消息" />
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/lLayout_mine"
                 style="@style/act_table_bottom_layout_style">
 
@@ -107,14 +123,23 @@
                     android:id="@+id/tv_main_bottom_tab5"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_19"
+                    android:layout_centerHorizontal="true"
                     android:background="@drawable/select_main_bottom_tab4_bg"
                     android:enabled="false" />
 
                 <TextView
                     android:id="@+id/tv_main_bottom_tab5_content"
                     style="@style/act_table_bottom_tv_style"
+                    android:layout_below="@+id/tv_main_bottom_tab5"
                     android:text="我的" />
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_main_bottom_tab2_dots"
+                    style="@style/act_main_bottom_dots_style"
+                    android:layout_toEndOf="@+id/tv_main_bottom_tab5"
+                    android:text="9" />
+
+            </RelativeLayout>
 
         </LinearLayout>
 

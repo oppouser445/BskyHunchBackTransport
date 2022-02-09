@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.tuofeng.bskyhunchbacktransport.R;
-import com.tuofeng.bskyhunchbacktransport.base.IView;
 import com.tuofeng.bskyhunchbacktransport.in.IPublicCallback;
 
 public class ViewMyUtils {
@@ -82,34 +81,32 @@ public class ViewMyUtils {
         return ssb;
     }
 
-    public static void initDotsLayoutStyle(Context context,LinearLayout homeLlyaout){
+    public static void initDotsLayoutStyle(Context context, LinearLayout homeLlyaout) {
+        int spacing = CommonUtil.px2dp(context, 10);
         for (int i = 0; i < 3; i++) {
             ImageView imageView = new ImageView(context);
-            int i1 = CommonUtil.px2dp(context, 10);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(i1, i1);
-            params.setMargins(i1, i1, i1, i1);
-            imageView.setImageResource(R.drawable.shape_main_fragment_dots_default);
+            int width = CommonUtil.px2dp(context, i == 0 ? 20 : 10);
+            int spacingRight = CommonUtil.px2dp(context, i == 0 ? 5 : 10);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, CommonUtil.px2dp(context, 10));
+            params.setMargins(spacingRight, spacing, spacingRight, spacing);
+            imageView.setImageResource(i == 0 ? R.drawable.shape_main_fragment_dots : R.drawable.shape_main_fragment_dots_default);
             imageView.setLayoutParams(params);
             homeLlyaout.addView(imageView);
         }
     }
 
-    public static void setDotsLayoutStyle(Context context,int position,LinearLayout homeLlyaout){
+    public static void setDotsLayoutStyle(Context context, int position, LinearLayout homeLlyaout) {
         for (int i = 0; i < 3; i++) {
-            boolean b = position == i;
+            boolean b = i == position - 1;
             ImageView imageView = (ImageView) homeLlyaout.getChildAt(i);
             int spacing = CommonUtil.px2dp(context, 10);
             int width = CommonUtil.px2dp(context, b ? 20 : 10);
             int spacingRight = CommonUtil.px2dp(context, b ? 5 : 10);
             LinearLayout.LayoutParams layoutParams = /*new LinearLayout.LayoutParams(width, high)*/(LinearLayout.LayoutParams) imageView.getLayoutParams();
             layoutParams.width = width;
-            layoutParams.setMargins(spacing, spacing, spacingRight, spacing);
+            layoutParams.setMargins(spacingRight, spacing, spacingRight, spacing);
             imageView.setImageResource(b ? R.drawable.shape_main_fragment_dots : R.drawable.shape_main_fragment_dots_default);
             imageView.setLayoutParams(layoutParams);
         }
     }
-
-
-    /**/
-
 }

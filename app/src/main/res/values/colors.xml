@@ -21,13 +21,14 @@
     <color name="es_green">#01AE66</color>
 
     <color name="loginact_tv_color1">#ffb1b1b1</color>
-
     <color name="act_login_edit_bg">#F4F4F4</color>
-
     <color name="act_login_bottom_bg">#B1B1B1</color>
-
     <color name="act_login_edit_color1">#191919</color>
     <color name="act_login_edit_color2">#C7C7C7</color>
+    <color name="act_login_re_adapter_tv_color">#ff666666</color>
+    <color name="act_login_re_adapter_tv2_color">#ffff251c</color>
+    <color name="act_login_re_title_tv_color">#ff1377ff</color>
+    <color name="act_login_re_tv_color">#ff191919</color>
 
     <color name="universal_view_press">#EBEBEB</color>
     <color name="universal_view__default">#FFFFFF</color>
@@ -36,11 +37,7 @@
     <color name="act_main_title_notice_content_color">#FF251C</color>
     <color name="act_main_layout_bg_color">#F4F4F4</color>
     <color name="act_main_options_bar_txt_color">#191919</color>
-
-    <color name="act_login_re_adapter_tv_color">#ff666666</color>
-    <color name="act_login_re_adapter_tv2_color">#ffff251c</color>
-    <color name="act_login_re_title_tv_color">#ff1377ff</color>
-    <color name="act_login_re_tv_color">#ff191919</color>
+    <color name="act_main_bottom_red_dots_color">#FF1108</color>
 
     <color name="fragment_supply_hall_table_tv_color">#666666</color>
 
@@ -50,7 +47,6 @@
     <color name="fragment_mine_tab1_wallet_color">#ff191919</color>
     <color name="fragment_mine_tab1_withdraw_color">#ffff251c</color>
     <color name="fragment_mine_tab1_amount_color">#fff35b00</color>
-
     <color name="fragment_mine_tab2_details_color">#469CD3</color>
     <color name="fragment_mine_tab2_waybill_number_color">#3594D1</color>
     <color name="fragment_mine_tab3_tv_color">#666666</color>
@@ -66,7 +62,6 @@
     <color name="act_driver_certification_tv_color">#666666</color>
     <color name="act_driver_certification_tv2_color">#191919</color>
     <color name="act_driver_certification_line_color">#EEEEEE</color>
-
     <color name="act_driver_mark_color">#FF1108</color>
     <color name="act_driver_vehicle_basic_tv1_color">#191919</color>
     <color name="act_driver_vehicle_basic_tv2_color">#666666</color>

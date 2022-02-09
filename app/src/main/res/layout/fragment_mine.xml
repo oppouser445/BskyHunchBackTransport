@@ -89,25 +89,11 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow
+                android:id="@+id/vp_user_banner"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_74_5"
-                android:layout_margin="@dimen/dp_12">
-
-                <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/vp_user_banner"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_74_5" />
-
-                <LinearLayout
-                    android:id="@+id/lLayout_main_fragment_banner_dots"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:orientation="horizontal"/>
-
-            </RelativeLayout>
+                android:layout_margin="@dimen/dp_12" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -362,7 +348,9 @@
 
             </LinearLayout>
 
-            <LinearLayout style="@style/main_fragment_min_layout_style">
+            <LinearLayout
+                style="@style/main_fragment_min_layout_style"
+                android:layout_marginBottom="@dimen/dp_11_5">
 
                 <TextView
                     style="@style/main_fragment_mine_layout_title_style"
