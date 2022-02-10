@@ -57,12 +57,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
 
     protected void initTitleBarBean() {
         mToolbarBack = findViewById(R.id.toolbar_back);
-        mToolbarBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        mToolbarBack.setOnClickListener(v -> finish());
         mToolbarTitle = findViewById(R.id.toolbar_title);
     }
 

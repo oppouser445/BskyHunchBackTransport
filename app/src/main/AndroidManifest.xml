@@ -40,22 +40,13 @@
 
     <application
         android:name=".ui.activity.BaseApplication"
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".ui.activity.DriverInformationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.ConfirmContractActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.ContractConfirmationActivity"
-            android:exported="false" />
+
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,12 +54,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.activity.HistoryWayBillDetailsActivity"
+            android:theme="@style/AppActivityStyle" />
+        <activity
+            android:name=".ui.activity.HistoricalWayBillActivity"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.activity.WayBillManagementActivity"
+            android:exported="false"
+            android:theme="@style/AppActivityStyle" />
+        <activity
+            android:name=".ui.activity.DriverInformationActivity"
+            android:exported="false"
+            android:theme="@style/AppActivityStyle" />
+        <activity
+            android:name=".ui.activity.ConfirmContractActivity"
+            android:exported="false"
+            android:theme="@style/AppActivityStyle" />
+        <activity
+            android:name=".ui.activity.ContractConfirmationActivity"
+            android:exported="false"
+            android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.LoginActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.MainActivity"
@@ -79,60 +92,35 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.MessageCenterDetailsActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.InformationAuthenticationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.TeamCaptainCertificationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.DriverIdentificationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.TeamCaptainCertificationReview"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.VehicleCertificationInformationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:exported="false"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.VehicleBasicInformationActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.InformationAuthenticationBankCardActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
     </application>
 

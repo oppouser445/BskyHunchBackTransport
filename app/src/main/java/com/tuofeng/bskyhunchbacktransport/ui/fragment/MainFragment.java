@@ -1,6 +1,8 @@
 package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,6 +17,9 @@ import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMainBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMainFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.RecycleBannerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.FragmentMainViewModel;
@@ -32,14 +37,16 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     private List<String> mDataList;
     private RecyclerView mRecyclerActHome;
     private RecycleBannerAdapter mRecycleBannerAdapter;
-    private FragmentActivity mActivity;
+    private MainActivity mActivity;
     private final String TAG = "MainFragment";
     private float mNoticeHeight;
-    private  int[] mImageIds = new int[]{
+    private int[] mImageIds = new int[]{
             R.mipmap.act_main_banner_icon3,
             R.mipmap.act_main_banner_icon1,
             R.mipmap.act_main_banner_icon2,
     };
+    private LinearLayout mLlyaoutWaybillManagement,mLlyaoutVehicleManagement,mLlyaoutPersonnelManagement;
+    private Intent mIntent;
 
     @Override
     int getLayoutID() {
@@ -53,7 +60,15 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
 
     @Override
     void initView() {
-        mActivity = getActivity();
+        mActivity = (MainActivity) getActivity();
+
+        mLlyaoutWaybillManagement = mDataBinding.llyaoutWaybillManagement;
+        mLlyaoutWaybillManagement.setOnClickListener(this);
+        mLlyaoutVehicleManagement = mDataBinding.llyaoutVehicleManagement;
+        mLlyaoutVehicleManagement.setOnClickListener(this);
+        mLlyaoutPersonnelManagement = mDataBinding.llyaoutPersonnelManagement;
+        mLlyaoutPersonnelManagement.setOnClickListener(this);
+
         mImgTitleNoticeClear = mDataBinding.imgTitleNoticeClear;
         mImgTitleNoticeClear.setOnClickListener(this);
         mLayoutTitleNoticeHome = mDataBinding.rlayoutTitleNoticeHome;
@@ -65,8 +80,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
 
         mViewList = new ArrayList<>();
 
-        for (int i = 0;i<mImageIds.length ;i++){
-            mVpBanner.addImageTitle("", "",mImageIds[i]);
+        for (int i = 0; i < mImageIds.length; i++) {
+            mVpBanner.addImageTitle("", "", mImageIds[i]);
         }
         mVpBanner.commit();
 
@@ -80,14 +95,31 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     }
 
     @Override
+    void initData() {
+
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         mVpBanner.releaseResource();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.llyaout_personnel_management:
+                mIntent = new Intent(mActivity, HistoricalWayBillActivity.class);
+                startActivity(mIntent);
+                break;
+            case R.id.llyaout_vehicle_management:
+                mIntent = new Intent(mActivity, WayBillManagementActivity.class);
+                startActivity(mIntent);
+                break;case R.id.llyaout_waybill_management:
+                Intent intent = new Intent(mActivity, WayBillManagementActivity.class);
+                startActivity(intent);
+                break;
             case R.id.img_title_notice_clear:
                 setNoticeViewStyle(true);
                 break;

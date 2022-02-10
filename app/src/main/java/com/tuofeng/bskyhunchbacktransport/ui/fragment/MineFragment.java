@@ -58,6 +58,11 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     }
 
     @Override
+    void initData() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_user_certification:

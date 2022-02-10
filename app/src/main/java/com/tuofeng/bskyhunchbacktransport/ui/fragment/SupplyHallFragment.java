@@ -90,6 +90,11 @@ public class SupplyHallFragment extends BaseFragment<FragmentSupplyHallBinding, 
     }
 
     @Override
+    void initData() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.llyaout_sort:

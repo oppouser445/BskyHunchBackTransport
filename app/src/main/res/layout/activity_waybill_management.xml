@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlelbar_layout" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34"
+        android:layout_margin="@dimen/dp_12"
+        android:background="@drawable/shape_search_bg"
+        android:drawableStart="@mipmap/search_left_icon"
+        android:drawablePadding="@dimen/dp_4"
+        android:hint="请输入车牌号/装货地/卸货地"
+        android:textColorHint="@color/shape_search_hit_color"
+        android:textSize="@dimen/sp_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -43,9 +43,11 @@ public abstract class BaseFragment<B extends ViewDataBinding,M extends BaseViewM
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initView();
+        initData();
     }
 
     abstract void initView();
+    abstract void initData();
     abstract int getLayoutID();
 
     abstract M getViewModel();

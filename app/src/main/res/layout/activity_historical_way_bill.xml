@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.HistoricalWayBillActivity">
+
+    <include layout="@layout/titlelbar_layout" />
+
+    <com.tuofeng.bskyhunchbacktransport.ui.view.slidingTabLayout.SlidingTabLayout
+        android:id="@+id/tl_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        app:tl_divider_color="@color/es_bg"
+        app:tl_divider_padding="@dimen/dp_0"
+        app:tl_divider_width="0dp"
+        app:tl_indicator_color="@color/color_main_orange"
+        app:tl_indicator_height="@dimen/dp_2"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_padding="@dimen/dp_27"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/color_main_orange"
+        app:tl_textUnselectColor="@color/color_btn_grey"
+        app:tl_textsize="@dimen/sp_14" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

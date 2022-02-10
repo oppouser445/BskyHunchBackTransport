@@ -53,4 +53,10 @@ public class MessageCenterFragment extends BaseFragment<FragmentMessageCenterBin
             mActivity.startActivity(intent );
         });
     }
+
+    @Override
+    void initData() {
+
+    }
+
 }

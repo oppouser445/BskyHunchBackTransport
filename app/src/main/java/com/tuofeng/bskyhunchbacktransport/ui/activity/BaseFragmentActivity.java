@@ -1,12 +1,15 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.FragmentActivity;
 
+import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.base.IView;
 import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
@@ -17,6 +20,8 @@ public abstract class BaseFragmentActivity<B extends ViewDataBinding,M extends B
 
     protected M mViewModel;
     protected B mDataBinding;
+    protected ImageView mToolbarBack;
+    protected TextView mToolbarTitle;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,4 +61,28 @@ public abstract class BaseFragmentActivity<B extends ViewDataBinding,M extends B
     public void dismissLoadingDialog() {
 
     }
+
+    protected void initTitleBar() {
+        initTitleBar(1);
+    }
+
+    protected void initTitleBar(int type) {
+        initTitleBarBean();
+        initStatusBar(type);
+    }
+
+    protected void initTitleBarBean() {
+        mToolbarBack = findViewById(R.id.toolbar_back);
+        mToolbarBack.setOnClickListener(v -> finish());
+        mToolbarTitle = findViewById(R.id.toolbar_title);
+    }
+
+    protected void initStatusBar(int type) {
+        if (type == 1) {
+            StatusBarUtil.setTransparentStatusBar(getWindow(), 1);
+        } else {
+            StatusBarUtil.setTransparentStatusBar(getWindow());
+        }
+    }
+
 }
