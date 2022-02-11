@@ -110,8 +110,6 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.llyaout_personnel_management:
-                mIntent = new Intent(mActivity, HistoricalWayBillActivity.class);
-                startActivity(mIntent);
                 break;
             case R.id.llyaout_vehicle_management:
                 mIntent = new Intent(mActivity, WayBillManagementActivity.class);

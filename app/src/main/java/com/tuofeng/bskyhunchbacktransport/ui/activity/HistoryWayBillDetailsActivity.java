@@ -1,8 +1,5 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityHistoryWayBillDetailsBinding;

@@ -11,4 +11,9 @@ public class MineFragmentViewModel extends BaseViewModel<IMineFragmentView, Mine
     public MineFragmentViewModel(IMineFragmentView iView) {
         super(iView, new MineFragmentRepository());
     }
+
+    public void startHistoricalWayBillActivity(){
+        mIView.startHistoricalWayBillActivity();
+    }
+
 }

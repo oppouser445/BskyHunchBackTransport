@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataBean"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_driver_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp_11_5"
+            android:layout_marginTop="@dimen/dp_12"
+            android:includeFontPadding="false"
+            android:text="王小萌"
+            android:textColor="@color/color_main_orange"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_number_plate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_driver_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp_11_5"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:includeFontPadding="false"
+            android:text="京A888888"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_19"
+            android:layout_height="@dimen/dp_19"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/driver_status1" />
+
+    </RelativeLayout>
+
+</layout>

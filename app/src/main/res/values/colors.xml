@@ -7,6 +7,8 @@
 
     <color name="color_main_orange">#FF8823</color>
     <color name="act_main_default_bg">#F4F4F4</color>
+    <color name="view_line_color">#F4F4F4</color>
+    <color name="divideLine">#979797</color>
 
     <color name="color_login_line">#F5F5F5</color>
 
@@ -79,8 +81,15 @@
     <!-- TabLayout Start -->
     <color name="es_bg">#F5F5F5</color>
     <color name="color_btn_grey">#666666</color>
-
     <!-- TabLayout End -->
 
+    <color name="act_history_waybill_details_title_color">#191919</color>
+    <color name="act_history_waybill_details_content_color">#666666</color>
+
+    <color name="act_waybill_management_color">#191919</color>
+    <color name="act_waybill_management_color2">#666666</color>
+
+    <color name="color_circle_green">#17AE03</color>
+    <color name="color_circle_red">#EF8100</color>
 
 </resources>

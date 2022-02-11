@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.fragment.app.FragmentActivity;
@@ -13,6 +14,7 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
@@ -28,11 +30,12 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     private ImageSlideshow mVpUserBanner;
     private BannerPagerAdapter mBannerAdapter;
     private TextView mTvUserCertification;
-    private  int[] mImageIds = new int[]{
+    private int[] mImageIds = new int[]{
             R.mipmap.act_main_banner_icon3,
             R.mipmap.act_main_banner_icon1,
             R.mipmap.act_main_banner_icon2,
     };
+    private RelativeLayout mRlHistoricalwaybill;
 
     @Override
     int getLayoutID() {
@@ -48,13 +51,16 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     void initView() {
         mActivity = (MainActivity) getActivity();
         mVpUserBanner = mDataBinding.vpUserBanner;
-        for (int i = 0;i<mImageIds.length ;i++){
-            mVpUserBanner.addImageTitle("", "",mImageIds[i]);
+        for (int i = 0; i < mImageIds.length; i++) {
+            mVpUserBanner.addImageTitle("", "", mImageIds[i]);
         }
         mVpUserBanner.commit();
 
         mTvUserCertification = mDataBinding.tvUserCertification;
         mTvUserCertification.setOnClickListener(this);
+
+        mRlHistoricalwaybill = mDataBinding.rlHistoricalwaybill;
+        mRlHistoricalwaybill.setOnClickListener(this);
     }
 
     @Override
@@ -64,11 +70,21 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()) {
+            case R.id.rl_historicalwaybill:
+                intent = new Intent(mActivity, HistoricalWayBillActivity.class);
+                startActivity(intent);
+                break;
             case R.id.tv_user_certification:
-                Intent intent = new Intent(mActivity, InformationAuthenticationActivity.class);
+                intent = new Intent(mActivity, InformationAuthenticationActivity.class);
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void startHistoricalWayBillActivity() {
+
     }
 }

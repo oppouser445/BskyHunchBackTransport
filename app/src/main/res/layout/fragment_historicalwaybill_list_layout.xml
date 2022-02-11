@@ -121,7 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"
                 android:layout_marginTop="@dimen/dp_4"
-                android:background="#E3E3E3" />
+                android:background="@color/view_line_color" />
 
             <TextView
                 android:layout_width="match_parent"

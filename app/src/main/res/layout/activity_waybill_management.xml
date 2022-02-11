@@ -1,32 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+    tools:context=".ui.activity.MainActivity">
 
-    <include layout="@layout/titlelbar_layout" />
+    <data>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_34"
-        android:layout_margin="@dimen/dp_12"
-        android:background="@drawable/shape_search_bg"
-        android:drawableStart="@mipmap/search_left_icon"
-        android:drawablePadding="@dimen/dp_4"
-        android:hint="请输入车牌号/装货地/卸货地"
-        android:textColorHint="@color/shape_search_hit_color"
-        android:textSize="@dimen/sp_14" />
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.WayBillManagementViewModel" />
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
 
+        <include layout="@layout/titlelbar_layout" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:layout_margin="@dimen/dp_12"
+            android:background="@drawable/shape_search_bg"
+            android:drawableStart="@mipmap/search_left_icon"
+            android:drawablePadding="@dimen/dp_4"
+            android:hint="请输入车牌号/装货地/卸货地"
+            android:textColorHint="@color/shape_search_hit_color"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_104_5"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="@dimen/dp_104_5"
+                    android:layout_height="@dimen/dp_44"
+                    android:background="@color/act_main_default_bg"
+                    android:gravity="center"
+                    android:text="我的司机99+"
+                    android:textColor="@color/act_waybill_management_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_data_left"
+                    android:layout_width="@dimen/dp_104_5"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/frame_waybill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="司机行程"
+                    android:textColor="@color/act_waybill_management_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20_5"
+                    android:text="15米-40吨-重型挂车XXXX"
+                    android:textColor="@color/act_waybill_management_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:background="@drawable/shape_waybill_management">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_marginBottom="@dimen/dp_4"
+                        android:includeFontPadding="false"
+                        android:text="前一天"
+                        android:textColor="#ffff8823"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:text="05-16"
+                        android:textColor="#ffff8823"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:includeFontPadding="false"
+                        android:text="后一天"
+                        android:textColor="#ffff8823"
+                        android:textSize="@dimen/sp_12" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_data_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/btn_confirm_changes"
+                        android:layout_marginBottom="@dimen/dp_14_5" />
+
+                    <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                        android:id="@+id/btn_confirm_changes"
+                        android:layout_width="@dimen/dp_223_5"
+                        android:layout_height="@dimen/dp_37"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_17"
+                        android:gravity="center"
+                        android:onClick="@{()->viewModel.confirmChanges()}"
+                        android:text="确认派单/改派运单"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        app:bgType="3" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</layout>

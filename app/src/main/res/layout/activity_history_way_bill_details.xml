@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.HistoryWayBillDetailsActivity">
 
     <data>
 
@@ -13,10 +13,343 @@
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.HistoricalWaybillDetailsViewModel" />
     </data>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
 
+            <include layout="@layout/titlelbar_layout" />
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <View style="@style/act_information_authentication_title_mark_style" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="运单信息 " />
+
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginTop="@dimen/dp_8" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/waybill_number"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="运单号:" />
+
+                <TextView
+                    android:id="@+id/tv_waybill_number"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_toEndOf="@+id/waybill_number"
+                    android:text="tf2111110001"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_toStartOf="@+id/unit"
+                    android:includeFontPadding="false"
+                    android:text="9999"
+                    android:textColor="@color/act_main_title_notice_content_color"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:includeFontPadding="false"
+                    android:text="元"
+                    android:textColor="@color/act_history_waybill_details_content_color"
+                    android:textSize="@dimen/sp_12" />
+
+            </RelativeLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    android:id="@+id/cargo_information"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="货物信息:" />
+
+                <TextView
+                    android:id="@+id/tv_cargo_information"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="名称/重量/体积"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    android:id="@+id/loading_time"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="装货时间:" />
+
+                <TextView
+                    android:id="@+id/tv_loading_time"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="2020-22-22 11:30"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    android:id="@+id/unloading_time"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="卸货时间:" />
+
+                <TextView
+                    android:id="@+id/tv_unloading_time"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="2020-22-22 11:30"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    android:id="@+id/shipping_information"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="承运信息:" />
+
+                <TextView
+                    android:id="@+id/tv_shipping_information"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="王小蒙  京A1234456"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    android:id="@+id/remark"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="备注:" />
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="三不超，全天可装货，需定金"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/view_line_color" />
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <View style="@style/act_information_authentication_title_mark_style" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="单据 " />
+
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginTop="@dimen/dp_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_186_5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="装货"
+                        android:textColor="@color/act_history_waybill_details_title_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_123_5"
+                        android:layout_height="@dimen/dp_80" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="2021-01-13 19:00"
+                        android:textColor="@color/act_history_waybill_details_content_color"
+                        android:textSize="@dimen/sp_10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="卸货"
+                        android:textColor="@color/act_history_waybill_details_title_color"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_123_5"
+                        android:layout_height="@dimen/dp_80" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:text="2021-01-13 19:00"
+                        android:textColor="@color/act_history_waybill_details_content_color"
+                        android:textSize="@dimen/sp_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/view_line_color" />
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <View style="@style/act_information_authentication_title_mark_style" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="货主信息 " />
+
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginTop="@dimen/dp_8" />
+
+            <TextView
+                style="@style/act_history_waybill_details_title_style"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="王先生/女士"
+                android:textColor="@color/act_history_waybill_details_title_color" />
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="公司:" />
+
+                <TextView
+                    style="@style/act_history_waybill_details_title_style"
+                    android:text="公司名称公司名称公司名称公司名称"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_history_waybill_details_layout_home_style">
+
+                <TextView
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:text="地址:" />
+
+                <TextView
+                    style="@style/act_history_waybill_details_title_style"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="@dimen/dp_28"
+                    android:text="北京市昌平区回龙观云控中心B"
+                    android:textColor="@color/act_history_waybill_details_title_color" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/view_line_color" />
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <View style="@style/act_information_authentication_title_mark_style" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="轨迹记录 " />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/locate_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:text="轨迹回放"
+                    android:textColor="#ff25a3fc"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                android:id="@+id/btn_signing_contract"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:text="电联催单"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
 </layout>

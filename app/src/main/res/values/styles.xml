@@ -270,4 +270,22 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="act_history_waybill_details_title_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_5</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/act_history_waybill_details_content_color</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="act_history_waybill_details_layout_home_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/dp_28</item>
+        <item name="android:layout_marginTop">@dimen/dp_6</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
 </resources>

@@ -141,6 +141,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/rl_historicalwaybill"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/dp_12"
