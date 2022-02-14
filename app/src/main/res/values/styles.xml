@@ -77,7 +77,7 @@
     <style name="main_fragment_supplyhall_tv_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/color_main_orange</item>
+        <item name="android:textColor">@color/main_orange_color</item>
         <item name="android:textSize">@dimen/sp_14</item>
     </style>
 

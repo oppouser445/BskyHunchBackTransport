@@ -16,6 +16,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/main_default_bg_color"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
         android:scrollbars="none">
@@ -27,9 +28,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_message_center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp_12" />
-
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </layout>

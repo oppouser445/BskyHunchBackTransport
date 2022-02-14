@@ -1,6 +1,7 @@
 package com.tuofeng.bskyhunchbacktransport.module.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tuofeng.bskyhunchbacktransport.BR;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMessageCenterAdapterBinding;
+import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class RecycleMessageCenterAdapter extends RecyclerView.Adapter<RecycleMes
     private List<String> mList;
     private Context mContext;
     private onChildListener onChildListener;
+    private final String TAG = "RecycleMessageCenterAdapter";
 
     public void setOnChildListener(RecycleMessageCenterAdapter.onChildListener onChildListener) {
         this.onChildListener = onChildListener;
@@ -35,7 +37,7 @@ public class RecycleMessageCenterAdapter extends RecyclerView.Adapter<RecycleMes
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflate = LayoutInflater.from(mContext);
         FragmentMessageCenterAdapterBinding mBinding = DataBindingUtil.inflate(inflate, R.layout.fragment_message_center_adapter, parent, false);
-        return new ViewHolder(mBinding.getRoot(),mBinding);
+        return new ViewHolder(mBinding.getRoot(), mBinding);
     }
 
     @Override
@@ -43,6 +45,8 @@ public class RecycleMessageCenterAdapter extends RecyclerView.Adapter<RecycleMes
         FragmentMessageCenterAdapterBinding binding = holder.getBinding();
         LinearLayout lLyaoutMessageCenterAdapterHomeLayout = binding.lLyaoutMessageCenterAdapterHomeLayout;
         lLyaoutMessageCenterAdapterHomeLayout.setOnClickListener(v -> onChildListener.onChildListener(v, position));
+        LogUtils.e(TAG, "onBindViewHolder: " + position);
+        binding.viewInterval.setVisibility(position == 0 ? View.VISIBLE : View.GONE);
     }
 
     @Override

@@ -46,7 +46,7 @@
                 <TextView
                     android:layout_width="@dimen/dp_104_5"
                     android:layout_height="@dimen/dp_44"
-                    android:background="@color/act_main_default_bg"
+                    android:background="@color/main_default_bg_color"
                     android:gravity="center"
                     android:text="我的司机99+"
                     android:textColor="@color/act_waybill_management_color"

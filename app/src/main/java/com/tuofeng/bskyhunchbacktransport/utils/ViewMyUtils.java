@@ -53,7 +53,7 @@ public class ViewMyUtils {
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
                 //设置文件颜色
-                ds.setColor(context.getResources().getColor(R.color.color_main_orange));
+                ds.setColor(context.getResources().getColor(R.color.main_orange_color));
                 // 去掉下划线
                 ds.setUnderlineText(false);
             }
@@ -73,7 +73,7 @@ public class ViewMyUtils {
             public void updateDrawState(TextPaint ds) {
                 super.updateDrawState(ds);
                 //设置文件颜色
-                ds.setColor(context.getResources().getColor(R.color.color_main_orange));
+                ds.setColor(context.getResources().getColor(R.color.main_orange_color));
                 // 去掉下划线
                 ds.setUnderlineText(false);
             }

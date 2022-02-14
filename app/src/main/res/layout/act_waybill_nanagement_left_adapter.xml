@@ -29,7 +29,7 @@
             android:layout_marginTop="@dimen/dp_12"
             android:includeFontPadding="false"
             android:text="王小萌"
-            android:textColor="@color/color_main_orange"
+            android:textColor="@color/main_orange_color"
             android:textSize="@dimen/sp_14" />
 
         <TextView

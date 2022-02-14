@@ -132,7 +132,7 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
             TextView tv1 = (TextView) childAt.getChildAt(0);
             TextView tv2 = (TextView) childAt.getChildAt(1);
             tv1.setEnabled(i == type);
-            tv2.setTextColor(getResources().getColor(i == type ? R.color.color_main_orange : R.color.fragment_main_bottom_tv_color));
+            tv2.setTextColor(getResources().getColor(i == type ? R.color.main_orange_color : R.color.fragment_main_bottom_tv_color));
         }
     }
 }

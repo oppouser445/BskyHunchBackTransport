@@ -16,7 +16,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/act_main_default_bg"
+        android:background="@color/main_default_bg_color"
         android:fitsSystemWindows="true"
         android:orientation="vertical">
 
@@ -79,7 +79,7 @@
                     android:paddingEnd="@dimen/dp_6_5"
                     android:paddingBottom="@dimen/dp_2_5"
                     android:text="身份证"
-                    android:textColor="@color/color_main_orange" />
+                    android:textColor="@color/main_orange_color" />
             </LinearLayout>
 
             <TextView
@@ -157,7 +157,7 @@
                     android:paddingEnd="@dimen/dp_6_5"
                     android:paddingBottom="@dimen/dp_2_5"
                     android:text="身份证"
-                    android:textColor="@color/color_main_orange" />
+                    android:textColor="@color/main_orange_color" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
                     android:paddingEnd="@dimen/dp_6_5"
                     android:paddingBottom="@dimen/dp_2_5"
                     android:text="行驶证"
-                    android:textColor="@color/color_main_orange" />
+                    android:textColor="@color/main_orange_color" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -183,7 +183,7 @@
                     android:paddingEnd="@dimen/dp_6_5"
                     android:paddingBottom="@dimen/dp_2_5"
                     android:text="驾驶证"
-                    android:textColor="@color/color_main_orange" />
+                    android:textColor="@color/main_orange_color" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -196,7 +196,7 @@
                     android:paddingEnd="@dimen/dp_6_5"
                     android:paddingBottom="@dimen/dp_2_5"
                     android:text="其他"
-                    android:textColor="@color/color_main_orange" />
+                    android:textColor="@color/main_orange_color" />
 
             </LinearLayout>
 

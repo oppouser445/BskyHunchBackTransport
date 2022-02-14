@@ -18,12 +18,12 @@
         app:tl_divider_color="@color/es_bg"
         app:tl_divider_padding="@dimen/dp_0"
         app:tl_divider_width="0dp"
-        app:tl_indicator_color="@color/color_main_orange"
+        app:tl_indicator_color="@color/main_orange_color"
         app:tl_indicator_height="@dimen/dp_2"
         app:tl_indicator_width_equal_title="true"
         app:tl_tab_padding="@dimen/dp_27"
         app:tl_tab_space_equal="true"
-        app:tl_textSelectColor="@color/color_main_orange"
+        app:tl_textSelectColor="@color/main_orange_color"
         app:tl_textUnselectColor="@color/color_btn_grey"
         app:tl_textsize="@dimen/sp_14" />
 

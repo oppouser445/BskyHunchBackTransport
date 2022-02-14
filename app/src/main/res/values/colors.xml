@@ -5,8 +5,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="color_main_orange">#FF8823</color>
-    <color name="act_main_default_bg">#F4F4F4</color>
+    <color name="main_orange_color">#FF8823</color>
+    <color name="main_default_bg_color">#F4F4F4</color>
     <color name="view_line_color">#F4F4F4</color>
     <color name="divideLine">#979797</color>
 

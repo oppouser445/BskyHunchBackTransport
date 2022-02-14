@@ -16,48 +16,55 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/color_main_orange"
+        android:background="@color/main_default_bg_color"
         android:fitsSystemWindows="true"
         android:orientation="vertical">
 
-        <RadioGroup
-            android:id="@+id/rbtn_supply_hall_home"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp_12"
-            android:orientation="horizontal">
+            android:background="@color/main_orange_color">
 
-            <RadioButton
-                android:id="@+id/rbtn_supply_hall"
+            <RadioGroup
+                android:id="@+id/rbtn_supply_hall_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/select_supply_hall_fragment_tab1_bg"
-                android:button="@null"
-                android:checked="true"
-                android:paddingLeft="@dimen/dp_12_5"
-                android:paddingTop="@dimen/dp_6_5"
-                android:paddingRight="@dimen/dp_12_5"
-                android:paddingBottom="@dimen/dp_6_5"
-                android:text="资源大厅"
-                android:textColor="@color/color_main_orange"
-                android:textSize="@dimen/sp_16" />
+                android:layout_margin="@dimen/dp_12"
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/rbtn_recruit_team"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_3_5"
-                android:background="@drawable/select_supply_hall_fragment_tab1_bg"
-                android:button="@null"
-                android:paddingLeft="@dimen/dp_12_5"
-                android:paddingTop="@dimen/dp_6_5"
-                android:paddingRight="@dimen/dp_12_5"
-                android:paddingBottom="@dimen/dp_6_5"
-                android:text="招募车队"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_16" />
+                <RadioButton
+                    android:id="@+id/rbtn_supply_hall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/select_supply_hall_fragment_tab1_bg"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingLeft="@dimen/dp_12_5"
+                    android:paddingTop="@dimen/dp_6_5"
+                    android:paddingRight="@dimen/dp_12_5"
+                    android:paddingBottom="@dimen/dp_6_5"
+                    android:text="资源大厅"
+                    android:textColor="@color/main_orange_color"
+                    android:textSize="@dimen/sp_16" />
 
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rbtn_recruit_team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_3_5"
+                    android:background="@drawable/select_supply_hall_fragment_tab1_bg"
+                    android:button="@null"
+                    android:paddingLeft="@dimen/dp_12_5"
+                    android:paddingTop="@dimen/dp_6_5"
+                    android:paddingRight="@dimen/dp_12_5"
+                    android:paddingBottom="@dimen/dp_6_5"
+                    android:text="招募车队"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </RadioGroup>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llyaout_tab_home"
@@ -127,22 +134,28 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/act_main_layout_bg_color"
-            android:orientation="vertical">
+            android:fitsSystemWindows="true">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rList_fragment_supply_hall"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:layout_marginTop="@dimen/dp_12"
-                android:layout_marginRight="@dimen/dp_12"
-                android:nestedScrollingEnabled="false" />
-        </LinearLayout>
+                android:background="@color/act_main_layout_bg_color"
+                android:orientation="vertical">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rList_fragment_supply_hall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.SmartRefreshLayout>
     </LinearLayout>
 
 </layout>

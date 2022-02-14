@@ -58,7 +58,7 @@ public class SupplyHallFragment extends BaseFragment<FragmentSupplyHallBinding, 
         rbtnSupplyHall = mDataBinding.rbtnSupplyHall;
         rbtnRecruitTeam = mDataBinding.rbtnRecruitTeam;
 
-        int color_orange = getResources().getColor(R.color.color_main_orange);
+        int color_orange = getResources().getColor(R.color.main_orange_color);
         int color_white = getResources().getColor(R.color.white);
 
         mRbtnSupplyHallHome.setOnCheckedChangeListener((group, checkedId) -> {
@@ -119,7 +119,7 @@ public class SupplyHallFragment extends BaseFragment<FragmentSupplyHallBinding, 
             TextView textView = (TextView) linearLayout.getChildAt(0);
             ImageView imageView = (ImageView) linearLayout.getChildAt(1);
 
-            textView.setTextColor(getResources().getColor(index == i ? R.color.color_main_orange : R.color.fragment_supply_hall_table_tv_color));
+            textView.setTextColor(getResources().getColor(index == i ? R.color.main_orange_color : R.color.fragment_supply_hall_table_tv_color));
             boolean b = i != childCount - 1;
             imageView.setImageResource(index == i ? b ? R.mipmap.triangle_orange_icon : R.mipmap.filter_icon : b ? R.mipmap.triangle_orange_icon_default : R.mipmap.filter_icon_default);
         }

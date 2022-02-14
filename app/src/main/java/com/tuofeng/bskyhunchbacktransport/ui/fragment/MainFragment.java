@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,10 +16,11 @@ import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMainBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMainFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.RecycleBannerAdapter;
-import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
+import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.SmartRefreshLayout;
+
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.FragmentMainViewModel;
 
@@ -47,6 +47,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     };
     private LinearLayout mLlyaoutWaybillManagement,mLlyaoutVehicleManagement,mLlyaoutPersonnelManagement;
     private Intent mIntent;
+    private SmartRefreshLayout mRefreshLayout;
 
     @Override
     int getLayoutID() {
@@ -92,6 +93,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
         mDataList = new ArrayList<>();
         mRecycleBannerAdapter = new RecycleBannerAdapter(mDataList, mActivity);
         mRecyclerActHome.setAdapter(mRecycleBannerAdapter);
+
+        mRefreshLayout = mDataBinding.refreshLayout;
     }
 
     @Override

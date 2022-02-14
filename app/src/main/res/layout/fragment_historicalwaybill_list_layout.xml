@@ -22,7 +22,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_5"
-            android:background="@color/act_main_default_bg" />
+            android:background="@color/main_default_bg_color" />
 
         <LinearLayout
             android:id="@+id/llyaout_home"

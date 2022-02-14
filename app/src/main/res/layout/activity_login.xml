@@ -181,9 +181,9 @@
                         android:onClick="@{()-> viewModel.getMobileVerificationCode()}"
                         android:padding="@dimen/dp_5"
                         android:text="获取验证码"
-                        android:textColor="@color/color_main_orange"
+                        android:textColor="@color/main_orange_color"
                         android:textSize="@dimen/sp_13"
-                        app:textCountdownColor="@color/color_main_orange" />
+                        app:textCountdownColor="@color/main_orange_color" />
                 </RelativeLayout>
 
                 <RelativeLayout

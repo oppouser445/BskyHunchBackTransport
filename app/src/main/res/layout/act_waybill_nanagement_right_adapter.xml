@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="05-16 至 05-20"
             android:layout_marginTop="@dimen/dp_6"
-            android:textColor="@color/color_main_orange"
+            android:textColor="@color/main_orange_color"
             android:textSize="@dimen/sp_12" />
 
         <RelativeLayout
