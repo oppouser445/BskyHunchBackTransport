@@ -92,4 +92,7 @@
     <color name="color_circle_green">#17AE03</color>
     <color name="color_circle_red">#EF8100</color>
 
+
+    <color name="shared_left_img_btn_tv_color">#25A3FC</color>
+
 </resources>

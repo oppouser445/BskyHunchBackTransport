@@ -54,7 +54,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.activity.WayBillTaskActivity"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.HistoryWayBillDetailsActivity"
             android:theme="@style/AppActivityStyle" />
@@ -62,7 +65,6 @@
             android:name=".ui.activity.HistoricalWayBillActivity"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".ui.activity.WayBillManagementActivity"
             android:exported="false"
