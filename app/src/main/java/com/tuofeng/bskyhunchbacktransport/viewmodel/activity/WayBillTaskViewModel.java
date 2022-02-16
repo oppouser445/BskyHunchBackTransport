@@ -20,7 +20,6 @@ public class WayBillTaskViewModel extends BaseViewModel<IWayBillTaskView, WayBil
         return mData;
     }
 
-
     public void BtnClick(int type) {
     }
 }

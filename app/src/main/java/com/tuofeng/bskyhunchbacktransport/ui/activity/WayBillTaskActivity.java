@@ -9,6 +9,7 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityWayBillTaskBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IWayBillTaskView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.WayBillTaskAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.view.dialog.WayBillPhoneDialog;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.WayBillTaskViewModel;
 
@@ -41,12 +42,23 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
 
         mRecyclerList = mDataBinding.recyclerList;
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        //mRecyclerActHome.setNestedScrollingEnabled(false);
         mRecyclerList.setLayoutManager(mLayoutManager);
         mDataList = new ArrayList<>();
         mRecycleAdapter = new WayBillTaskAdapter(mDataList, this);
         mRecyclerList.setAdapter(mRecycleAdapter);
-        mRecycleAdapter.setMyOnClickListener((type, position) -> ToastUtil.shortToast(type == 1 ? "第一个" : "第二个"));
+        mRecycleAdapter.setMyOnClickListener((type, position) -> {
+            if (type == 1) {
+                WayBillPhoneDialog wayBillPhoneDialog = new WayBillPhoneDialog(this);
+                wayBillPhoneDialog.setMyClickListener(new WayBillPhoneDialog.MyClicklListener() {
+                    @Override
+                    public void onClick(String phone) {
+                        ToastUtil.shortToast("点击手机按钮" + phone);
+                    }
+                });
+                wayBillPhoneDialog.show();
+            }
+            //ToastUtil.shortToast(type == 1 ? "第一个" : "第二个");
+        });
     }
 
     @Override

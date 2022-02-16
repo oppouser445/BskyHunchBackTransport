@@ -95,4 +95,10 @@
 
     <color name="shared_left_img_btn_tv_color">#25A3FC</color>
 
+
+    <color name="waybill_phone_dialog_layout_tv_color1">#191919</color>
+    <color name="waybill_phone_dialog_layout_tv_color2">#F8F8F8</color>
+
+
+
 </resources>
