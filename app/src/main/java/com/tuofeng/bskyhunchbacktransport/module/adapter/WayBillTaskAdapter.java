@@ -46,8 +46,7 @@ public class WayBillTaskAdapter extends RecyclerView.Adapter<WayBillTaskAdapter.
         });
         holder.lLyaoutLeft.setOnClickListener(v -> mClickListener.onItemClick(1, position));
         holder.lLyaoutRight.setOnClickListener(v -> mClickListener.onItemClick(2, position));
-        holder.viewLine.setVisibility(position == mList.size() ? View.VISIBLE : View.GONE);
-
+        holder.viewLine.setVisibility(position != 0 && position == mList.size() ? View.VISIBLE : View.GONE);
     }
 
     @Override

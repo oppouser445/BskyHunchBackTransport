@@ -1,15 +1,17 @@
-
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
-
 
 import android.content.Intent;
 import android.view.View;
+import android.view.ViewStub;
 
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityWayBillTaskBinding;
+import com.tuofeng.bskyhunchbacktransport.databinding.ActivityWayBillTaskDataBinding;
+import com.tuofeng.bskyhunchbacktransport.databinding.ActivityWayBillTaskNoDataBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IWayBillTaskView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.WayBillTaskAdapter;
 import com.tuofeng.bskyhunchbacktransport.ui.view.dialog.LoadingDepartureDialog;
@@ -25,6 +27,10 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
     private List<String> mDataList;
     private WayBillTaskAdapter mRecycleAdapter;
     private RecyclerView mRecyclerList;
+    private ViewStub mNoDataViewStub;
+    private ActivityWayBillTaskNoDataBinding mNoDataBindingbind;
+    private ActivityWayBillTaskDataBinding mDataBindingbind;
+    private ViewStub mViewStubData;
 
     @Override
     protected WayBillTaskViewModel getViewModel() {
@@ -42,29 +48,17 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
         mToolbarTitle.setText("运单任务");
         mTvRightClick.setText("历史运单");
         mTvRightClick.setVisibility(View.GONE);
+        mDataBinding.setViewModel(mViewModel);
 
-        mRecyclerList = mDataBinding.recyclerList;
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerList.setLayoutManager(mLayoutManager);
-        mDataList = new ArrayList<>();
-        mRecycleAdapter = new WayBillTaskAdapter(mDataList, this);
-        mRecyclerList.setAdapter(mRecycleAdapter);
-        mRecycleAdapter.setMyOnClickListener((type, position) -> {
-            if (type == 1) {
-                WayBillPhoneDialog wayBillPhoneDialog = new WayBillPhoneDialog(this);
-                wayBillPhoneDialog.setMyClickListener(phone -> CommonUtil.callPhone(WayBillTaskActivity.this, phone));
-                wayBillPhoneDialog.show();
-            } else if (type == 2) {
-                LoadingDepartureDialog departureDialog = new LoadingDepartureDialog(this);
-                departureDialog.setMyClickListener(data -> {
-
-                });
-                departureDialog.show();
-            } else if (type == 3) {
-                Intent intent = new Intent(this, WayBillDetailsActivity.class);
-                startActivity(intent);
-            }
-        });
+        mNoDataViewStub = mDataBinding.viewStubNoData.getViewStub();
+        if (mNoDataViewStub != null) {
+            mNoDataViewStub.setOnInflateListener((stub, inflated) -> {
+                mNoDataBindingbind = DataBindingUtil.bind(inflated);
+                assert mNoDataBindingbind != null;
+                mNoDataBindingbind.setViewModel(mViewModel);
+            });
+            mNoDataViewStub.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -73,8 +67,49 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mDataBinding = null;
+        mViewModel = null;
+    }
+
+    @Override
     public void startSupplyHallAct() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);*/
+
+        mNoDataViewStub.setVisibility(View.GONE);
+
+        mViewStubData = mDataBinding.viewStubData.getViewStub();
+        if (mViewStubData != null) {
+            mViewStubData.setOnInflateListener((stub, inflated) -> {
+                mDataBindingbind = DataBindingUtil.bind(inflated);
+                assert mDataBindingbind != null;
+                mDataBindingbind.setViewModel(mViewModel);
+            });
+            mViewStubData.setVisibility(View.VISIBLE);
+            mRecyclerList = mDataBindingbind.recyclerList;
+            LinearLayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            mRecyclerList.setLayoutManager(mLayoutManager);
+            mDataList = new ArrayList<>();
+            mRecycleAdapter = new WayBillTaskAdapter(mDataList, this);
+            mRecyclerList.setAdapter(mRecycleAdapter);
+            mRecycleAdapter.setMyOnClickListener((type, position) -> {
+                if (type == 1) {
+                    WayBillPhoneDialog wayBillPhoneDialog = new WayBillPhoneDialog(this);
+                    wayBillPhoneDialog.setMyClickListener(phone -> CommonUtil.callPhone(WayBillTaskActivity.this, phone));
+                    wayBillPhoneDialog.show();
+                } else if (type == 2) {
+                    LoadingDepartureDialog departureDialog = new LoadingDepartureDialog(this);
+                    departureDialog.setMyClickListener(data -> {
+
+                    });
+                    departureDialog.show();
+                } else if (type == 3) {
+                    Intent intent = new Intent(this, WayBillDetailsActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 }

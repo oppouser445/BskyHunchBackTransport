@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_48"
             android:layout_marginTop="@dimen/dp_12"
-            android:background="@color/waybill_phone_dialog_layout_tv_color2"
+            android:background="@drawable/shape_waybill_dialog_cancel_bg"
             android:gravity="center"
             android:includeFontPadding="false"
             android:text="取消"
