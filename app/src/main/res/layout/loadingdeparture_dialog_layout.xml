@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp_20"
+    android:paddingTop="@dimen/dp_20"
+    android:paddingEnd="@dimen/dp_20"
+    android:paddingBottom="@dimen/dp_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_default_style"
+            android:text="运单号"
+            android:textColor="@color/loading_departure_dialog_layout_tv_color1"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginStart="@dimen/dp_36"
+            android:text="202101150009"
+            android:textColor="@color/loading_departure_dialog_layout_tv_color2"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_default_style"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_default_style"
+            android:text="装货单"
+            android:textColor="@color/loading_departure_dialog_layout_tv_color1"
+            android:textSize="@dimen/sp_16" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginStart="@dimen/dp_36"
+            android:src="@mipmap/add_pictures_icon" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_36"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16_5"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/tv_default_style"
+            android:text="装货时间"
+            android:textColor="@color/loading_departure_dialog_layout_tv_color1"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginStart="@dimen/dp_20"
+            android:text="2021-01-15 14:09"
+            android:textColor="@color/loading_departure_dialog_layout_tv_color3"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+    <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+        android:id="@+id/btn_fc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="装货发车"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

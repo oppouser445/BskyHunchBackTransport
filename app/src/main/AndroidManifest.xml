@@ -59,6 +59,9 @@
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".ui.activity.WayBillDetailsActivity"
+            android:theme="@style/AppActivityStyle" />
+        <activity
             android:name=".ui.activity.HistoryWayBillDetailsActivity"
             android:theme="@style/AppActivityStyle" />
         <activity

@@ -53,7 +53,6 @@
             android:layout_height="@dimen/dp_48"
             android:layout_marginStart="@dimen/dp_20"
             android:layout_marginEnd="@dimen/dp_20"
-            android:gravity="center"
             android:onClick="@{()->viewModel.PreviousAction()}"
             android:text="完成"
             android:textColor="@color/white"

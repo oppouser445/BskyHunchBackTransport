@@ -22,7 +22,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
     protected B mDataBinding;
     protected M mViewModel;
     protected ImageView mToolbarBack;
-    protected TextView mToolbarTitle,mTvRghtClick;
+    protected TextView mToolbarTitle,mTvRightClick;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +59,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
         mToolbarBack = findViewById(R.id.toolbar_back);
         mToolbarBack.setOnClickListener(v -> finish());
         mToolbarTitle = findViewById(R.id.toolbar_title);
-        mTvRghtClick = findViewById(R.id.tv_right_click);
+        mTvRightClick = findViewById(R.id.tv_right_click);
     }
 
     protected void initStatusBar(int type) {

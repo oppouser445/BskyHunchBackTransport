@@ -35,7 +35,16 @@ public class WayBillPhoneDialog extends BaseDialog {
         mTvPhone = findViewById(R.id.tv_phone);
         mTvCancel = findViewById(R.id.tv_cancel);
         mTvCancel.setOnClickListener(v -> dismiss());
-        mlLyaoutPhone.setOnClickListener(v -> mListener.onClick(mTvPhone.getText().toString()));
+        mlLyaoutPhone.setOnClickListener(v -> {
+            mListener.onClick(mTvPhone.getText().toString());
+            dismiss();
+        });
+    }
+
+    @Override
+    public void initWindow() {
+        super.initWindow();
+        mWindow.setGravity(Gravity.BOTTOM);
     }
 
     private MyClicklListener mListener;

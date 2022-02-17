@@ -94,7 +94,6 @@
                 android:layout_marginTop="@dimen/dp_28"
                 android:layout_marginEnd="@dimen/dp_28"
                 android:layout_marginBottom="@dimen/dp_28"
-                android:gravity="center"
                 android:onClick="@{()->viewModel.PreviousAction()}"
                 android:text="签订合同(6/6)"
                 android:textColor="@color/white" />

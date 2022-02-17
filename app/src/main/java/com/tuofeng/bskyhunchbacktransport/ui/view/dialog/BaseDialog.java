@@ -15,6 +15,8 @@ import com.tuofeng.bskyhunchbacktransport.R;
 public abstract class BaseDialog extends Dialog {
 
     protected Context mContext;
+    protected Window mWindow;
+    protected WindowManager.LayoutParams mParamsWindow;
 
     //pro浏览器 DialogSimpleUtils
     public BaseDialog(Context context) {
@@ -43,32 +45,32 @@ public abstract class BaseDialog extends Dialog {
     }
 
     public void initWindow() {
-        Window window = getWindow();
+        mWindow = getWindow();
+        mWindow.setGravity(Gravity.CENTER);
+
+        mParamsWindow = getWindow().getAttributes();
+        mParamsWindow.width = WindowManager.LayoutParams.MATCH_PARENT;
+        mWindow.setAttributes(mParamsWindow);
+
+
         //window.getDecorView().setPadding(0, 0, 0, 0);
         //设置背景透明，不然会出现白色直角问题
         //window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        WindowManager.LayoutParams params = getWindow().getAttributes();
-
-        params.gravity = Gravity.TOP;
-        /*params.width = WindowManager.LayoutParams.MATCH_PARENT;
-        params.height = WindowManager.LayoutParams.MATCH_PARENT;*/
-
-        window.setAttributes(params);
-        window.setGravity(Gravity.TOP);
         /*setCancelable(false);
         setCanceledOnTouchOutside(false);
         Window window = getWindow();
+
         window.getDecorView().setPadding(0, 0, 0, 0);
         //设置背景透明，不然会出现白色直角问题
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        WindowManager.LayoutParams params = getWindow().getAttributes();
+        window.setGravity(Gravity.TOP);
 
-        params.gravity = Gravity.TOP;
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.gravity = Gravity.CENTER;
         params.width = WindowManager.LayoutParams.MATCH_PARENT;
         params.height = WindowManager.LayoutParams.MATCH_PARENT;
 
-        window.setAttributes(params);
-        window.setGravity(Gravity.TOP);*/
+        window.setAttributes(params);*/
     }
 
     protected abstract void initView();

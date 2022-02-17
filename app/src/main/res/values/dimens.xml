@@ -90,6 +90,7 @@
     <dimen name="dp_50">50dp</dimen>
     <dimen name="dp_50_5">50.5dp</dimen>
     <dimen name="dp_51">51dp</dimen>
+    <dimen name="dp_51_5">51.5dp</dimen>
     <dimen name="dp_52">52dp</dimen>
     <dimen name="dp_53">53dp</dimen>
     <dimen name="dp_54">54dp</dimen>

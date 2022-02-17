@@ -99,6 +99,12 @@
     <color name="waybill_phone_dialog_layout_tv_color1">#191919</color>
     <color name="waybill_phone_dialog_layout_tv_color2">#F8F8F8</color>
 
+    <color name="loading_departure_dialog_layout_tv_color1">#191919</color>
+    <color name="loading_departure_dialog_layout_tv_color2">#666666</color>
+    <color name="loading_departure_dialog_layout_tv_color3">#FF251C</color>
+
+
+    <color name="waybill_details_tv_color1">#07C060</color>
 
 
 </resources>

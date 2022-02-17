@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.MotionEvent;
 
 import com.tuofeng.bskyhunchbacktransport.R;
@@ -19,18 +20,18 @@ public class SharedButton extends androidx.appcompat.widget.AppCompatButton {
 
     public SharedButton(Context context) {
         super(context);
-        initData();
+        initView();
     }
 
     public SharedButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        initData();
+        initView();
         initAttrs(context, attrs);
     }
 
     public SharedButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        initData();
+        initView();
         initAttrs(context, attrs);
     }
 
@@ -42,8 +43,9 @@ public class SharedButton extends androidx.appcompat.widget.AppCompatButton {
         setMyBackground();
     }
 
-    private void initData() {
+    private void initView() {
         mRect = new Rect();
+        setGravity(Gravity.CENTER);
     }
 
     public void scaleTo(float scale) {

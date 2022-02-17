@@ -13,6 +13,18 @@
         <item name="android:layout_marginRight">@dimen/dp_28</item>
     </style>
 
+    <style name="tv_default_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="btn_default_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
     <style name="main_act_title_list_lLayout_style">
         <item name="android:layout_width">@dimen/dp_0</item>
         <item name="android:layout_height">match_parent</item>
@@ -297,6 +309,12 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@null</item>
         <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="line_default_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:background">@color/view_line_color</item>
     </style>
 
 </resources>

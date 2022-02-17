@@ -2,6 +2,9 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 
+import android.content.Intent;
+import android.view.View;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,16 +12,15 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityWayBillTaskBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IWayBillTaskView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.WayBillTaskAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.view.dialog.LoadingDepartureDialog;
 import com.tuofeng.bskyhunchbacktransport.ui.view.dialog.WayBillPhoneDialog;
-import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
+import com.tuofeng.bskyhunchbacktransport.utils.CommonUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.WayBillTaskViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding, WayBillTaskViewModel> implements IWayBillTaskView {
-
 
     private List<String> mDataList;
     private WayBillTaskAdapter mRecycleAdapter;
@@ -38,7 +40,8 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
     protected void initView() {
         initTitleBar();
         mToolbarTitle.setText("运单任务");
-        mTvRghtClick.setText("历史运单");
+        mTvRightClick.setText("历史运单");
+        mTvRightClick.setVisibility(View.GONE);
 
         mRecyclerList = mDataBinding.recyclerList;
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -49,20 +52,29 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
         mRecycleAdapter.setMyOnClickListener((type, position) -> {
             if (type == 1) {
                 WayBillPhoneDialog wayBillPhoneDialog = new WayBillPhoneDialog(this);
-                wayBillPhoneDialog.setMyClickListener(new WayBillPhoneDialog.MyClicklListener() {
-                    @Override
-                    public void onClick(String phone) {
-                        ToastUtil.shortToast("点击手机按钮" + phone);
-                    }
-                });
+                wayBillPhoneDialog.setMyClickListener(phone -> CommonUtil.callPhone(WayBillTaskActivity.this, phone));
                 wayBillPhoneDialog.show();
+            } else if (type == 2) {
+                LoadingDepartureDialog departureDialog = new LoadingDepartureDialog(this);
+                departureDialog.setMyClickListener(data -> {
+
+                });
+                departureDialog.show();
+            } else if (type == 3) {
+                Intent intent = new Intent(this, WayBillDetailsActivity.class);
+                startActivity(intent);
             }
-            //ToastUtil.shortToast(type == 1 ? "第一个" : "第二个");
         });
     }
 
     @Override
     protected void initData() {
 
+    }
+
+    @Override
+    public void startSupplyHallAct() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -36,8 +36,9 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:gravity="center"
         android:layout_marginEnd="@dimen/dp_16"
+        android:gravity="center"
+        android:visibility="gone"
         android:text="历史运单 "
         android:textColor="@color/white"
         android:textSize="@dimen/sp_14" />

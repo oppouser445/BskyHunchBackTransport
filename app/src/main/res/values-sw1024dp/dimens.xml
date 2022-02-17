@@ -171,6 +171,8 @@
     	
     <dimen name="dp_51">145.0667dp</dimen>
     	
+    <dimen name="dp_51_5">146.4889dp</dimen>
+    	
     <dimen name="dp_52">147.9111dp</dimen>
     	
     <dimen name="dp_53">150.7556dp</dimen>
@@ -538,6 +540,8 @@
     <dimen name="dp_222">631.4667dp</dimen>
     	
     <dimen name="dp_223">634.3111dp</dimen>
+    	
+    <dimen name="dp_223_5">635.7333dp</dimen>
     	
     <dimen name="dp_224">637.1556dp</dimen>
     	
