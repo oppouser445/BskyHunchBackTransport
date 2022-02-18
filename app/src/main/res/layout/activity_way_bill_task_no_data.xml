@@ -20,6 +20,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_hint"
             style="@style/tv_default_style"
             android:layout_marginStart="@dimen/dp_80"
             android:layout_marginTop="@dimen/dp_145"

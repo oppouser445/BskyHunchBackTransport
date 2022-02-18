@@ -1,8 +1,10 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.content.Intent;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewStub;
+import android.widget.TextView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -58,6 +60,9 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
                 mNoDataBindingbind.setViewModel(mViewModel);
             });
             mNoDataViewStub.setVisibility(View.VISIBLE);
+
+            String strMsg = "您还没有接单任务，前往<font color=\"#FF8823\">货源大厅</font>来一单吧";
+            mNoDataBindingbind.tvHint.setText(Html.fromHtml(strMsg));
         }
     }
 
@@ -69,8 +74,6 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mDataBinding = null;
-        mViewModel = null;
     }
 
     @Override
@@ -111,5 +114,12 @@ public class WayBillTaskActivity extends BaseActivity<ActivityWayBillTaskBinding
                 }
             });
         }
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mDataBindingbind = null;
+        mNoDataBindingbind = null;
     }
 }

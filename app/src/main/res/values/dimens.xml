@@ -167,6 +167,7 @@
     <dimen name="dp_120">120dp</dimen>
     <dimen name="dp_121">121dp</dimen>
     <dimen name="dp_122">122dp</dimen>
+    <dimen name="dp_122_5">122.5dp</dimen>
     <dimen name="dp_123">123dp</dimen>
     <dimen name="dp_123_5">123.5dp</dimen>
     <dimen name="dp_124">124dp</dimen>

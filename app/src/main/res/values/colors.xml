@@ -30,7 +30,7 @@
     <color name="act_login_re_adapter_tv_color">#666666</color>
     <color name="act_login_re_adapter_tv2_color">#ffff251c</color>
     <color name="act_login_re_title_tv_color">#ff1377ff</color>
-    <color name="act_login_re_tv_color">#ff191919</color>
+    <color name="act_login_re_tv_color">#191919</color>
 
     <color name="universal_view_press">#EBEBEB</color>
     <color name="universal_view__default">#FFFFFF</color>
@@ -46,7 +46,7 @@
     <color name="fragment_mine_telephone_color">#191919</color>
     <color name="fragment_mine_number_plate_color">#999999</color>
     <color name="fragment_mine_certification_bg_color">#25A3FC</color>
-    <color name="fragment_mine_tab1_wallet_color">#ff191919</color>
+    <color name="fragment_mine_tab1_wallet_color">#191919</color>
     <color name="fragment_mine_tab1_withdraw_color">#ffff251c</color>
     <color name="fragment_mine_tab1_amount_color">#fff35b00</color>
     <color name="fragment_mine_tab2_details_color">#469CD3</color>
@@ -105,6 +105,8 @@
 
 
     <color name="waybill_details_tv_color1">#07C060</color>
+
+    <color name="activity_my_purse_tv_color1">#b1b1b1</color>
 
 
 </resources>

@@ -22,14 +22,14 @@
 
         <ViewStub
             android:id="@+id/view_stub_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout="@layout/activity_way_bill_task_data" />
 
         <ViewStub
             android:id="@+id/view_stub_no_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout="@layout/activity_way_bill_task_no_data" />
     </LinearLayout>
 </layout>

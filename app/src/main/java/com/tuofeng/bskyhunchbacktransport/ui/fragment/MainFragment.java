@@ -31,7 +31,7 @@ import java.util.List;
 public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMainViewModel> implements IMainFragmentView, View.OnClickListener {
 
     private ImageView mImgTitleNoticeClear;
-    private RelativeLayout mLayoutTitleNoticeHome,mRelayoutWaybillTask;
+    private RelativeLayout mLayoutTitleNoticeHome, mRelayoutWaybillTask;
     private ImageSlideshow mVpBanner;
     private BannerPagerAdapter mBannerAdapter;
     private List<ImageView> mViewList;
@@ -49,6 +49,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     private LinearLayout mLlyaoutWaybillManagement, mLlyaoutVehicleManagement, mLlyaoutPersonnelManagement;
     private Intent mIntent;
     private SmartRefreshLayout mRefreshLayout;
+    private boolean mPause;
+    private boolean mHidden;
 
     @Override
     int getLayoutID() {
@@ -104,6 +106,39 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     @Override
     void initData() {
 
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        LogUtils.e(TAG, "onHiddenChanged == " + hidden);
+        if (hidden) {
+            //相当于Fragment的onPause
+            mVpBanner.stopPlay();
+            mHidden = true;
+        } else {
+            // 相当于Fragment的onResume
+            mVpBanner.startPlay();
+            mHidden = false;
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtils.e(TAG, "onResume");
+        if (mPause && !mHidden) {
+            mVpBanner.startPlay();
+        }
+        mPause = false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mPause = true;
+        mVpBanner.stopPlay();
+        LogUtils.e(TAG, "onPause");
     }
 
     @Override

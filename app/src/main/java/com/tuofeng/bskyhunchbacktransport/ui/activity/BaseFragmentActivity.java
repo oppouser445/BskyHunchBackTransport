@@ -50,6 +50,11 @@ public abstract class BaseFragmentActivity<B extends ViewDataBinding,M extends B
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+        if (mViewModel != null) {
+            mViewModel.onActivityDestroyed();
+        }
+        mViewModel = null;
+        mDataBinding = null;
     }
 
     @Override

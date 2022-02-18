@@ -104,6 +104,7 @@
                 android:orientation="horizontal">
 
                 <RelativeLayout
+                    android:id="@+id/rlayout_my_purse"
                     android:layout_width="@dimen/dp_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

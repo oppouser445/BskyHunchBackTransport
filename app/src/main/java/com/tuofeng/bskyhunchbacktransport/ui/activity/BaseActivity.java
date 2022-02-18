@@ -22,7 +22,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
     protected B mDataBinding;
     protected M mViewModel;
     protected ImageView mToolbarBack;
-    protected TextView mToolbarTitle,mTvRightClick;
+    protected TextView mToolbarTitle, mTvRightClick;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,6 +74,9 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+        mViewModel.onActivityDestroyed();
+        mViewModel = null;
+        mDataBinding = null;
     }
 
     @Override

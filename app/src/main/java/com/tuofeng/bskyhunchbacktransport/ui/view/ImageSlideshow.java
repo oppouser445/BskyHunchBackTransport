@@ -19,6 +19,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.module.bean.ImageTitleBean;
+import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class ImageSlideshow extends FrameLayout {
     private List<ImageTitleBean> mDataList;
     private int dotSize = 12;
     private int dotSpace = 12;
-    private int delay = 1000;
+    private int delay = 3000;
     private ImageTitlePagerAdapter mAdapter;
     private int mLastSubscript;
 
@@ -120,7 +121,7 @@ public class ImageSlideshow extends FrameLayout {
             // 设置指示器
             setIndicator();
             // 开始播放
-            starPlay();
+            startPlay();
         } else {
             Log.e(TAG, "数据为空");
         }
@@ -145,7 +146,7 @@ public class ImageSlideshow extends FrameLayout {
     /**
      * 开始自动播放图片
      */
-    private void starPlay() {
+    public void startPlay() {
         // 如果少于2张就不用自动播放了
         if (count < 2) {
             isAutoPlay = false;
@@ -154,6 +155,10 @@ public class ImageSlideshow extends FrameLayout {
             handler = new Handler();
             handler.postDelayed(task, delay);
         }
+    }
+
+    public void stopPlay() {
+        handler.removeCallbacks(task);
     }
 
     private Runnable task = new Runnable() {
@@ -166,6 +171,7 @@ public class ImageSlideshow extends FrameLayout {
                 // 正常每隔3秒播放一张图片
                 mViewPager.setCurrentItem(currentItem);
                 handler.postDelayed(task, delay);
+                LogUtils.e(TAG,"切换下一章");
             } else {
                 // 如果处于拖拽状态停止自动播放，会每隔5秒检查一次是否可以正常自动播放。
                 handler.postDelayed(task, 5000);
@@ -203,7 +209,9 @@ public class ImageSlideshow extends FrameLayout {
             // 设置Item的点击监听器
             view.setOnClickListener(v -> {
                 // 注意：位置是position-1
-                //onItemClickListener.onItemClick(v, position - 1);
+                if (onItemClickListener != null) {
+                    onItemClickListener.onItemClick(v, position - 1);
+                }
             });
             container.addView(view);
             return view;
@@ -255,7 +263,7 @@ public class ImageSlideshow extends FrameLayout {
                 position = position == viewList.size() - 1 ? 1 : position;// 滑动到最后一页时设置第一个点选中
                 position = position == 0 ? viewList.size() - 2 : position;// 滑动到第一页时设置最后一个点选中
                 ViewMyUtils.setDotsLayoutStyle(mContext, position, llDot);
-                mLastSubscript = position;
+                //mLastSubscript = position;
             }
 
             @Override

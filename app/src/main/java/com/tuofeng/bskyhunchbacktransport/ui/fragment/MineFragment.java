@@ -1,5 +1,6 @@
 package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,7 +18,9 @@ import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.MyPurseActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
+import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.MineFragmentViewModel;
 
@@ -36,6 +39,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
             R.mipmap.act_main_banner_icon2,
     };
     private RelativeLayout mRlHistoricalwaybill;
+    private final String TAG = "MineFragment";
+    private boolean mPause;
+    private boolean mHidden;
 
     @Override
     int getLayoutID() {
@@ -59,8 +65,11 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
         mTvUserCertification = mDataBinding.tvUserCertification;
         mTvUserCertification.setOnClickListener(this);
 
+        //rlayout_my_purse
         mRlHistoricalwaybill = mDataBinding.rlHistoricalwaybill;
         mRlHistoricalwaybill.setOnClickListener(this);
+
+        mDataBinding.rlayoutMyPurse.setOnClickListener(this);
     }
 
     @Override
@@ -69,9 +78,48 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     }
 
     @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        LogUtils.e(TAG, "onHiddenChanged == " + hidden);
+        if (hidden) {
+            //相当于Fragment的onPause
+            mVpUserBanner.stopPlay();
+            mHidden = mHidden;
+            mHidden = true;
+        } else {
+            // 相当于Fragment的onResume
+            mVpUserBanner.startPlay();
+            mHidden = false;
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtils.e(TAG, "onResume");
+        if (mPause && !mHidden) {
+            mVpUserBanner.startPlay();
+        }
+        mPause = false;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mPause = true;
+        mVpUserBanner.stopPlay();
+        LogUtils.e(TAG, "onPause");
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()) {
+            case R.id.rlayout_my_purse:
+                intent = new Intent(mActivity, MyPurseActivity.class);
+                startActivity(intent);
+                break;
             case R.id.rl_historicalwaybill:
                 intent = new Intent(mActivity, HistoricalWayBillActivity.class);
                 startActivity(intent);
