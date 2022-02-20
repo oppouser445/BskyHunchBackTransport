@@ -20,4 +20,8 @@ public class DriverInformationViewModel extends BaseViewModel<IDriverInformation
     public void NextAction() {
         mIView.NextAction();
     }
+
+    public void saveSubmitReview() {
+        mIView.saveSubmitReview();
+    }
 }

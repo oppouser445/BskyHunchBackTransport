@@ -42,4 +42,9 @@ public class DriverInformationActivity extends BaseActivity<ActivityDriverInform
         Intent intent = new Intent(this, VehicleBasicInformationActivity.class);
         startActivity(intent);
     }
+
+    @Override
+    public void saveSubmitReview() {
+
+    }
 }

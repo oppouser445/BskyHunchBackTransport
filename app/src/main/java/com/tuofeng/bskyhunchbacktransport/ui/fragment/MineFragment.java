@@ -15,10 +15,12 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.DriverInformation2Activity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MyPurseActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.VehicleBasicInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
@@ -70,6 +72,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
         mRlHistoricalwaybill.setOnClickListener(this);
 
         mDataBinding.rlayoutMyPurse.setOnClickListener(this);
+
+        mDataBinding.lLyaoutPersonalInformation.setOnClickListener(this);
+        mDataBinding.lLyaoutVehicleInformation.setOnClickListener(this);
     }
 
     @Override
@@ -114,8 +119,15 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        Intent intent;
+        Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_vehicle_information:
+                intent = new Intent(mActivity, VehicleBasicInformationActivity.class);
+                intent.putExtra("btn_style", 1);
+                break;
+            case R.id.lLyaout_personal_information:
+                intent = new Intent(mActivity, DriverInformation2Activity.class);
+                break;
             case R.id.rlayout_my_purse:
                 intent = new Intent(mActivity, MyPurseActivity.class);
                 startActivity(intent);
@@ -126,8 +138,10 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
                 break;
             case R.id.tv_user_certification:
                 intent = new Intent(mActivity, InformationAuthenticationActivity.class);
-                startActivity(intent);
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 

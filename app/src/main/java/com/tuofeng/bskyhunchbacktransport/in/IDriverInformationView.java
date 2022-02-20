@@ -7,4 +7,6 @@ public interface IDriverInformationView extends IView {
     void PreviousAction();
 
     void NextAction();
+
+    void saveSubmitReview();
 }

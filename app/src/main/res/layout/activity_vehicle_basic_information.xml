@@ -275,6 +275,7 @@
                     android:orientation="horizontal">
 
                     <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                        android:id="@+id/btn_previous"
                         style="@style/act_information_authentication_button_style"
                         android:layout_marginStart="@dimen/dp_20"
                         android:onClick="@{()->viewModel.PreviousAction()}"
@@ -282,6 +283,7 @@
                         app:bgType="4" />
 
                     <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                        android:id="@+id/btn_vehicle_basic_information_next"
                         style="@style/act_information_authentication_button_style"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_45"

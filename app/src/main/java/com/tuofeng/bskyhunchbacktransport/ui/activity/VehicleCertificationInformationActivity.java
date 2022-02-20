@@ -1,13 +1,19 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
 import android.content.Intent;
+import android.view.View;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityVehicleCertificationInformationBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IVehicleCertificationInformationView;
+import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.VehicleCertificationInformationViewModel;
 
 public class VehicleCertificationInformationActivity extends BaseActivity<ActivityVehicleCertificationInformationBinding, VehicleCertificationInformationViewModel> implements IVehicleCertificationInformationView {
+
+    private Intent intent;
+    private int mBtnStyle;
+    private SharedButton mBtnPrevious, mBtnKeepVehicleInformation;
 
     @Override
     protected VehicleCertificationInformationViewModel getViewModel() {
@@ -24,6 +30,16 @@ public class VehicleCertificationInformationActivity extends BaseActivity<Activi
         initTitleBar();
         mToolbarTitle.setText("车辆证件信息");
         mDataBinding.setViewModel(mViewModel);
+
+        intent = getIntent();
+        mBtnStyle = intent.getIntExtra("btn_style", 0);
+
+        mBtnPrevious = mDataBinding.btnPrevious;
+        mBtnKeepVehicleInformation = mDataBinding.btnKeepVehicleInformation;
+
+        boolean b = mBtnStyle == 0;
+        mBtnPrevious.setVisibility(b ? View.VISIBLE : View.GONE);
+        mBtnKeepVehicleInformation.setText(b ? "下一步 添加银行卡(4/6)" : "保持(2/2)");
     }
 
     @Override
@@ -38,7 +54,11 @@ public class VehicleCertificationInformationActivity extends BaseActivity<Activi
 
     @Override
     public void NextAction() {
-        Intent intent = new Intent(this, InformationAuthenticationBankCardActivity.class);
-        startActivity(intent);
+        if (mBtnStyle == 1) {
+            finish();
+        } else {
+            Intent intent = new Intent(this, InformationAuthenticationBankCardActivity.class);
+            startActivity(intent);
+        }
     }
 }

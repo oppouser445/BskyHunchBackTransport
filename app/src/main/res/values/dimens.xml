@@ -65,6 +65,7 @@
     <dimen name="dp_27">27dp</dimen>
     <dimen name="dp_27_5">27.5dp</dimen>
     <dimen name="dp_28">28dp</dimen>
+    <dimen name="dp_28_5">28.5dp</dimen>
     <dimen name="dp_29">29dp</dimen>
     <dimen name="dp_30">30dp</dimen>
     <dimen name="dp_31">31dp</dimen>
