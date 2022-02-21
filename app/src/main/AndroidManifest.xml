@@ -46,9 +46,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".ui.activity.AddBankCardProcessActivity"
-            android:exported="false" />
+
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,8 +54,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle" />
+
+        <activity
+            android:name=".ui.activity.AddBankCardProcessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.activity.AddBankCardProcessActivity2"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.BankCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
@@ -66,83 +85,114 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.MyPurseActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.DriverInformation2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.WayBillTaskActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.WayBillDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.HistoryWayBillDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.HistoricalWayBillActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.WayBillManagementActivity"
             android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.DriverInformationActivity"
             android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.ConfirmContractActivity"
             android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.ContractConfirmationActivity"
             android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
         <activity
             android:name=".ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.activity.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize|locale|layoutDirection"
+            android:name=".ui.activity.MessageCenterDetailsActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".ui.activity.MessageCenterDetailsActivity"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.InformationAuthenticationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.TeamCaptainCertificationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.DriverIdentificationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.TeamCaptainCertificationReview"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.VehicleCertificationInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.VehicleBasicInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.InformationAuthenticationBankCardActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
     </application>

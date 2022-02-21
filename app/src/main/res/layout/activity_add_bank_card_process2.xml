@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.AddBankCardViewModel2" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_100_5"
+            android:text="持卡人：*小蒙"
+            android:textColor="#191919"
+            android:textSize="@dimen/sp_18" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_320"
+            android:layout_height="@dimen/dp_165"
+            android:layout_marginTop="@dimen/dp_12"
+            android:src="@drawable/shape_add_bancard_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="请将银行卡正面放在框内，并对齐边缘"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_14" />
+
+        <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+            style="@style/btn_default_style"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_44"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:onClick="@{()-> viewModel.nextActivity()}"
+            android:text="手动输入" />
+
+    </LinearLayout>
+
+</layout>

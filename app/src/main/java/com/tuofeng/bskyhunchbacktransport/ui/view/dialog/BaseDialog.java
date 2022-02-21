@@ -50,6 +50,7 @@ public abstract class BaseDialog extends Dialog {
 
         mParamsWindow = getWindow().getAttributes();
         mParamsWindow.width = WindowManager.LayoutParams.MATCH_PARENT;
+        mParamsWindow.height = WindowManager.LayoutParams.MATCH_PARENT;
         mWindow.setAttributes(mParamsWindow);
 
 

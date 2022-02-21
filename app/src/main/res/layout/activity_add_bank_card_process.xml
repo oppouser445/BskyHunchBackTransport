@@ -60,7 +60,7 @@
                 android:id="@+id/tv_account_opening_name"
                 style="@style/act_driver_certification_tv4_style"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_8"
                 android:layout_toEndOf="@+id/account_opening_name"
                 android:text="王小蒙"
                 android:textSize="@dimen/sp_15" />
@@ -93,7 +93,8 @@
             <TextView
                 android:id="@+id/tv_bank_card_number"
                 style="@style/act_driver_certification_tv4_style"
-                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_centerVertical="true"
                 android:layout_toEndOf="@+id/bank_card_number"
                 android:text="6217002020021452347"
                 android:textSize="@dimen/sp_15" />
@@ -122,6 +123,5 @@
             android:text="下一步" />
 
     </LinearLayout>
-
 
 </layout>

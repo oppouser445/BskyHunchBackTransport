@@ -12,51 +12,48 @@
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.BankCardViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:orientation="vertical">
 
-        <LinearLayout
+        <include
+            android:id="@+id/title_bar"
+            layout="@layout/titlelbar_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_above="@+id/lLyaout_add_bank_card"
+            android:layout_below="@+id/title_bar" />
 
-            <include layout="@layout/titlelbar_layout" />
+        <LinearLayout
+            android:id="@+id/lLyaout_add_bank_card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_28"
+            android:background="@color/main_orange_color"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/add_bankcard_ico" />
 
-            <LinearLayout
-                android:id="@+id/lLyaout_add_bank_card"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_48"
-                android:layout_marginStart="@dimen/dp_20"
-                android:layout_marginTop="@dimen/dp_28"
-                android:layout_marginEnd="@dimen/dp_20"
-                android:layout_marginBottom="@dimen/dp_28"
-                android:background="@color/main_orange_color"
-                android:gravity="center"
-                android:orientation="horizontal">
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_12"
+                android:text="添加银行卡"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/add_bankcard_ico" />
-
-                <TextView
-                    style="@style/tv_default_style"
-                    android:layout_marginStart="@dimen/dp_12"
-                    android:text="添加银行卡"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_18" />
-
-            </LinearLayout>
         </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+    </RelativeLayout>
 </layout>
