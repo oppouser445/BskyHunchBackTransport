@@ -108,5 +108,7 @@
 
     <color name="activity_my_purse_tv_color1">#b1b1b1</color>
 
+    <color name="activity_collection_invitations_tv_color1">#191919</color>
+    <color name="activity_collection_invitations_tv_color2">#666666</color>
 
 </resources>

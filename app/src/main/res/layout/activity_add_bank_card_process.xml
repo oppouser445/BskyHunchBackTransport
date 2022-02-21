@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.AddBankCardViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <LinearLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/act_driver_certification_tv3_style"
+                android:text="完善信息:"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                style="@style/act_driver_certification_tv4_style"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="完整清晰、有效期内"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/act_driver_certification_line_style"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_20" />
+
+        <RelativeLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/account_opening_name"
+                style="@style/act_driver_certification_tv3_style"
+                android:text="开户姓名:"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/tv_account_opening_name"
+                style="@style/act_driver_certification_tv4_style"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_toEndOf="@+id/account_opening_name"
+                android:text="王小蒙"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/bankcard_question_mark" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/act_driver_certification_line_style"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_20" />
+
+        <RelativeLayout
+            style="@style/act_driver_certification_content_layout_style"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bank_card_number"
+                style="@style/act_driver_certification_tv3_style"
+                android:text="银行卡号:"
+                android:textSize="@dimen/sp_18" />
+
+            <TextView
+                android:id="@+id/tv_bank_card_number"
+                style="@style/act_driver_certification_tv4_style"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_toEndOf="@+id/bank_card_number"
+                android:text="6217002020021452347"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/bankcard_camera" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/act_driver_certification_line_style"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_20" />
+
+        <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+            style="@style/btn_default_style"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_82"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:onClick="@{()-> viewModel.nextActivity()}"
+            android:text="下一步" />
+
+    </LinearLayout>
+
+
+</layout>

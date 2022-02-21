@@ -126,8 +126,8 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     @Override
     public void onResume() {
         super.onResume();
-        LogUtils.e(TAG, "onResume");
         if (mPause && !mHidden) {
+            LogUtils.e(TAG, "onResume");
             mVpBanner.startPlay();
         }
         mPause = false;
@@ -154,7 +154,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
         switch (v.getId()) {
             case R.id.relayout_waybill_task:
                 intent = new Intent(mActivity, WayBillTaskActivity.class);
-                mActivity.startActivity(intent);
+                startActivity(intent);
                 break;
             case R.id.llyaout_personnel_management:
                 break;

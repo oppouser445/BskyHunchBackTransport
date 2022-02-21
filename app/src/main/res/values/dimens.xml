@@ -255,6 +255,7 @@
     <dimen name="dp_199">199dp</dimen>
     <dimen name="dp_200">200dp</dimen>
     <dimen name="dp_201">201dp</dimen>
+    <dimen name="dp_201_5">201.5dp</dimen>
     <dimen name="dp_202">202dp</dimen>
     <dimen name="dp_203">203dp</dimen>
     <dimen name="dp_204">204dp</dimen>

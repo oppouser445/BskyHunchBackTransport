@@ -101,8 +101,8 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     @Override
     public void onResume() {
         super.onResume();
-        LogUtils.e(TAG, "onResume");
         if (mPause && !mHidden) {
+            LogUtils.e(TAG, "onResume");
             mVpUserBanner.startPlay();
         }
         mPause = false;
@@ -129,12 +129,11 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
                 intent = new Intent(mActivity, DriverInformation2Activity.class);
                 break;
             case R.id.rlayout_my_purse:
+                mVpUserBanner.stopPlay();
                 intent = new Intent(mActivity, MyPurseActivity.class);
-                startActivity(intent);
                 break;
             case R.id.rl_historicalwaybill:
                 intent = new Intent(mActivity, HistoricalWayBillActivity.class);
-                startActivity(intent);
                 break;
             case R.id.tv_user_certification:
                 intent = new Intent(mActivity, InformationAuthenticationActivity.class);

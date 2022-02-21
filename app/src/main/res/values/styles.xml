@@ -32,7 +32,6 @@
     </style>
 
 
-
     <style name="main_act_title_list_lLayout_style">
         <item name="android:layout_width">@dimen/dp_0</item>
         <item name="android:layout_height">match_parent</item>
@@ -244,20 +243,14 @@
     </style>
 
 
-    <style name="act_driver_certification_tv3_style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="act_driver_certification_tv3_style" parent="tv_default_style">
         <item name="android:layout_marginStart">@dimen/dp_4</item>
-        <item name="android:includeFontPadding">false</item>
         <item name="android:textColor">@color/act_driver_vehicle_basic_tv1_color</item>
         <item name="android:textSize">@dimen/sp_16</item>
     </style>
 
-    <style name="act_driver_certification_tv4_style">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="act_driver_certification_tv4_style" parent="tv_default_style">
         <item name="android:layout_marginStart">@dimen/dp_8</item>
-        <item name="android:includeFontPadding">false</item>
         <item name="android:singleLine">true</item>
         <item name="android:textColor">@color/act_driver_vehicle_basic_tv2_color</item>
         <item name="android:textSize">@dimen/sp_14</item>
@@ -328,6 +321,19 @@
         <item name="android:paddingBottom">@dimen/dp_3</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="act_collection_invitations_tv_style" parent="tv_default_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/activity_collection_invitations_tv_color1</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="act_collection_invitations_tv_content_style" parent="tv_default_style">
+        <item name="android:layout_marginStart">@dimen/dp_8</item>
+        <item name="android:textColor">@color/activity_collection_invitations_tv_color2</item>
+        <item name="android:textSize">@dimen/sp_15</item>
     </style>
 
 </resources>

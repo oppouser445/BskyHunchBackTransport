@@ -1,5 +1,6 @@
 package com.tuofeng.bskyhunchbacktransport.ui.activity;
 
+import android.content.Intent;
 import android.view.View;
 
 import com.tuofeng.bskyhunchbacktransport.R;
@@ -7,6 +8,7 @@ import com.tuofeng.bskyhunchbacktransport.databinding.ActivityMyPurseBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMyPurseView;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
+import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.MyPurseViewModel;
 
 public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurseViewModel> implements IMyPurseView {
@@ -18,6 +20,7 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
     };
     private ImageSlideshow mVpBanner;
     private final String TAG = "MyPurseActivity";
+    private boolean mPause;
 
     @Override
     protected MyPurseViewModel getViewModel() {
@@ -35,6 +38,10 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
         mToolbarTitle.setText("我的钱包");
         mTvRightClick.setText("银行卡");
         mTvRightClick.setVisibility(View.VISIBLE);
+        mTvRightClick.setOnClickListener(v -> {
+            Intent intent = new Intent(this, BankCardActivity.class);
+            startActivity(intent);
+        });
 
         mDataBinding.setViewModel(mViewModel);
         mVpBanner = mDataBinding.vpUserBanner;
@@ -44,10 +51,11 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
         mVpBanner.setDelay(3000);
         mVpBanner.setOnItemClickListener((view, position) -> {
             if (position == 0) {
-
+                Intent intent = new Intent(this, CollectionInvitationsActivity.class);
+                startActivity(intent);
+                ToastUtil.shortToast("测试点击");
             }
         });
-
         mVpBanner.commit();
     }
 
@@ -57,14 +65,26 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        mVpBanner.stopPlay();
+    public void onResume() {
+        super.onResume();
+        if (mPause) {
+            LogUtils.e(TAG, "onResume");
+            mVpBanner.startPlay();
+        }
+        mPause = false;
     }
 
     @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        mVpBanner.startPlay();
+    public void onPause() {
+        super.onPause();
+        mPause = true;
+        mVpBanner.stopPlay();
+        LogUtils.e(TAG, "onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mVpBanner.stopPlay();
     }
 }

@@ -189,7 +189,6 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     protected void onDestroy() {
         super.onDestroy();
         mSendCode.unRegisterCountDownListener();
-        mViewModel.onActivityDestroyed();
     }
 
     @Override

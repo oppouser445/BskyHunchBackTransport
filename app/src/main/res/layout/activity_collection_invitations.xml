@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.HistoryWayBillDetailsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.CollectionInvitationsViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlelbar_layout" />
+
+            <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_style"
+                    android:includeFontPadding="false"
+                    android:text="身份证号:" />
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_content_style"
+                    android:text="130130199506170028" />
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+            <RelativeLayout style="@style/act_driver_certification_content_layout_style">
+
+                <TextView
+                    android:id="@+id/tv_collector_phone_number"
+                    style="@style/act_collection_invitations_tv_style"
+                    android:layout_centerVertical="true"
+                    android:text="代收人电话:" />
+
+                <TextView
+                    android:id="@+id/tv_collector_phone_number_content"
+                    style="@style/act_collection_invitations_tv_content_style"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tv_collector_phone_number"
+                    android:text="156 8888 9999" />
+
+                <TextView
+                    style="@style/act_my_purser_details_style"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:paddingStart="@dimen/dp_14_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_14_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:textSize="@dimen/sp_12"
+                    android:text="电话确认" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+            <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_style"
+                    android:includeFontPadding="false"
+                    android:text="车队ID:" />
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_content_style"
+                    android:text="at123456" />
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+            <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_style"
+                    android:includeFontPadding="false"
+                    android:text="车队所属:" />
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_content_style"
+                    android:text="北京驮丰XXXXXXXXXX" />
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+            <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_style"
+                    android:includeFontPadding="false"
+                    android:text="车队成员:" />
+
+                <TextView
+                    style="@style/act_collection_invitations_tv_content_style"
+                    android:text="10人" />
+            </LinearLayout>
+
+            <View
+                style="@style/act_driver_certification_line_style"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chk_login_instruction"
+                    android:layout_width="@dimen/dp_21"
+                    android:layout_height="@dimen/dp_21"
+                    android:layout_marginTop="@dimen/dp_m_2"
+                    android:button="@drawable/select_act_login_agreement_btn_bg"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txt_login_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/chk_login_instruction"
+                    android:includeFontPadding="false"
+                    android:text="首次登录自动注册网络货运平台账号，并默认您已\n阅读同意《用户服务协议》《隐私协议》"
+                    android:textColor="#ffb1b1b1"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                    style="@style/act_information_authentication_button_style"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_37"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_weight="1"
+                    android:onClick="@{()->viewModel.refuseCollect()}"
+                    android:text="拒绝代收"
+                    app:bgType="4" />
+
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                    style="@style/act_information_authentication_button_style"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_37"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:onClick="@{()->viewModel.agreeCollect()}"
+                    android:text="同意代收"
+                    app:bgType="3" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

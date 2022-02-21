@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataBean"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_109"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@mipmap/bankcard_ico"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_11_5"
+                android:gravity="center"
+                android:text=".......................650"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

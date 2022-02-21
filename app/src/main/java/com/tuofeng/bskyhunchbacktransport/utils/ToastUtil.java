@@ -41,7 +41,7 @@ public class ToastUtil {
         showToast(context, msg, Toast.LENGTH_LONG);
     }
 
-    private static void showToast(Context context, String massage, int duration) {
+    public static void showToast(Context context, String massage, int duration) {
         // 判断是否是在主线程
         if (Looper.getMainLooper().getThread() != Thread.currentThread()) {
             Looper.prepare();
@@ -104,4 +104,34 @@ public class ToastUtil {
             toast.show();
         }
     }
+
+    public static void showCenterToast(Context context, String massage) {
+        // 判断是否是在主线程
+        if (Looper.getMainLooper().getThread() != Thread.currentThread()) {
+            Looper.prepare();
+            Toast toast = new Toast(context);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER, 0, 0);
+            toast.setDuration(Toast.LENGTH_SHORT);
+
+            View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+            TextView tvToast = view.findViewById(R.id.tv_toast);
+            tvToast.setText(massage);//设置文本
+
+            toast.setView(view);
+            toast.show();
+            Looper.loop();
+        } else {
+            Toast toast = new Toast(context);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER, 0, 0);
+            toast.setDuration(Toast.LENGTH_SHORT);
+
+            View view = LayoutInflater.from(context).inflate(R.layout.toast_layout, null);
+            TextView tvToast = view.findViewById(R.id.tv_toast);
+            tvToast.setText(massage);//设置文本
+
+            toast.setView(view);
+            toast.show();
+        }
+    }
+
 }

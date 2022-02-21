@@ -122,6 +122,7 @@ public class ImageSlideshow extends FrameLayout {
             setIndicator();
             // 开始播放
             startPlay();
+            LogUtils.e(TAG,"启动调用commit");
         } else {
             Log.e(TAG, "数据为空");
         }
@@ -153,7 +154,9 @@ public class ImageSlideshow extends FrameLayout {
         } else {
             isAutoPlay = true;
             handler = new Handler();
+            handler.removeCallbacks(task);
             handler.postDelayed(task, delay);
+            LogUtils.e(TAG,"启动调用startPlay");
         }
     }
 
