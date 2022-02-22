@@ -226,7 +226,9 @@
 
                     </LinearLayout>
 
-                    <LinearLayout style="@style/main_fragment_min_tab1_style">
+                    <LinearLayout
+                        android:id="@+id/lLyaout_my_fleet"
+                        style="@style/main_fragment_min_tab1_style">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -235,7 +237,7 @@
 
                         <TextView
                             style="@style/main_fragment_min_basic_information_tv_style"
-                            android:text="参与活动" />
+                            android:text="我的车队" />
 
                     </LinearLayout>
 
@@ -248,7 +250,7 @@
 
                         <TextView
                             style="@style/main_fragment_min_basic_information_tv_style"
-                            android:text="参与活动" />
+                            android:text="银行卡" />
 
                     </LinearLayout>
 
@@ -374,7 +376,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@mipmap/mine_personal_information" />
+                            android:background="@mipmap/comments_complaints" />
 
                         <TextView
                             style="@style/main_fragment_min_basic_information_tv_style"
@@ -400,7 +402,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@mipmap/mine_my_fleet" />
+                            android:background="@mipmap/mine_vehicle_information" />
 
                         <TextView
                             style="@style/main_fragment_min_basic_information_tv_style"
@@ -413,7 +415,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@mipmap/mine_bank_card" />
+                            android:background="@mipmap/collection_invitations_icon" />
 
                         <TextView
                             style="@style/main_fragment_min_basic_information_tv_style"

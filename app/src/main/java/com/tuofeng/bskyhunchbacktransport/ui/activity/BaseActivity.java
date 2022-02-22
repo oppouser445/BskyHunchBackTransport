@@ -74,9 +74,11 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
-        mViewModel.onActivityDestroyed();
-        mViewModel = null;
-        mDataBinding = null;
+        if (mViewModel != null) {
+            mViewModel.onActivityDestroyed();
+            mViewModel = null;
+            mDataBinding = null;
+        }
     }
 
     @Override

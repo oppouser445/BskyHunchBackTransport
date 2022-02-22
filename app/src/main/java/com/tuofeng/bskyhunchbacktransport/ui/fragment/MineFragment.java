@@ -16,6 +16,7 @@ import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.DriverInformation2Activity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.FleetInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
@@ -75,6 +76,7 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
 
         mDataBinding.lLyaoutPersonalInformation.setOnClickListener(this);
         mDataBinding.lLyaoutVehicleInformation.setOnClickListener(this);
+        mDataBinding.lLyaoutMyFleet.setOnClickListener(this);
     }
 
     @Override
@@ -121,6 +123,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_my_fleet:
+                intent = new Intent(mActivity, FleetInformationActivity.class);
+                break;
             case R.id.lLyaout_vehicle_information:
                 intent = new Intent(mActivity, VehicleBasicInformationActivity.class);
                 intent.putExtra("btn_style", 1);

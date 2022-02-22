@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.FleetInformationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <LinearLayout
+            android:id="@+id/lLyaout_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/lLyaout_fleet_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    style="@style/act_driver_certification_llyayout_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_24">
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_style"
+                        android:text="车队ID:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="500384199309092832" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <LinearLayout
+                    style="@style/act_driver_certification_llyayout_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_12_5">
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_style"
+                        android:text="车队长：" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="500384199309092832" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <LinearLayout
+                    style="@style/act_driver_certification_llyayout_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_12_5">
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_style"
+                        android:text="车队长电话：" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="156 8888 9999备份" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <LinearLayout
+                    style="@style/act_driver_certification_llyayout_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_12_5">
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_style"
+                        android:text="车队所属：" />
+
+                    <TextView
+                        android:id="@+id/tv_driver_identity"
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="北京驮丰高新科技股份有限公司" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+                <LinearLayout
+                    style="@style/act_driver_certification_llyayout_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_12_5">
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_style"
+                        android:text="车队成员：" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="10人" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_145"
+                android:text="您还尚未加入车队"
+                android:textColor="#000000"
+                android:textSize="@dimen/sp_20"
+                android:visibility="gone" />
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                android:id="@+id/btn_ok"
+                style="@style/btn_default_style"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_44"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:onClick="@{()->viewModel.NextAction(1)}"
+                android:text="申请加入车队" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lLyaout_apply_join_team"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout style="@style/act_driver_certification_title_style">
+
+                <View
+                    android:layout_width="@dimen/dp_4"
+                    android:layout_height="@dimen/dp_12"
+                    android:background="@drawable/shape_driver_certification_mark" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="拖过车队ID： " />
+
+            </LinearLayout>
+
+            <View style="@style/act_driver_certification_line_style" />
+
+            <RelativeLayout
+                style="@style/act_driver_certification_llyayout_style"
+                android:layout_height="@dimen/dp_46"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_28">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/act_driver_certification_tv_style"
+                    android:layout_centerVertical="true"
+                    android:text="姓名：" />
+
+                <EditText
+                    android:id="@+id/ed_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_46"
+                    android:layout_toEndOf="@+id/tv_name"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="车队ID请询问车队长"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/act_login_edit_color1"
+                    android:textColorHint="@color/act_login_edit_color2"
+                    android:textSize="@dimen/sp_15" />
+
+            </RelativeLayout>
+
+            <View style="@style/act_driver_certification_line_style" />
+
+            <RelativeLayout
+                style="@style/act_driver_certification_llyayout_style"
+                android:layout_height="@dimen/dp_46"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_28">
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    style="@style/act_driver_certification_tv_style"
+                    android:layout_centerVertical="true"
+                    android:text="备注：" />
+
+                <EditText
+                    android:id="@+id/ed_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_46"
+                    android:layout_toEndOf="@+id/tv_remark"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="入队理由/个人信息等"
+                    android:singleLine="true"
+                    android:textColor="@color/act_login_edit_color1"
+                    android:textColorHint="@color/act_login_edit_color2"
+                    android:textSize="@dimen/sp_15" />
+
+            </RelativeLayout>
+
+            <View style="@style/act_driver_certification_line_style" />
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                style="@style/btn_default_style"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:onClick="@{()->viewModel.NextAction(2)}"
+                android:text="申请加入车队" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image_apply_icon"
+                android:layout_width="@dimen/dp_77"
+                android:layout_height="@dimen/dp_91"
+                android:layout_marginTop="@dimen/dp_100"
+                android:src="@mipmap/shield_icon" />
+
+            <TextView
+                android:id="@+id/tv_apply_title"
+                style="@style/tv_default_style"
+                android:layout_marginTop="@dimen/dp_25"
+                android:text="未达到申请要求"
+                android:textColor="#191919"
+                android:textSize="@dimen/sp_20" />
+
+            <TextView
+                android:id="@+id/tv_apply_content"
+                style="@style/tv_default_style"
+                android:layout_marginTop="@dimen/dp_15"
+                android:text="完成司机信息认证后才能申请入队"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_14" />
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                android:id="@+id/btn_go_certification"
+                style="@style/login_act_btn_style"
+                android:onClick="@{() -> viewModel.NextAction(3)}"
+                android:text="前往认证"
+                android:textColor="@color/white" />
+
+            <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                android:id="@+id/btn_talk_about_later"
+                style="@style/login_act_btn_style"
+                android:onClick="@{() -> viewModel.NextAction(4)}"
+                android:text="稍后再说"
+                android:textColor="@color/white"
+                app:bgType="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
