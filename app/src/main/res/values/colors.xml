@@ -9,6 +9,7 @@
     <color name="main_default_bg_color">#F4F4F4</color>
     <color name="view_line_color">#F4F4F4</color>
     <color name="divideLine">#979797</color>
+    <color name="tv_default_color">#191919</color>
 
     <color name="color_login_line">#F5F5F5</color>
 

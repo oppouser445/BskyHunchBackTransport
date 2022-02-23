@@ -46,9 +46,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".ui.activity.FleetInformationActivity"
-            android:exported="false" />
+
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +59,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle" />
+
         <activity
             android:name=".ui.activity.AddBankCardProcessActivity"
             android:launchMode="singleTask"
@@ -195,6 +194,31 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.activity.SettingLoginPasswordActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.SetUpActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.activity.FleetInformationActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

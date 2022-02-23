@@ -21,6 +21,7 @@ import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.InformationAuthenticationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MyPurseActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.SetUpActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.VehicleBasicInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
@@ -77,6 +78,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
         mDataBinding.lLyaoutPersonalInformation.setOnClickListener(this);
         mDataBinding.lLyaoutVehicleInformation.setOnClickListener(this);
         mDataBinding.lLyaoutMyFleet.setOnClickListener(this);
+
+        //服务 列表
+        mDataBinding.lLyaoutSetUp.setOnClickListener(this);
     }
 
     @Override
@@ -123,6 +127,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_set_up:
+                intent = new Intent(mActivity, SetUpActivity.class);
+                break;
             case R.id.lLyaout_my_fleet:
                 intent = new Intent(mActivity, FleetInformationActivity.class);
                 break;
