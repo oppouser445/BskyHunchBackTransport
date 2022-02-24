@@ -41,6 +41,7 @@
         android:layout_marginEnd="@dimen/dp_16" />
 
     <RelativeLayout
+        android:id="@+id/rLyaout_set_withdrawal_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/dp_12"

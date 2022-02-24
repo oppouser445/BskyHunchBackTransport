@@ -46,7 +46,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,12 +53,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.activity.SetWithdrawalPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
-            android:theme="@style/AppActivityStyle" />
-
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.AddBankCardProcessActivity"
             android:launchMode="singleTask"
@@ -194,15 +201,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".ui.activity.SettingLoginPasswordActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.SetUpActivity"
             android:exported="false"
@@ -216,9 +221,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
-            tools:ignore="LockedOrientationActivity"
-            android:exported="false" />
-
+            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>
