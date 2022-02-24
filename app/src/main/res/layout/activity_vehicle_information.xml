@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.VehicleInformationVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.activity.VehicleBasicInformationActivity">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/act_driver_certification_title_style">
+
+                    <View style="@style/act_information_authentication_title_mark_style" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv_content_style"
+                        android:text="车辆基础信息 " />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/act_driver_certification_line_style"
+                    android:layout_marginTop="@dimen/dp_8" />
+
+                <LinearLayout
+                    android:id="@+id/relative_seal"
+                    style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        android:id="@+id/tv_seal"
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车牌号:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="选择车辆" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车牌颜色:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="蓝色" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车长:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="8980×2495×3200mm" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车型:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="厢式货车" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车架号:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="LJHLR9CEIF3215069" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="能源类型:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="柴油" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="车辆所有人:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="王小蒙" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="使用性质:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="货运" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="发证机关:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="江办省徐州市公安局交通警察支队" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="注册日期:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="2015-10-30" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="发证日期:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="2015-10-30" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="核定载质量:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="7000kg" />
+                </LinearLayout>
+
+                <View style="@style/act_driver_certification_line_style" />
+
+                <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+                    <TextView
+                        style="@style/act_driver_certification_mark_style"
+                        android:text="*" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv3_style"
+                        android:text="总质量:" />
+
+                    <TextView
+                        style="@style/act_driver_certification_tv4_style"
+                        android:text="16500kg" />
+                </LinearLayout>
+
+                <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+                    style="@style/act_information_authentication_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_27_5"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:onClick="@{()->viewModel.NextAction()}"
+                    android:text="下一步 添加车辆证件信息(1/2)"
+                    app:bgType="3" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

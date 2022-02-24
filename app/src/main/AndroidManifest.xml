@@ -53,14 +53,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".ui.activity.VehicleInformationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.activity.SubscribeRouteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".ui.activity.SetWithdrawalPasswordActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppActivityStyle"
             tools:ignore="LockedOrientationActivity" />
-
         <activity
             android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask"

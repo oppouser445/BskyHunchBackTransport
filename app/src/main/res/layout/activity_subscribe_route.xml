@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.MineFragmentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_weight="1"
+                android:background="@drawable/shape_subscribe_route"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:text="系统通知"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:text="符合路线有通知"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="符合路线有通知"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_weight="1"
+                android:background="@drawable/shape_sound_notification"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:text="系统通知"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:text="符合路线有通知"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:text="符合路线有通知"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@drawable/shape_subscribe_route_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingEnd="@dimen/dp_12">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="我的常跑路线(3/10)"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:layout_alignParentEnd="true"
+                    android:text="编辑"
+                    android:textColor="#25a3fc"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/line_default_style"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_12" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
