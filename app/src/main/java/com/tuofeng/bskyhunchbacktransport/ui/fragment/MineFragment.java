@@ -3,18 +3,14 @@ package com.tuofeng.bskyhunchbacktransport.ui.fragment;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.ViewPager;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.CommentsComplaintsActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.DriverInformation2Activity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.FleetInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
@@ -26,11 +22,7 @@ import com.tuofeng.bskyhunchbacktransport.ui.activity.SubscribeRouteActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.VehicleBasicInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
-import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.fragment.MineFragmentViewModel;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragmentViewModel> implements IMineFragmentView, View.OnClickListener {
 
@@ -81,8 +73,11 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
         mDataBinding.lLyaoutMyFleet.setOnClickListener(this);
 
         //服务 列表
-        mDataBinding.lLyaoutSetUp.setOnClickListener(this);//lLyaout_subscribe_route
+        mDataBinding.lLyaoutSetUp.setOnClickListener(this);
         mDataBinding.lLyaoutSubscribeRoute.setOnClickListener(this);
+
+        //工具  lLyaout_comments_complaints
+        mDataBinding.lLyaoutCommentsComplaints.setOnClickListener(this);
     }
 
     @Override
@@ -129,6 +124,9 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_comments_complaints:
+                intent = new Intent(mActivity, CommentsComplaintsActivity.class);
+                 break;
             case R.id.lLyaout_subscribe_route:
                 intent = new Intent(mActivity, SubscribeRouteActivity.class);
                 break;

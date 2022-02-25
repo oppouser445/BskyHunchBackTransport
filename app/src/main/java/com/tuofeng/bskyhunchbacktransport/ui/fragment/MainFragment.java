@@ -17,6 +17,7 @@ import com.tuofeng.bskyhunchbacktransport.in.IMainFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.RecycleBannerAdapter;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.VehicleManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillTaskActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.view.ImageSlideshow;
@@ -150,25 +151,25 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        Intent intent;
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.relayout_waybill_task:
                 intent = new Intent(mActivity, WayBillTaskActivity.class);
-                startActivity(intent);
                 break;
             case R.id.llyaout_personnel_management:
                 break;
-            case R.id.llyaout_vehicle_management:
-                mIntent = new Intent(mActivity, WayBillManagementActivity.class);
-                startActivity(mIntent);
+            case R.id.llyaout_vehicle_management://车辆管理
+                intent = new Intent(mActivity, VehicleManagementActivity.class);
                 break;
-            case R.id.llyaout_waybill_management:
+            case R.id.llyaout_waybill_management://运单管理
                 intent = new Intent(mActivity, WayBillManagementActivity.class);
-                startActivity(intent);
                 break;
             case R.id.img_title_notice_clear:
                 setNoticeViewStyle(true);
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 

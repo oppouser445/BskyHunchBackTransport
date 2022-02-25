@@ -375,7 +375,9 @@
                     android:layout_marginTop="@dimen/dp_8"
                     android:orientation="horizontal">
 
-                    <LinearLayout style="@style/main_fragment_min_tab1_style">
+                    <LinearLayout
+                        android:id="@+id/lLyaout_comments_complaints"
+                        style="@style/main_fragment_min_tab1_style">
 
                         <ImageView
                             android:layout_width="wrap_content"

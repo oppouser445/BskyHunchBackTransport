@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlelbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/act_driver_certification_title_style">
+
+            <View style="@style/act_information_authentication_title_mark_style" />
+
+            <TextView
+                style="@style/act_driver_certification_tv_content_style"
+                android:text="反馈类型基本信息选择" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_default_style"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46_5"
+            android:layout_marginStart="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="反馈类型:"
+                android:textColor="@color/tv_default_color"
+                android:textSize="@dimen/sp_16" />
+
+            <CheckBox
+                android:id="@+id/chk_login_instruction"
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_21"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_m_2"
+                android:button="@drawable/select_act_login_agreement_btn_bg"
+                android:gravity="center" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="建议"
+                android:textColor="@color/tv_default_color2"
+                android:textSize="@dimen/sp_15" />
+
+            <CheckBox
+                android:layout_width="@dimen/dp_21"
+                android:layout_height="@dimen/dp_21"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_m_2"
+                android:button="@drawable/select_act_login_agreement_btn_bg"
+                android:gravity="center" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_3"
+                android:text="建议"
+                android:textColor="@color/tv_default_color2"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_default_style"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginEnd="@dimen/dp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46_5"
+            android:layout_marginStart="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="涉及业务:"
+                android:textColor="@color/tv_default_color"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="单选下拉框"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:src="@mipmap/triangle_down" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_default_style"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginEnd="@dimen/dp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46_5"
+            android:layout_marginStart="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="选择运单号:"
+                android:textColor="@color/tv_default_color"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="单选下拉框备份"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_15" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:src="@mipmap/triangle_down" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_default_style"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginEnd="@dimen/dp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="#F4F4F4" />
+
+            <LinearLayout
+                style="@style/act_driver_certification_title_style"
+                android:layout_marginTop="@dimen/dp_8">
+
+                <View style="@style/act_information_authentication_title_mark_style" />
+
+                <TextView
+                    style="@style/act_driver_certification_tv_content_style"
+                    android:text="问题描述" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_59_9"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:gravity="left"
+                android:hint="最多可输入300字"
+                android:paddingStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_8"
+                android:textSize="@dimen/sp_12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="#F4F4F4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/act_driver_certification_title_style"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <View style="@style/act_information_authentication_title_mark_style" />
+
+            <TextView
+                style="@style/act_driver_certification_tv_content_style"
+                android:text="问题截图" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_12"
+            android:background="#F4F4F4" />
+
+        <LinearLayout
+            style="@style/act_driver_certification_title_style"
+            android:layout_marginTop="@dimen/dp_8">
+
+            <View style="@style/act_information_authentication_title_mark_style" />
+
+            <TextView
+                style="@style/act_driver_certification_tv_content_style"
+                android:text="联系方式" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_default_style"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginEnd="@dimen/dp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46_5"
+            android:layout_marginStart="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="联系人:"
+                android:textColor="@color/tv_default_color"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="默认拉入投诉人的信息"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_46_5"
+            android:layout_marginStart="@dimen/dp_28"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="联系电话:"
+                android:textColor="@color/tv_default_color"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="默认拉入投诉账号手机号"
+                android:textColor="#b1b1b1"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+        style="@style/btn_default_style"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="提交"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataBean"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="京A123456"
+                android:textColor="#ff1108"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_alignParentEnd="true"
+                android:text="重型半挂牵引车"
+                android:textColor="@color/tv_default_color2"
+                android:textSize="@dimen/sp_14" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

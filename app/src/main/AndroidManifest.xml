@@ -54,6 +54,19 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.activity.VehicleManagementActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.activity.CommentsComplaintsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppActivityStyle"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".ui.activity.VehicleInformationActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
