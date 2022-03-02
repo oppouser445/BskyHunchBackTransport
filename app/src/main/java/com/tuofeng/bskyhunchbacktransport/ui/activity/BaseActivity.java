@@ -21,7 +21,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
 
     protected B mDataBinding;
     protected M mViewModel;
-    protected ImageView mToolbarBack;
+    protected ImageView mToolbarBack,mImageTitleRight;
     protected TextView mToolbarTitle, mTvRightClick;
 
     @Override
@@ -60,6 +60,7 @@ public abstract class BaseActivity<B extends ViewDataBinding, M extends BaseView
         mToolbarBack.setOnClickListener(v -> finish());
         mToolbarTitle = findViewById(R.id.toolbar_title);
         mTvRightClick = findViewById(R.id.tv_right_click);
+        mImageTitleRight = findViewById(R.id.image_title_right);
     }
 
     protected void initStatusBar(int type) {

@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tuofeng.bskyhunchbacktransport.R;
-import com.tuofeng.bskyhunchbacktransport.module.adapter.HistoricalWayBillAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.VehicleManagementAdapter;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.BaseViewModel;
 
@@ -35,8 +34,18 @@ public class VehicleManagementActivity extends BaseActivity {
         mRecyclerList = findViewById(R.id.recycler_list);
 
         mDataList = new ArrayList<>();
-        mAdapter = new VehicleManagementAdapter(mDataList,this);
+        mAdapter = new VehicleManagementAdapter(mDataList, this);
         mRecyclerList.setAdapter(mAdapter);
+
+        mRecyclerList.setLayoutManager(new LinearLayoutManager(this));
+
+        mAdapter.setMyOnClickListener(new VehicleManagementAdapter.MyOnClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(VehicleManagementActivity.this, VehicleInformationDetailsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         /*mHistoricalWayBillAdapter = new HistoricalWayBillAdapter(mDataList, this);
         mHistoricalWayBillAdapter.setMyOnClickListener(position -> {

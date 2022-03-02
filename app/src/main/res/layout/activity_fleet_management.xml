@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.FleetManagementVM" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_default_bg_color"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context=".ui.activity.FleetManagementActivity">
+
+        <include layout="@layout/titlelbar_layout" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_34"
+            android:layout_margin="@dimen/dp_12"
+            android:background="@drawable/shape_fleet_management_search_bg"
+            android:drawableStart="@mipmap/search_left_icon"
+            android:drawablePadding="@dimen/dp_4"
+            android:hint="请输入姓名/车牌号/手机号"
+            android:textColorHint="@color/shape_search_hit_color"
+            android:textSize="@dimen/sp_14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rLyaout_all_members"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:layout_weight="1"
+                android:background="@drawable/shape_fleet_management_tab1_bg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="全部成员"
+                    android:textColor="@color/main_orange_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/image_right_icon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/fleet_management_tab_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLyaout_apply_join_team"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_fleet_management_tab2_bg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="申请入队"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/image_right_icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/fleet_management_tab_icon"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

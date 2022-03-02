@@ -38,9 +38,19 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="@dimen/dp_16"
         android:gravity="center"
-        android:visibility="gone"
         android:text="历史运单 "
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_14" />
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image_title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:src="@mipmap/item_add_icon"
+        android:visibility="gone" />
 
 </RelativeLayout>

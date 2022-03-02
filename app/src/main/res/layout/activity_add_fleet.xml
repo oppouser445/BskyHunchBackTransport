@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.AddFleetActivity">
+
+    <include layout="@layout/titlelbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/relative_seal"
+        style="@style/act_driver_certification_content_layout_style"
+        android:layout_marginTop="@dimen/dp_25">
+
+        <TextView
+            style="@style/act_driver_certification_mark_style"
+            android:text="*" />
+
+        <TextView
+            android:id="@+id/tv_seal"
+            style="@style/act_driver_certification_tv3_style"
+            android:text="司机姓名:" />
+
+        <TextView
+            style="@style/act_driver_certification_tv4_style"
+            android:text="130130199506170028" />
+    </LinearLayout>
+
+    <View style="@style/act_driver_certification_line_style" />
+
+    <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+        <TextView
+            style="@style/act_driver_certification_mark_style"
+            android:text="*" />
+
+        <TextView
+            style="@style/act_driver_certification_tv3_style"
+            android:text="司机电话:" />
+
+        <TextView
+            style="@style/act_driver_certification_tv4_style"
+            android:text="130130199506170028" />
+    </LinearLayout>
+
+    <View style="@style/act_driver_certification_line_style" />
+
+    <LinearLayout style="@style/act_driver_certification_content_layout_style">
+
+        <TextView
+            style="@style/act_driver_certification_mark_style"
+            android:text="*" />
+
+        <TextView
+            style="@style/act_driver_certification_tv3_style"
+            android:text="司机ID:" />
+
+        <TextView
+            style="@style/act_driver_certification_tv4_style"
+            android:text="123456" />
+    </LinearLayout>
+
+    <View style="@style/act_driver_certification_line_style" />
+
+    <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+        style="@style/btn_default_style"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:text="添加成员"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+</LinearLayout>

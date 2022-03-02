@@ -1,5 +1,6 @@
 package com.tuofeng.bskyhunchbacktransport.module.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tuofeng.bskyhunchbacktransport.R;
@@ -15,14 +15,14 @@ import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMessageCenterAdapt
 
 import java.util.List;
 
-public class VehicleManagementAdapter extends RecyclerView.Adapter<VehicleManagementAdapter.ViewHolder> {
+public class PersonnelManagementAdapter extends RecyclerView.Adapter<PersonnelManagementAdapter.ViewHolder> {
 
     private List<String> mList;
     private Context mContext;
     private RecycleBannerAdapter.onChildListener onChildListener;
     private MyOnClickListener mClickListener;
 
-    public VehicleManagementAdapter(List<String> mList, Context mContext) {
+    public PersonnelManagementAdapter(List<String> mList, Context mContext) {
         this.mList = mList;
         this.mContext = mContext;
     }
@@ -38,12 +38,12 @@ public class VehicleManagementAdapter extends RecyclerView.Adapter<VehicleManage
         LayoutInflater inflate = LayoutInflater.from(mContext);
         /*WaybilltaskListLayoutBinding mBinding = DataBindingUtil.inflate(inflate, R.layout.activity_vehicle_list_layout, parent, false);
         return new ViewHolder(mBinding.getRoot(), mBinding)*/
-        ;
 
-        View contentView = inflate.inflate(R.layout.activity_vehicle_list_layout, parent, false);
+        View contentView = inflate.inflate(R.layout.personnel_management_list_layout, parent, false);
         return new ViewHolder(contentView, null);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.mLayoutItemHome.setOnClickListener(new View.OnClickListener() {

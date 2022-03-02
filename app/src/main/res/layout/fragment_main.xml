@@ -102,7 +102,6 @@
 
                     <LinearLayout
                         android:id="@+id/llyaout_personnel_management"
-
                         style="@style/main_act_title_list_lLayout_style">
 
                         <ImageView
@@ -115,7 +114,9 @@
 
                     </LinearLayout>
 
-                    <LinearLayout style="@style/main_act_title_list_lLayout_style">
+                    <LinearLayout
+                        android:id="@+id/lLyaout_fleet_management"
+                        style="@style/main_act_title_list_lLayout_style">
 
                         <ImageView
                             style="@style/main_act_title_list_img_style"

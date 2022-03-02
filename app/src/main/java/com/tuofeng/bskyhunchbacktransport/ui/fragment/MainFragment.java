@@ -16,7 +16,9 @@ import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMainBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMainFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.RecycleBannerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.FleetManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.MainActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.PersonnelManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.VehicleManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillManagementActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.WayBillTaskActivity;
@@ -47,7 +49,7 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
             R.mipmap.act_main_banner_icon1,
             R.mipmap.act_main_banner_icon2,
     };
-    private LinearLayout mLlyaoutWaybillManagement, mLlyaoutVehicleManagement, mLlyaoutPersonnelManagement;
+    private LinearLayout mLlyaoutWaybillManagement, mLlyaoutVehicleManagement, mLlyaoutPersonnelManagement,mLyaoutFleetManagement;
     private Intent mIntent;
     private SmartRefreshLayout mRefreshLayout;
     private boolean mPause;
@@ -73,12 +75,15 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
         mLlyaoutVehicleManagement.setOnClickListener(this);
         mLlyaoutPersonnelManagement = mDataBinding.llyaoutPersonnelManagement;
         mLlyaoutPersonnelManagement.setOnClickListener(this);
+        mLyaoutFleetManagement = mDataBinding.lLyaoutFleetManagement;
+        mLyaoutFleetManagement.setOnClickListener(this);
 
         mRelayoutWaybillTask = mDataBinding.relayoutWaybillTask;
         mRelayoutWaybillTask.setOnClickListener(this);
 
         mImgTitleNoticeClear = mDataBinding.imgTitleNoticeClear;
         mImgTitleNoticeClear.setOnClickListener(this);
+
         mLayoutTitleNoticeHome = mDataBinding.rlayoutTitleNoticeHome;
 
         mNoticeHeight = getResources().getDimension(R.dimen.dp_26_5);
@@ -153,10 +158,14 @@ public class MainFragment extends BaseFragment<FragmentMainBinding, FragmentMain
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_fleet_management:
+                intent = new Intent(mActivity, FleetManagementActivity.class);
+                break;
             case R.id.relayout_waybill_task:
                 intent = new Intent(mActivity, WayBillTaskActivity.class);
                 break;
             case R.id.llyaout_personnel_management:
+                intent = new Intent(mActivity, PersonnelManagementActivity.class);
                 break;
             case R.id.llyaout_vehicle_management://车辆管理
                 intent = new Intent(mActivity, VehicleManagementActivity.class);

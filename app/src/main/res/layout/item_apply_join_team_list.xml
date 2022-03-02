@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.MainActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dataBean"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="@drawable/shape_fleet_management_item_bg"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_12">
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="京A123456"
+            android:textColor="#ff1108"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="司机姓名：王小蒙"
+            android:textColor="@color/tv_default_color"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="手机号：156 8888 9999"
+            android:textColor="@color/tv_default_color2"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="申请时间：2022-02-23"
+            android:textColor="@color/tv_default_color2"
+            android:textSize="@dimen/sp_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_weight="1"
+                android:background="@drawable/shape_item_apply_join_steam_btn_bg1"
+                android:gravity="center"
+                android:text="拒绝入队"
+                android:textColor="@color/main_orange_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                style="@style/tv_default_style"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/shape_item_apply_join_steam_btn_bg2"
+                android:gravity="center"
+                android:text="同意入队"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

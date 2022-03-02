@@ -14,9 +14,17 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/lLayout_item_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@drawable/shape_information_authentication_tab_bg"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_12">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -38,7 +46,116 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长："
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长："
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长："
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="车长"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="所有人: 北京驮丰高新科技股份有限公司"
+            android:textColor="@color/tv_default_color2"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="道路运输证号码: 123456789012"
+            android:textColor="@color/tv_default_color2"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            style="@style/tv_default_style"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="道路运输经营许可证号: 1234567890"
+            android:textColor="@color/tv_default_color2"
+            android:textSize="@dimen/sp_14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4">
+
+            <TextView
+                style="@style/tv_default_style"
+                android:text="行驶证照片："
+                android:textColor="@color/tv_default_color2"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                style="@style/act_my_purser_details_style"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_0"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:paddingStart="@dimen/dp_14_5"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_14_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:text="审核通过" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
