@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.tuofeng.bskyhunchbacktransport.R;
+import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 
 public abstract class BaseDialog extends Dialog {
 
@@ -39,6 +40,8 @@ public abstract class BaseDialog extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+
+        StatusBarUtil.setLightStatusBar((Activity) mContext, true);
         //初始化布局控件
         initView();
         initWindow();

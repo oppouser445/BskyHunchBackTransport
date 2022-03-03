@@ -301,7 +301,9 @@
 
                     </LinearLayout>
 
-                    <LinearLayout style="@style/main_fragment_min_tab1_style">
+                    <LinearLayout
+                        android:id="@+id/lLyaout_contract_carriage"
+                        style="@style/main_fragment_min_tab1_style">
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -416,7 +418,9 @@
 
                     </LinearLayout>
 
-                    <LinearLayout style="@style/main_fragment_min_tab1_style">
+                    <LinearLayout
+                        android:id="@+id/lLyaout_collection_invitations"
+                        style="@style/main_fragment_min_tab1_style">
 
                         <ImageView
                             android:layout_width="wrap_content"

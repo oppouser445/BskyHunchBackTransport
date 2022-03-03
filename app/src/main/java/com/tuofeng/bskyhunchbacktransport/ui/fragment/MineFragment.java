@@ -10,7 +10,9 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.FragmentMineBinding;
 import com.tuofeng.bskyhunchbacktransport.in.IMineFragmentView;
 import com.tuofeng.bskyhunchbacktransport.module.adapter.BannerPagerAdapter;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.CollectFreightActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.CommentsComplaintsActivity;
+import com.tuofeng.bskyhunchbacktransport.ui.activity.ContractConfirmationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.DriverInformation2Activity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.FleetInformationActivity;
 import com.tuofeng.bskyhunchbacktransport.ui.activity.HistoricalWayBillActivity;
@@ -78,6 +80,11 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
 
         //工具  lLyaout_comments_complaints
         mDataBinding.lLyaoutCommentsComplaints.setOnClickListener(this);
+
+        mDataBinding.lLyaoutContractCarriage.setOnClickListener(this);
+
+        //lLyaout_collection_invitations
+        mDataBinding.lLyaoutCollectionInvitations.setOnClickListener(this);
     }
 
     @Override
@@ -124,6 +131,14 @@ public class MineFragment extends BaseFragment<FragmentMineBinding, MineFragment
     public void onClick(View v) {
         Intent intent = null;
         switch (v.getId()) {
+            case R.id.lLyaout_collection_invitations:
+                //CollectFreightActivity
+                intent = new Intent(mActivity, CollectFreightActivity.class);
+                break;
+            case R.id.lLyaout_contract_carriage:
+                intent = new Intent(mActivity, ContractConfirmationActivity.class);
+                intent.putExtra("viewType",1);
+                break;
             case R.id.lLyaout_comments_complaints:
                 intent = new Intent(mActivity, CommentsComplaintsActivity.class);
                  break;
