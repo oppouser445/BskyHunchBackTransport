@@ -13,31 +13,53 @@
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.activity.CollectFreightVM" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/main_default_bg_color"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
         tools:context=".ui.activity.CollectFreightActivity">
 
-        <include layout="@layout/titlelbar_layout" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_34"
-            android:layout_margin="@dimen/dp_12"
-            android:background="@drawable/shape_search_bg"
-            android:drawableStart="@mipmap/search_left_icon"
-            android:drawablePadding="@dimen/dp_4"
-            android:hint="请输入车牌号/装货地/卸货地"
-            android:textColorHint="@color/shape_search_hit_color"
-            android:textSize="@dimen/sp_14" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_list"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/dp_12" />
+            android:layout_marginBottom="@dimen/dp_65"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <include layout="@layout/titlelbar_layout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_34"
+                    android:layout_margin="@dimen/dp_12"
+                    android:background="@drawable/shape_search_bg"
+                    android:drawableStart="@mipmap/search_left_icon"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:hint="请输入车牌号/装货地/卸货地"
+                    android:textColorHint="@color/shape_search_hit_color"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_12" />
+        </LinearLayout>
+
+        <com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton
+            style="@style/btn_default_style"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_17"
+            android:text="发送代收邀约" />
+
+    </RelativeLayout>
 </layout>

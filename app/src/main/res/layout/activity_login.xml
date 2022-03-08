@@ -11,6 +11,10 @@
         <variable
             name="viewModel"
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.LoginViewModel" />
+
+        <variable
+            name="dataModel"
+            type="com.tuofeng.bskyhunchbacktransport.module.bean.LogInBean" />
     </data>
 
     <ScrollView
@@ -46,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_75"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="150dp"
@@ -87,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_75"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <RelativeLayout
                     android:id="@+id/login_phone"

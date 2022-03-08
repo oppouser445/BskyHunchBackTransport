@@ -5,6 +5,7 @@ import android.content.Intent;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivitySplashBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ISplashView;
+import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.SplashViewModel;
 
@@ -22,6 +23,7 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding,SplashVie
 
     @Override
     protected void initView() {
+        StatusBarUtil.setTransparentStatusBar(getWindow(),2);
         mDataBinding.setViewModel(mViewModel);
     }
 
@@ -32,8 +34,8 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding,SplashVie
 
     @Override
     public void startLoginAct() {
-        Intent intent = new Intent(this,MainActivity.class);
-        //Intent intent = new Intent(this, LoginActivity.class);
+        //Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

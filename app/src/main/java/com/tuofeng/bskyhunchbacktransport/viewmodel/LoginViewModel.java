@@ -1,17 +1,22 @@
 package com.tuofeng.bskyhunchbacktransport.viewmodel;
 
 import androidx.databinding.Bindable;
+import androidx.databinding.Observable;
+import androidx.databinding.ObservableField;
 
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
+import com.tuofeng.bskyhunchbacktransport.module.bean.LogInBean;
 import com.tuofeng.bskyhunchbacktransport.module.data.LoginRepository;
 
-public class LoginViewModel extends BaseViewModel<ILoginView, LoginRepository>{
+public class LoginViewModel extends BaseViewModel<ILoginView, LoginRepository> {
 
     private final String TAG = "SplashViewModel";
-    private String mData="";
+    private String mData = "";
+
+    public ObservableField<LogInBean> logInBeanObservableField = new ObservableField<>();
 
     public LoginViewModel(ILoginView iv) {
-        super(iv,new LoginRepository());
+        super(iv, new LoginRepository());
     }
 
     @Bindable
@@ -23,18 +28,18 @@ public class LoginViewModel extends BaseViewModel<ILoginView, LoginRepository>{
         mIView.getMobileVerificationCode();
     }
 
-    public void showLoginView(int type){
+    public void showLoginView(int type) {
         mIView.showLoginView(type);
     }
 
     public void loginUser(int type) {
-        if(type == 4){
+        if (type == 4) {
             mDataSource.loginUser("https://www.baidu.com/", baseBean -> {
                 mIView.loginUser(type);
             }, baseBean -> {
 
             });
-        }else {
+        } else {
             mIView.loginUser(type);
         }
     }

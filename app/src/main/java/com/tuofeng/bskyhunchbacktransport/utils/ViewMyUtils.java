@@ -2,12 +2,17 @@ package com.tuofeng.bskyhunchbacktransport.utils;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.text.InputType;
 import android.text.SpannableStringBuilder;
 import android.text.TextPaint;
+import android.text.method.DigitsKeyListener;
 import android.text.style.ClickableSpan;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.in.IPublicCallback;
@@ -108,5 +113,21 @@ public class ViewMyUtils {
             imageView.setImageResource(b ? R.drawable.shape_main_fragment_dots : R.drawable.shape_main_fragment_dots_default);
             imageView.setLayoutParams(layoutParams);
         }
+    }
+
+    public static void setEdViewContentStyple(EditText editText){
+        String regular = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+        editText.setKeyListener(new DigitsKeyListener() {
+            @Override
+            public int getInputType() {
+                return InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL;
+            }
+
+            @NonNull
+            @Override
+            protected char[] getAcceptedChars() {
+                return regular.toCharArray();
+            }
+        });
     }
 }

@@ -24,6 +24,7 @@ import com.tuofeng.bskyhunchbacktransport.module.SingleTextWatcher;
 import com.tuofeng.bskyhunchbacktransport.ui.view.DownTimerText;
 import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
+import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.LoginViewModel;
@@ -58,6 +59,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
     @Override
     protected void initView() {
+        StatusBarUtil.setTransparentStatusBar(getWindow(),2);
         mDataBinding.setViewModel(mViewModel);
 
         mEdLoginPhone = mDataBinding.edPhone;
@@ -85,21 +87,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         mRlayoutPasswordClear.setOnClickListener(this);
 
         mEdtPassword = mDataBinding.edtPassword;
-        String regular = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
-        mEdtPassword.setKeyListener(new DigitsKeyListener() {
-            @Override
-            public int getInputType() {
-                return InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL;
-            }
+        ViewMyUtils.setEdViewContentStyple(mEdtPassword);
 
-            @NonNull
-            @Override
-            protected char[] getAcceptedChars() {
-                return regular.toCharArray();
-            }
-        });
-
-        //tv_switch_identity
         mTvSwitchIdentity = mDataBinding.tvSwitchIdentity;
         mTvSwitchIdentity.setOnClickListener(this);
 

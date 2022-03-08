@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@mipmap/agreement_btn_press" android:state_checked="true" />
-    <item android:drawable="@mipmap/agreement_btn_default2" android:state_checked="false" />
-    <item android:drawable="@mipmap/agreement_btn_default2" />
+    <item android:drawable="@mipmap/agreement_btn_default" android:state_checked="false" />
+    <item android:drawable="@mipmap/agreement_btn_default" />
 </selector>

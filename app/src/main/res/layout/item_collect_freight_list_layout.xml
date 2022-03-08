@@ -13,7 +13,7 @@
             type="com.tuofeng.bskyhunchbacktransport.module.bean.MainActRelistBean" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/lLayout_item_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,63 +26,77 @@
         android:paddingTop="@dimen/dp_12"
         android:paddingEnd="@dimen/dp_12">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/tv_default_style"
-                android:text="王小萌"
-                android:textColor="@color/tv_default_color"
-                android:textSize="@dimen/sp_16" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="A1/A2"
-                android:textColor="@color/tv_default_color"
-                android:textSize="@dimen/sp_16" />
-
-        </RelativeLayout>
-
-        <TextView
-            style="@style/tv_default_style"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="手机号：156 8888 9999"
-            android:textColor="@color/tv_default_color2"
-            android:textSize="@dimen/sp_12" />
-
-        <TextView
-            style="@style/tv_default_style"
-            android:layout_marginTop="@dimen/dp_4"
-            android:text="关联车辆：京A12345"
-            android:textColor="@color/tv_default_color2"
-            android:textSize="@dimen/sp_12" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <CheckBox
+            android:id="@+id/checkbox_left"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4">
+            android:button="@drawable/select_act_login_agreement_btn_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_toEndOf="@+id/checkbox_left"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="王小萌"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="A1/A2"
+                    android:textColor="@color/tv_default_color"
+                    android:textSize="@dimen/sp_16" />
+
+            </RelativeLayout>
 
             <TextView
                 style="@style/tv_default_style"
-                android:text="从业资格证号：1307211970072"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="手机号：156 8888 9999"
                 android:textColor="@color/tv_default_color2"
                 android:textSize="@dimen/sp_12" />
 
             <TextView
-                style="@style/act_my_purser_details_style"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/dp_0"
-                android:layout_marginBottom="@dimen/dp_8"
-                android:paddingStart="@dimen/dp_17_5"
-                android:paddingTop="@dimen/dp_5"
-                android:paddingEnd="@dimen/dp_17_5"
-                android:paddingBottom="@dimen/dp_5"
-                android:text="通过" />
-        </RelativeLayout>
+                style="@style/tv_default_style"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="关联车辆：京A12345"
+                android:textColor="@color/tv_default_color2"
+                android:textSize="@dimen/sp_12" />
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4">
+
+                <TextView
+                    style="@style/tv_default_style"
+                    android:text="从业资格证号：1307211970072"
+                    android:textColor="@color/tv_default_color2"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    style="@style/act_my_purser_details_style"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:paddingStart="@dimen/dp_17_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingEnd="@dimen/dp_17_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:text="通过" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </layout>
