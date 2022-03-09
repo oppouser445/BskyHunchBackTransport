@@ -21,6 +21,7 @@ import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityLoginBinding;
 import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
 import com.tuofeng.bskyhunchbacktransport.module.SingleTextWatcher;
+import com.tuofeng.bskyhunchbacktransport.module.bean.UserBean;
 import com.tuofeng.bskyhunchbacktransport.ui.view.DownTimerText;
 import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
@@ -144,9 +145,9 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     @Override
     public void loginUser(int type) {
         if (type == 4) {
-            Intent intent = new Intent(this, MainActivity.class);
+            /*Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            finish();
+            finish();*/
         }
     }
 
@@ -246,7 +247,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
         boolean b;
         boolean isCodNull = !TextUtils.isEmpty(code);
-        boolean codFlage = isCodNull && code.length() == 6;
+        boolean codFlage = isCodNull && code.length() >= 6;
         if (type == 3) {
             String password = mEdtPassword.getText().toString();
             boolean passwordFlage = !TextUtils.isEmpty(password) && password.length() == 6;

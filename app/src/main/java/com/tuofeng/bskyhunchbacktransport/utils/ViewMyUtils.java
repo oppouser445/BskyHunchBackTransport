@@ -116,7 +116,7 @@ public class ViewMyUtils {
     }
 
     public static void setEdViewContentStyple(EditText editText){
-        String regular = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+        String regular = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890*";
         editText.setKeyListener(new DigitsKeyListener() {
             @Override
             public int getInputType() {

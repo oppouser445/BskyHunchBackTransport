@@ -12,9 +12,6 @@
             name="viewModel"
             type="com.tuofeng.bskyhunchbacktransport.viewmodel.LoginViewModel" />
 
-        <variable
-            name="dataModel"
-            type="com.tuofeng.bskyhunchbacktransport.module.bean.LogInBean" />
     </data>
 
     <ScrollView
@@ -50,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_75"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <TextView
                     android:layout_width="150dp"
@@ -91,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_75"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <RelativeLayout
                     android:id="@+id/login_phone"
@@ -112,6 +109,7 @@
                         android:inputType="number"
                         android:maxLength="11"
                         android:singleLine="true"
+                        android:text="@={viewModel.userBean.phone}"
                         android:textColor="@color/act_login_edit_color1"
                         android:textColorHint="@color/act_login_edit_color2"
                         android:textSize="@dimen/sp_15" />
@@ -154,6 +152,7 @@
                         android:hint="请输入验证码"
                         android:inputType="number"
                         android:maxLength="6"
+                        android:text="@={viewModel.userBean.cod}"
                         android:textColor="@color/act_login_edit_color1"
                         android:textColorHint="@color/act_login_edit_color2"
                         android:textSize="@dimen/sp_15" />
@@ -210,7 +209,7 @@
                         android:gravity="center_vertical"
                         android:hint="请输入密码"
                         android:inputType="numberPassword"
-                        android:maxLength="6"
+                        android:text="@={viewModel.userBean.pwd}"
                         android:textColor="@color/act_login_edit_color1"
                         android:textColorHint="@color/act_login_edit_color2"
                         android:textSize="@dimen/sp_15" />
@@ -241,7 +240,6 @@
                     android:text="同意协议并注册/登录"
                     android:textColor="@color/white"
                     app:bgType="2" />
-                <!--android:onClick="@{()-> viewModel.loginUser(4)}"-->
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
