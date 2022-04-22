@@ -11,7 +11,7 @@ import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.MyPurseViewModel;
 
-public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurseViewModel> implements IMyPurseView {
+public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurseViewModel> implements IMyPurseView, View.OnClickListener {
 
     private int[] mImageIds = new int[]{
             R.mipmap.act_main_banner_icon3,
@@ -57,6 +57,9 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
             }
         });
         mVpBanner.commit();
+
+        //rlayout_my_purse
+        mDataBinding.rlayoutMyPurse.setOnClickListener(this);
     }
 
     @Override
@@ -86,5 +89,15 @@ public class MyPurseActivity extends BaseActivity<ActivityMyPurseBinding, MyPurs
     protected void onDestroy() {
         super.onDestroy();
         mVpBanner.stopPlay();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.rlayout_my_purse:
+                Intent intent = new Intent(this,WithDrawActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityInformationAuthenticationBinding;
 import com.tuofeng.bskyhunchbacktransport.in.InformationAuthenticationView;
+import com.tuofeng.bskyhunchbacktransport.utils.CommonUtil;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.activity.InformationAuthenticationViewModel;
 
 public class InformationAuthenticationActivity extends BaseActivity<ActivityInformationAuthenticationBinding, InformationAuthenticationViewModel> implements InformationAuthenticationView, View.OnClickListener {
@@ -29,6 +30,8 @@ public class InformationAuthenticationActivity extends BaseActivity<ActivityInfo
         mDataBinding.setViewModel(mViewModel);
         mDataBinding.lLyaoutCarLength.setOnClickListener(this);
         mDataBinding.lLyaoutDriver.setOnClickListener(this);
+
+        CommonUtil.getMD5Values(this);
     }
 
     @Override

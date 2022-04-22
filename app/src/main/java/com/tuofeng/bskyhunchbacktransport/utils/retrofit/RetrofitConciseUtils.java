@@ -5,6 +5,10 @@ import android.text.TextUtils;
 import androidx.annotation.NonNull;
 
 import com.google.gson.Gson;
+import com.tuofeng.bskyhunchbacktransport.base.IView;
+import com.tuofeng.bskyhunchbacktransport.base.MyDealWithJsonDataI;
+import com.tuofeng.bskyhunchbacktransport.module.bean.BaseBean;
+import com.tuofeng.bskyhunchbacktransport.module.bean.ErrorJsonBean;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 
 import org.json.JSONException;
@@ -25,14 +29,14 @@ import retrofit2.http.Body;
 
 public class RetrofitConciseUtils {
 
-    /*public static void dealWithJsonData(IView iView, String data, BaseBean baseBean, MyDealWithJsonDataI correctCall) {//无需解析数据异常做处理时调用
+    public static void dealWithJsonData(IView iView, String data, BaseBean baseBean, MyDealWithJsonDataI correctCall) {//无需解析数据异常做处理时调用
         dealWithJsonData(iView, data, baseBean, correctCall, baseBean1 -> {
         });
     }
 
     public static void dealWithJsonData(IView iView, String data, BaseBean baseBean, MyDealWithJsonDataI correctCall, MyDealWithJsonDataI errorCall) {
         try {
-            iView.dismissLoadingDialog();
+            //iView.dismissLoadingDialog();
             if (TextUtils.isEmpty(data)) {
                 correctCall.dealWithCall(baseBean);
                 return;
@@ -62,18 +66,6 @@ public class RetrofitConciseUtils {
             errorCall.dealWithCall(null);
         }
     }
-
-    public static RequestBody addPositionRequestBody() {
-        try {
-            JSONObject object = new JSONObject();
-            object.put("operateLng", SPUtil.getLongitude());
-            object.put("operateLat", SPUtil.getLatitude());
-            return RequestBody.create(getMediaTypeType(2), object.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
 
     public static MediaType getMediaTypeType(int type) {
         MediaType mediaType = null;
@@ -147,12 +139,15 @@ public class RetrofitConciseUtils {
         call.enqueue(new MyCallback(success, error));
     }
 
-   /* public static void postRaw(final String cUrl, @Body RequestBody route, IView view, final ICallBack success) {
+    public static void postRaw(final String cUrl, @Body RequestBody route, final ICallBack success) {
+        postRaw(cUrl, route, (IView) null, success);
+    }
+
+    public static void postRaw(final String cUrl, @Body RequestBody route, IView view, final ICallBack success) {
         postRaw(cUrl, route, success, str -> {
-            view.dismissLoadingDialog();
             ToastUtil.shortUniteErrorToast();
         });
-    }*/
+    }
 
     private static void postRaw(final String cUrl, @Body RequestBody route, final ICallBack success, final ICallBack error) {
         Call<ResponseBody> call = RetrofitApiBean.getInstance().service.postRaw(cUrl, route);

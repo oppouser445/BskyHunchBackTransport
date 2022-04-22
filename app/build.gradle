@@ -17,6 +17,32 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        main {
+            jni.srcDirs = []
+        }
+    }
+
+    signingConfigs {
+        release {
+            try {
+                storeFile file("./keystore/hunchBackTransport.jks")
+                storePassword "123456"
+                keyAlias "hunchBackTransport"
+                keyPassword "123456"
+            } catch (ex) {
+                throw new Exception(ex.toString())
+            }
+        }
+
+        debug {
+            storeFile file("./keystore/hunchBackTransport.jks")
+            storePassword "123456"
+            keyAlias "hunchBackTransport"
+            keyPassword "123456"
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -28,8 +54,14 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
@@ -50,4 +82,15 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //  AndroidX 的应用
+    implementation 'pub.devrel:easypermissions:2.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation project(path: ':ocr_ui')
+    implementation(name: 'ocrsdk', ext: 'aar')
+    implementation(name: 'baidu-ocr-sdk-base-release', ext: 'aar')
+    implementation(name: 'baidu-ocr-sdk-bankcard-ui-release', ext: 'aar')
+    implementation(name: 'baidu-ocr-sdk-idcard-ui-release', ext: 'aar')
 }

@@ -6,6 +6,10 @@ import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
 
+import com.baidu.ocr.sdk.OCR;
+import com.baidu.ocr.sdk.OnResultListener;
+import com.baidu.ocr.sdk.exception.OCRError;
+import com.baidu.ocr.sdk.model.AccessToken;
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.footer.MyFooter;
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.header.MyHeader;
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.SmartRefreshLayout;
@@ -14,6 +18,7 @@ import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.api.
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.api.RefreshLayout;
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.listener.DefaultRefreshFooterCreator;
 import com.tuofeng.bskyhunchbacktransport.ui.view.smartrefreshlayout.layout.listener.DefaultRefreshHeaderCreator;
+import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 
 public class BaseApplication extends MultiDexApplication {
 

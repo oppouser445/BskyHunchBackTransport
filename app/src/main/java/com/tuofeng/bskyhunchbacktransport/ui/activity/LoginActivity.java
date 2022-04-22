@@ -3,9 +3,7 @@ package com.tuofeng.bskyhunchbacktransport.ui.activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextUtils;
-import android.text.method.DigitsKeyListener;
 import android.text.method.LinkMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
@@ -15,22 +13,20 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
 import com.tuofeng.bskyhunchbacktransport.R;
+import com.tuofeng.bskyhunchbacktransport.contract.LoginContract;
 import com.tuofeng.bskyhunchbacktransport.databinding.ActivityLoginBinding;
-import com.tuofeng.bskyhunchbacktransport.in.ILoginView;
 import com.tuofeng.bskyhunchbacktransport.module.SingleTextWatcher;
-import com.tuofeng.bskyhunchbacktransport.module.bean.UserBean;
 import com.tuofeng.bskyhunchbacktransport.ui.view.DownTimerText;
 import com.tuofeng.bskyhunchbacktransport.ui.view.SharedButton;
+import com.tuofeng.bskyhunchbacktransport.utils.CommonUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.LogUtils;
 import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ToastUtil;
 import com.tuofeng.bskyhunchbacktransport.utils.ViewMyUtils;
 import com.tuofeng.bskyhunchbacktransport.viewmodel.LoginViewModel;
 
-public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewModel> implements ILoginView, View.OnClickListener {
+public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewModel> implements LoginContract.ILoginView, View.OnClickListener {
 
     private EditText mEdLoginPhone, mEdLoginVerification;
     private DownTimerText mSendCode;
@@ -60,7 +56,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
     @Override
     protected void initView() {
-        StatusBarUtil.setTransparentStatusBar(getWindow(),2);
+        StatusBarUtil.setTransparentStatusBar(getWindow(), 2);
         mDataBinding.setViewModel(mViewModel);
 
         mEdLoginPhone = mDataBinding.edPhone;
@@ -103,7 +99,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         txtLoginInstruction.setMovementMethod(LinkMovementMethod.getInstance());
         txtLoginInstruction.setOnClickListener(v -> {
             if (!mtxtOnClickCallback) {
-                LogUtils.e(TAG,"setOnClickListener监听事件");
+                LogUtils.e(TAG, "setOnClickListener监听事件");
                 ToastUtil.shortToast("setOnClickListener监听事件");
             }
             mtxtOnClickCallback = false;
@@ -145,18 +141,23 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     @Override
     public void loginUser(int type) {
         if (type == 4) {
-            /*Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-            finish();*/
+            finish();
         }
     }
 
     @Override
     public void showLoginView(int type) {
-        mLlayoutSelectLoginTypeHome.setVisibility(View.GONE);
-
-        mLlayoutLoginHome.setVisibility(View.VISIBLE);
+        setPwdCodViewType(1);
         ViewMyUtils.setTtoggleEffect(mLlayoutLoginHome, true);
+    }
+
+    @Override
+    public void startHomeActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -185,10 +186,10 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
             if (mLlayoutSelectLoginTypeHome.getVisibility() != View.VISIBLE) {
-                mRlayuotLoginPassword.setVisibility(View.GONE);
-                mLlayoutLoginHome.setVisibility(View.GONE);
-                mLlayoutSelectLoginTypeHome.setVisibility(View.VISIBLE);
+                setEditViewType(0);
+                setPwdCodViewType(0);
                 ViewMyUtils.setTtoggleEffect(mLlayoutSelectLoginTypeHome, true);
+                mEdLoginPhone.setText("");
                 return true;
             }
         }
@@ -200,10 +201,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_switch_identity:
-                mEdtPassword.setText("");
-                mEdLoginVerification.setText("");
-                mLlayoutLoginHome.setVisibility(View.GONE);
-                mLlayoutSelectLoginTypeHome.setVisibility(View.VISIBLE);
+                setEditViewType(0);
+                setPwdCodViewType(0);
                 ViewMyUtils.setTtoggleEffect(mRlayuotLoginPassword, true);
                 break;
             case R.id.rlayout_password_clear:
@@ -218,8 +217,6 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
             case R.id.tv_password_login:
                 mIsPasswordLogin = !mIsPasswordLogin;
                 mTvPasswordLogin.setText(mIsPasswordLogin ? "验证码登录" : "密码登录");
-                mRlayoutLoginVerification.setVisibility(mIsPasswordLogin ? View.GONE : View.VISIBLE);
-                mRlayuotLoginPassword.setVisibility(mIsPasswordLogin ? View.VISIBLE : View.GONE);
                 mEdLoginVerification.setText("");
                 if (mIsPasswordLogin) {
                     mEdtPassword.setText("");
@@ -230,6 +227,8 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
                     ViewMyUtils.setTtoggleEffect(mRlayoutLoginVerification, true);
                     mRlayuotLoginPassword.setAlpha(1);
                 }
+                mRlayuotLoginPassword.setVisibility(mIsPasswordLogin ? View.VISIBLE : View.GONE);
+                mRlayoutLoginVerification.setVisibility(mIsPasswordLogin ? View.GONE : View.VISIBLE);
                 break;
         }
     }
@@ -240,7 +239,7 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
 
         if (mFinish) {
             boolean isPhoneNull = !TextUtils.isEmpty(phone);
-            mSendCodeTag = isPhoneNull && phone.length() == 11;
+            mSendCodeTag = isPhoneNull && phone.length() == 11 && CommonUtil.telePhone(phone + "");
             mSendCode.setEnabled(mSendCodeTag);
             mRelativeEmptyPhone.setVisibility(isPhoneNull ? View.VISIBLE : View.GONE);
         }
@@ -248,9 +247,9 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         boolean b;
         boolean isCodNull = !TextUtils.isEmpty(code);
         boolean codFlage = isCodNull && code.length() >= 6;
-        if (type == 3) {
+        if (mRlayuotLoginPassword.getVisibility() != View.GONE) {
             String password = mEdtPassword.getText().toString();
-            boolean passwordFlage = !TextUtils.isEmpty(password) && password.length() == 6;
+            boolean passwordFlage = !TextUtils.isEmpty(password)/* && password.length() >= 6*/;
             b = mSendCodeTag && passwordFlage;
         } else {
             b = mSendCodeTag && codFlage;
@@ -261,5 +260,18 @@ public class LoginActivity extends BaseActivity<ActivityLoginBinding, LoginViewM
         mBtnLogin.setMyEnabled(b1);
         mBtnLogin.setAlpha(mSendCodeTag && b && mIsSelectChkLoginInstruction ? 1.0f : 0.3f);
         mBtnLogin.setEnabled(b1);
+    }
+
+    private void setPwdCodViewType(int type) {
+        mLlayoutLoginHome.setVisibility(type == 0 ? View.GONE : View.VISIBLE);
+        mLlayoutSelectLoginTypeHome.setVisibility(type == 0 ? View.VISIBLE : View.GONE);
+    }
+
+    private void setEditViewType(int type) {
+        mRlayoutLoginVerification.setVisibility(type == 0 ? View.VISIBLE : View.GONE);
+        mRlayuotLoginPassword.setVisibility(type == 0 ? View.GONE : View.VISIBLE);
+
+        mEdLoginVerification.setText("");
+        mEdtPassword.setText("");
     }
 }

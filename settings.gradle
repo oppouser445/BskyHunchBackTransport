@@ -1,2 +1,2 @@
 rootProject.name = "Bsky.HunchBackTransport"
-include ':app'
+include ':app', ':ocr_ui';

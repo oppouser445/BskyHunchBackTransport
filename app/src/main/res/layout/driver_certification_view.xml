@@ -65,11 +65,13 @@
     <View style="@style/act_driver_certification_line_style" />
 
     <ImageView
+        android:id="@+id/image_id_card_front"
         style="@style/act_driver_certification_id_card_style"
-        android:background="@mipmap/id_card_front" />
+        android:src="@mipmap/id_card_front" />
 
     <ImageView
+        android:id="@+id/image_id_card_reverse"
         style="@style/act_driver_certification_id_card_style"
-        android:background="@mipmap/id_card_back" />
+        android:src="@mipmap/id_card_back" />
 
 </LinearLayout>

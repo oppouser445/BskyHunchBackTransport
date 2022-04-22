@@ -5,10 +5,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.RequiresApi;
 
 import com.tuofeng.bskyhunchbacktransport.R;
 import com.tuofeng.bskyhunchbacktransport.utils.StatusBarUtil;
@@ -36,6 +40,7 @@ public abstract class BaseDialog extends Dialog {
         mContext = context;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +50,22 @@ public abstract class BaseDialog extends Dialog {
         //初始化布局控件
         initView();
         initWindow();
+
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//5.0 全透明实现
+            Window window = getWindow();
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.TRANSPARENT);
+
+            WindowManager.LayoutParams lp = getWindow().getAttributes();
+            //LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES是允许在刘海区域布局
+            lp.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
+            getWindow().setAttributes(lp);
+        } else {//4.4 全透明状态栏
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
     }
 
     public void initWindow() {
@@ -54,8 +75,8 @@ public abstract class BaseDialog extends Dialog {
         mParamsWindow = getWindow().getAttributes();
         mParamsWindow.width = WindowManager.LayoutParams.MATCH_PARENT;
         mParamsWindow.height = WindowManager.LayoutParams.MATCH_PARENT;
+        mParamsWindow.gravity = Gravity.CENTER;
         mWindow.setAttributes(mParamsWindow);
-
 
         //window.getDecorView().setPadding(0, 0, 0, 0);
         //设置背景透明，不然会出现白色直角问题

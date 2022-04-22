@@ -66,7 +66,7 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
 
     @Override
     protected void initData() {
-
+        initAccessToken();
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -135,4 +135,5 @@ public class MainActivity extends BaseFragmentActivity<ActivityMainBinding, Main
             tv2.setTextColor(getResources().getColor(i == type ? R.color.main_orange_color : R.color.fragment_main_bottom_tv_color));
         }
     }
+
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bsky.HunchBackTransport</string>
+    <string name="app_name">BskyHunchBackTransport</string>
 
     <!--刷新控件UI Start-->
     <string name="srl_content_empty">The content view in SmartRefreshLayout is empty. Do you forget to add it in xml layout file?</string>

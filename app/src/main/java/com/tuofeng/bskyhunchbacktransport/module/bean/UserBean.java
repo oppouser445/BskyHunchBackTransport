@@ -17,6 +17,7 @@ public class UserBean extends BaseBean {
 
     public void setCod(String cod) {
         this.cod = cod;
+        this.pwd = "";
         notifyPropertyChanged(BR.cod);
     }
 
@@ -37,6 +38,7 @@ public class UserBean extends BaseBean {
 
     public void setPwd(String pwd) {
         this.pwd = pwd;
+        this.cod = "";
         notifyPropertyChanged(BR.pwd);
     }
 }

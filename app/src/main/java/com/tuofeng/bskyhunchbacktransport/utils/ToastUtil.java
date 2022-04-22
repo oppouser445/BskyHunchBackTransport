@@ -22,12 +22,15 @@ public class ToastUtil {
             String message = error1.getString("message");
             ToastUtil.shortToast(message);
         } catch (JSONException e) {
-            ToastUtil.shortUniteErrorToast();
+            ToastUtil.shortUniteErrorToast(1);
             e.printStackTrace();
         }
     }
     public static void shortUniteErrorToast() {
-        showToast(BaseApplication.getInstance(), "网络异常请稍后再试", Toast.LENGTH_SHORT);
+        shortUniteErrorToast(0);
+    }
+    public static void shortUniteErrorToast(int type) {
+        showToast(BaseApplication.getInstance(), type == 0 ? "数据获取失败" : "网络异常请稍后再试", Toast.LENGTH_SHORT);
     }
 
     public static void shortToast(String msg) {
